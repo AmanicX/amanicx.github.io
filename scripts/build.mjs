@@ -596,7 +596,7 @@ function generateEvaPage() {
             <span class="mockup-dot"></span>
             <span class="mockup-dot"></span>
           </div>
-          <span style="font-size:0.8125rem; color:var(--text-muted); font-family:var(--font-mono);">Eva AI Character Studio — v2.2.2</span>
+          <span style="font-size:0.8125rem; color:var(--text-muted); font-family:var(--font-mono);">Eva AI Character Studio - v2.2.2</span>
           <span class="badge badge-dev" style="padding:0.15rem 0.5rem; font-size:0.7rem;">OBSIDIAN & FROSTED GLASS</span>
         </div>
         <div style="background:var(--bg-surface-0); padding:0.5rem; display:flex; justify-content:center;">
@@ -891,7 +891,7 @@ function generateEvaPage() {
   ${renderFooter('../')}
 `;
 
-  return renderHead('Eva Studio — Characters with a world of their own', eva.full_description, '/eva/', '../', 'eva/assets/icon.png') + content;
+  return renderHead('Eva Studio - Characters with a world of their own', eva.full_description, '/eva/', '../', 'eva/assets/icon.png') + content;
 }
 
 // -----------------------------------------------------------------------------
@@ -1124,7 +1124,7 @@ function generateAstraPage() {
             <span class="mockup-dot"></span>
             <span class="mockup-dot"></span>
           </div>
-          <span style="font-size:0.8125rem; color:var(--text-muted); font-family:var(--font-mono);">Astra Core — Tauri v2 + Rust Bridge</span>
+          <span style="font-size:0.8125rem; color:var(--text-muted); font-family:var(--font-mono);">Astra Core - Tauri v2 + Rust Bridge</span>
           <span class="badge badge-dev" style="padding:0.15rem 0.5rem; font-size:0.7rem;">RISK-GATED TOOL SYSTEM</span>
         </div>
         <div style="background:var(--bg-surface-0); padding:1rem; display:flex; justify-content:center;">
@@ -1324,7 +1324,7 @@ function generateAstraPage() {
   ${renderFooter('../')}
 `;
 
-  return renderHead('Astra — AI Desktop Assistant', astra.full_description, '/astra/', '../', 'astra/assets/icon.png') + content;
+  return renderHead('Astra - AI Desktop Assistant', astra.full_description, '/astra/', '../', 'astra/assets/icon.png') + content;
 }
 
 // -----------------------------------------------------------------------------
@@ -1503,7 +1503,7 @@ function generateAstraOsPage() {
             <span class="mockup-dot"></span>
             <span class="mockup-dot"></span>
           </div>
-          <span style="font-size:0.8125rem; color:var(--text-muted); font-family:var(--font-mono);">AstraOS — Niri Wayland Compositor + Noctalia v5</span>
+          <span style="font-size:0.8125rem; color:var(--text-muted); font-family:var(--font-mono);">AstraOS - Niri Wayland Compositor + Noctalia v5</span>
           <span class="badge badge-dev" style="padding:0.15rem 0.5rem; font-size:0.7rem;">UEFI ONLY</span>
         </div>
         <div style="background:var(--bg-surface-0); padding:0.5rem; display:flex; justify-content:center;">
@@ -1638,7 +1638,7 @@ function generateAstraOsPage() {
   ${renderFooter('../')}
 `;
 
-  return renderHead('AstraOS — Curated Arch Linux Distribution', astraOs.full_description, '/astra-os/', '../', 'astra-os/assets/wallpaper.png') + content;
+  return renderHead('AstraOS - Curated Arch Linux Distribution', astraOs.full_description, '/astra-os/', '../', 'astra-os/assets/wallpaper.png') + content;
 }
 
 // -----------------------------------------------------------------------------
@@ -1886,7 +1886,7 @@ function buildAll() {
   console.log('  ✓ Generated robots.txt');
 
   // Create .nojekyll for GitHub Pages
-  writeFileSync(join(ROOT, '.nojekyll'), '', 'utf-8');
+  writeFileSync(join(ROOT, '.nojekyll'), '# Disable Jekyll for GitHub Pages\n', 'utf-8');
   console.log('  ✓ Created .nojekyll');
 
   console.log('✨ Build completed successfully!');
