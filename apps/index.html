@@ -101,23 +101,33 @@
             </svg>
           </div>
 
-          <div>
-            <select id="filter-category" style="width:100%; padding:0.75rem 1rem; background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-full); font-size:0.875rem; color:var(--text-primary); cursor:pointer;">
-              <option value="all">All Categories</option>
-              <option value="AI Character">AI Character & Studio</option>
-              <option value="Assistant">Desktop Assistant</option>
-              <option value="Operating System">Operating System</option>
-            </select>
+          <div class="pill-dropdown" id="dropdown-category">
+            <button type="button" class="pill-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false" id="btn-dropdown-category">
+              <span class="selected-label">All Categories</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="pill-dropdown-menu" role="listbox">
+              <div class="pill-dropdown-item active" data-value="all" role="option">All Categories</div>
+              <div class="pill-dropdown-item" data-value="AI Character" role="option">AI Character &amp; Studio</div>
+              <div class="pill-dropdown-item" data-value="Assistant" role="option">Desktop Assistant</div>
+              <div class="pill-dropdown-item" data-value="Operating System" role="option">Operating System</div>
+            </div>
+            <input type="hidden" id="filter-category" value="all">
           </div>
 
-          <div>
-            <select id="filter-platform" style="width:100%; padding:0.75rem 1rem; background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-full); font-size:0.875rem; color:var(--text-primary); cursor:pointer;">
-              <option value="all">All Platforms</option>
-              <option value="Linux">Linux (Pacman / AppImage)</option>
-              <option value="Windows">Windows (EXE / MSI)</option>
-              <option value="macOS">macOS (Apple Silicon)</option>
-              <option value="Android">Android (APK)</option>
-            </select>
+          <div class="pill-dropdown" id="dropdown-platform">
+            <button type="button" class="pill-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false" id="btn-dropdown-platform">
+              <span class="selected-label">All Platforms</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="pill-dropdown-menu" role="listbox">
+              <div class="pill-dropdown-item active" data-value="all" role="option">All Platforms</div>
+              <div class="pill-dropdown-item" data-value="Linux" role="option">Linux (Pacman / AppImage)</div>
+              <div class="pill-dropdown-item" data-value="Windows" role="option">Windows (EXE / MSI)</div>
+              <div class="pill-dropdown-item" data-value="macOS" role="option">macOS (Apple Silicon)</div>
+              <div class="pill-dropdown-item" data-value="Android" role="option">Android (APK)</div>
+            </div>
+            <input type="hidden" id="filter-platform" value="all">
           </div>
         </div>
 
@@ -140,7 +150,12 @@
             
             <div>
               <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
-                <img src="../eva/assets/icon.png" alt="Eva logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3);">
+                
+      <div style="width:56px; height:56px; position:relative; flex-shrink:0;">
+        <img class="icon-theme-dark" src="../shared/assets/icons/eva-dark.png" alt="Eva logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3);">
+        <img class="icon-theme-light" src="../shared/assets/icons/eva-light.png" alt="Eva logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.1);">
+      </div>
+    
                 <div>
                   <h2 class="title-card" style="font-size:1.5rem;">Eva</h2>
                   <span style="font-size:0.8125rem; color:var(--text-muted);">AI Character & Conversation Studio</span>
@@ -188,9 +203,35 @@
                 
               </ul>
 
-              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Supported Platforms</div>
-              <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:1.25rem;">
-                <span class="badge badge-dev" style="font-size:0.75rem;">Windows</span><span class="badge badge-dev" style="font-size:0.75rem;">Linux</span><span class="badge badge-dev" style="font-size:0.75rem;">Arch Linux</span><span class="badge badge-dev" style="font-size:0.75rem;">macOS</span><span class="badge badge-dev" style="font-size:0.75rem;">Android</span>
+              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Supported Platforms &amp; Direct Downloads</div>
+              <div style="display:flex; flex-wrap:wrap; gap:0.45rem; margin-bottom:1.5rem;">
+                
+      <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-Setup-2.2.2.exe" class="platform-cta-btn" download title="Download Eva for Windows (.exe)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Windows</span>
+        <span class="dl-ext">EXE</span>
+      </a>
+      <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.AppImage" class="platform-cta-btn" download title="Download Eva Linux AppImage">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Linux</span>
+        <span class="dl-ext">AppImage</span>
+      </a>
+      <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.pacman" class="platform-cta-btn" download title="Download Eva Arch Linux Pacman">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Arch Linux</span>
+        <span class="dl-ext">pacman</span>
+      </a>
+      <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.dmg" class="platform-cta-btn" download title="Download Eva for macOS (.dmg)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>macOS</span>
+        <span class="dl-ext">DMG</span>
+      </a>
+      <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-android.apk" class="platform-cta-btn" download title="Download Eva Android APK">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Android</span>
+        <span class="dl-ext">APK</span>
+      </a>
+    
               </div>
 
               
@@ -218,7 +259,7 @@
             
             <div>
               <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
-                <img src="../astra/assets/icon.png" alt="Astra logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3);">
+                <img src="../shared/assets/icons/astra.png" alt="Astra logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3); flex-shrink:0;">
                 <div>
                   <h2 class="title-card" style="font-size:1.5rem;">Astra</h2>
                   <span style="font-size:0.8125rem; color:var(--text-muted);">AI Desktop Assistant & OS Automation</span>
@@ -266,9 +307,30 @@
                 
               </ul>
 
-              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Supported Platforms</div>
-              <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:1.25rem;">
-                <span class="badge badge-dev" style="font-size:0.75rem;">Windows</span><span class="badge badge-dev" style="font-size:0.75rem;">Linux</span><span class="badge badge-dev" style="font-size:0.75rem;">Arch Linux</span>
+              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Supported Platforms &amp; Direct Downloads</div>
+              <div style="display:flex; flex-wrap:wrap; gap:0.45rem; margin-bottom:1.5rem;">
+                
+      <a href="https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_x64-setup.exe" class="platform-cta-btn" download title="Download Astra for Windows (.exe)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Windows</span>
+        <span class="dl-ext">EXE</span>
+      </a>
+      <a href="https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_amd64.AppImage" class="platform-cta-btn" download title="Download Astra Linux AppImage">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Linux</span>
+        <span class="dl-ext">AppImage</span>
+      </a>
+      <a href="https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra-0.1.0-1.x86_64.rpm" class="platform-cta-btn" download title="Download Astra Fedora / RHEL RPM">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Fedora</span>
+        <span class="dl-ext">RPM</span>
+      </a>
+      <a href="../astra/releases/#arch" class="platform-cta-btn" title="View Astra Arch Linux Installation Script">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+        <span>Arch Linux</span>
+        <span class="dl-ext">Script</span>
+      </a>
+    
               </div>
 
               
@@ -296,7 +358,7 @@
             
             <div>
               <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
-                <img src="../astra-os/assets/astraos-logo.svg" alt="AstraOS logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3);">
+                <img src="../shared/assets/icons/astra-os.svg" alt="AstraOS logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3); flex-shrink:0;">
                 <div>
                   <h2 class="title-card" style="font-size:1.5rem;">AstraOS</h2>
                   <span style="font-size:0.8125rem; color:var(--text-muted);">Operating System / Linux Distribution</span>
@@ -344,9 +406,20 @@
                 
               </ul>
 
-              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Supported Platforms</div>
-              <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:1.25rem;">
-                <span class="badge badge-dev" style="font-size:0.75rem;">x86_64 UEFI</span>
+              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Supported Platforms &amp; Direct Downloads</div>
+              <div style="display:flex; flex-wrap:wrap; gap:0.45rem; margin-bottom:1.5rem;">
+                
+      <a href="https://github.com/AmanicX/astra-os#building-the-iso" target="_blank" rel="noopener" class="platform-cta-btn" title="Build AstraOS ISO (x86_64 UEFI)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="m8 12 4 4 4-4"/></svg>
+        <span>x86_64 UEFI</span>
+        <span class="dl-ext">Build ISO</span>
+      </a>
+      <a href="https://github.com/AmanicX/astra-os/blob/main/setup.sh" target="_blank" rel="noopener" class="platform-cta-btn" title="View setup.sh Live Installer">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+        <span>Live Shell</span>
+        <span class="dl-ext">setup.sh</span>
+      </a>
+    
               </div>
 
               

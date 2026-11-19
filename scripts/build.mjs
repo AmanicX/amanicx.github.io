@@ -161,6 +161,113 @@ function renderFooter(prefix = '') {
 
 console.log('Build engine loaded.');
 
+function renderAppIcon(p, prefix = './') {
+  if (p.id === 'eva') {
+    return `
+      <div style="width:44px; height:44px; position:relative; flex-shrink:0;">
+        <img class="icon-theme-dark" src="${prefix}shared/assets/icons/eva-dark.png" alt="Eva" width="44" height="44" style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+        <img class="icon-theme-light" src="${prefix}shared/assets/icons/eva-light.png" alt="Eva" width="44" height="44" style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+      </div>
+    `;
+  }
+  if (p.id === 'astra') {
+    return `<img src="${prefix}shared/assets/icons/astra.png" alt="Astra" width="44" height="44" style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3); flex-shrink:0;">`;
+  }
+  if (p.id === 'astra-os') {
+    return `<img src="${prefix}shared/assets/icons/astra-os.svg" alt="AstraOS" width="44" height="44" style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3); flex-shrink:0;">`;
+  }
+  return `<img src="${prefix}shared/assets/favicon.svg" alt="${p.name}" width="44" height="44" style="border-radius:12px;">`;
+}
+
+function renderCatalogAppIcon(p, prefix = '../') {
+  if (p.id === 'eva') {
+    return `
+      <div style="width:56px; height:56px; position:relative; flex-shrink:0;">
+        <img class="icon-theme-dark" src="${prefix}shared/assets/icons/eva-dark.png" alt="Eva logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3);">
+        <img class="icon-theme-light" src="${prefix}shared/assets/icons/eva-light.png" alt="Eva logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.1);">
+      </div>
+    `;
+  }
+  if (p.id === 'astra') {
+    return `<img src="${prefix}shared/assets/icons/astra.png" alt="Astra logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3); flex-shrink:0;">`;
+  }
+  if (p.id === 'astra-os') {
+    return `<img src="${prefix}shared/assets/icons/astra-os.svg" alt="AstraOS logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3); flex-shrink:0;">`;
+  }
+  return `<img src="${prefix}shared/assets/favicon.svg" alt="${p.name}" width="56" height="56">`;
+}
+
+function renderPlatformCtaButtons(p) {
+  if (p.id === 'eva') {
+    return `
+      <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-Setup-2.2.2.exe" class="platform-cta-btn" download title="Download Eva for Windows (.exe)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Windows</span>
+        <span class="dl-ext">EXE</span>
+      </a>
+      <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.AppImage" class="platform-cta-btn" download title="Download Eva Linux AppImage">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Linux</span>
+        <span class="dl-ext">AppImage</span>
+      </a>
+      <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.pacman" class="platform-cta-btn" download title="Download Eva Arch Linux Pacman">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Arch Linux</span>
+        <span class="dl-ext">pacman</span>
+      </a>
+      <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.dmg" class="platform-cta-btn" download title="Download Eva for macOS (.dmg)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>macOS</span>
+        <span class="dl-ext">DMG</span>
+      </a>
+      <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-android.apk" class="platform-cta-btn" download title="Download Eva Android APK">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Android</span>
+        <span class="dl-ext">APK</span>
+      </a>
+    `;
+  }
+  if (p.id === 'astra') {
+    return `
+      <a href="https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_x64-setup.exe" class="platform-cta-btn" download title="Download Astra for Windows (.exe)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Windows</span>
+        <span class="dl-ext">EXE</span>
+      </a>
+      <a href="https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_amd64.AppImage" class="platform-cta-btn" download title="Download Astra Linux AppImage">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Linux</span>
+        <span class="dl-ext">AppImage</span>
+      </a>
+      <a href="https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra-0.1.0-1.x86_64.rpm" class="platform-cta-btn" download title="Download Astra Fedora / RHEL RPM">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Fedora</span>
+        <span class="dl-ext">RPM</span>
+      </a>
+      <a href="../astra/releases/#arch" class="platform-cta-btn" title="View Astra Arch Linux Installation Script">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+        <span>Arch Linux</span>
+        <span class="dl-ext">Script</span>
+      </a>
+    `;
+  }
+  if (p.id === 'astra-os') {
+    return `
+      <a href="https://github.com/AmanicX/astra-os#building-the-iso" target="_blank" rel="noopener" class="platform-cta-btn" title="Build AstraOS ISO (x86_64 UEFI)">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="m8 12 4 4 4-4"/></svg>
+        <span>x86_64 UEFI</span>
+        <span class="dl-ext">Build ISO</span>
+      </a>
+      <a href="https://github.com/AmanicX/astra-os/blob/main/setup.sh" target="_blank" rel="noopener" class="platform-cta-btn" title="View setup.sh Live Installer">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+        <span>Live Shell</span>
+        <span class="dl-ext">setup.sh</span>
+      </a>
+    `;
+  }
+  return '';
+}
+
 // -----------------------------------------------------------------------------
 // 1. HOME PAGE GENERATOR (/)
 // -----------------------------------------------------------------------------
@@ -195,13 +302,13 @@ function generateHomePage() {
       </div>
 
       <!-- Live Ecosystem Activity Ticker -->
-      <div class="card card-glass reveal delay-400" style="display:inline-flex; align-items:center; gap:1.5rem; padding:0.875rem 1.75rem; border-radius:var(--radius-full); max-width:100%; overflow-x:auto;">
-        <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.8125rem; font-weight:600; color:var(--accent-primary);">
-          <span style="width:8px; height:8px; border-radius:50%; background:var(--accent-primary); animation:ambient-pulse 2s infinite;"></span>
+      <div class="card card-glass reveal delay-400" style="display:inline-flex; align-items:center; gap:1.5rem; padding:0.875rem 1.75rem; border-radius:var(--radius-full); max-width:100%;">
+        <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.8125rem; font-weight:600; color:var(--accent-primary); flex-shrink:0;">
+          <span class="live-dot"></span>
           LIVE UPDATES
         </div>
-        <div style="height:14px; width:1px; background:var(--border-subtle);"></div>
-        <div style="font-size:0.875rem; color:var(--text-secondary); display:flex; gap:1.5rem; white-space:nowrap;">
+        <div style="height:14px; width:1px; background:var(--border-subtle); flex-shrink:0;"></div>
+        <div style="font-size:0.875rem; color:var(--text-secondary); display:flex; gap:1.5rem; white-space:nowrap; overflow-x:auto;">
           <span><strong>Eva v2.2.2</strong> released today (Universal & Arch pacman)</span>
           <span>&bull;</span>
           <span><strong>Astra v0.1.0-pre.1</strong> permission engine testing</span>
@@ -223,14 +330,14 @@ function generateHomePage() {
         </p>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:2rem;">
+      <div class="grid-3col">
         
         <!-- Eva Card -->
         <div class="card card-feature reveal delay-100">
           <div>
             <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem;">
               <div style="display:flex; align-items:center; gap:0.875rem;">
-                <img src="./eva/assets/icon.png" alt="Eva" width="44" height="44" style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+                ${renderAppIcon(eva, './')}
                 <div>
                   <h3 class="title-card">Eva</h3>
                   <span style="font-size:0.8125rem; color:var(--text-muted);">AI Character Studio</span>
@@ -259,7 +366,7 @@ function generateHomePage() {
           <div>
             <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem;">
               <div style="display:flex; align-items:center; gap:0.875rem;">
-                <img src="./astra/assets/icon.png" alt="Astra" width="44" height="44" style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+                ${renderAppIcon(astra, './')}
                 <div>
                   <h3 class="title-card">Astra</h3>
                   <span style="font-size:0.8125rem; color:var(--text-muted);">AI Desktop Assistant</span>
@@ -288,7 +395,7 @@ function generateHomePage() {
           <div>
             <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem;">
               <div style="display:flex; align-items:center; gap:0.875rem;">
-                <img src="./astra-os/assets/astraos-logo.svg" alt="AstraOS" width="44" height="44" style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+                ${renderAppIcon(astraOs, './')}
                 <div>
                   <h3 class="title-card">AstraOS</h3>
                   <span style="font-size:0.8125rem; color:var(--text-muted);">Cosmic Arch Linux</span>
@@ -439,23 +546,33 @@ function generateAppsPage() {
             </svg>
           </div>
 
-          <div>
-            <select id="filter-category" style="width:100%; padding:0.75rem 1rem; background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-full); font-size:0.875rem; color:var(--text-primary); cursor:pointer;">
-              <option value="all">All Categories</option>
-              <option value="AI Character">AI Character & Studio</option>
-              <option value="Assistant">Desktop Assistant</option>
-              <option value="Operating System">Operating System</option>
-            </select>
+          <div class="pill-dropdown" id="dropdown-category">
+            <button type="button" class="pill-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false" id="btn-dropdown-category">
+              <span class="selected-label">All Categories</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="pill-dropdown-menu" role="listbox">
+              <div class="pill-dropdown-item active" data-value="all" role="option">All Categories</div>
+              <div class="pill-dropdown-item" data-value="AI Character" role="option">AI Character &amp; Studio</div>
+              <div class="pill-dropdown-item" data-value="Assistant" role="option">Desktop Assistant</div>
+              <div class="pill-dropdown-item" data-value="Operating System" role="option">Operating System</div>
+            </div>
+            <input type="hidden" id="filter-category" value="all">
           </div>
 
-          <div>
-            <select id="filter-platform" style="width:100%; padding:0.75rem 1rem; background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-full); font-size:0.875rem; color:var(--text-primary); cursor:pointer;">
-              <option value="all">All Platforms</option>
-              <option value="Linux">Linux (Pacman / AppImage)</option>
-              <option value="Windows">Windows (EXE / MSI)</option>
-              <option value="macOS">macOS (Apple Silicon)</option>
-              <option value="Android">Android (APK)</option>
-            </select>
+          <div class="pill-dropdown" id="dropdown-platform">
+            <button type="button" class="pill-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false" id="btn-dropdown-platform">
+              <span class="selected-label">All Platforms</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="pill-dropdown-menu" role="listbox">
+              <div class="pill-dropdown-item active" data-value="all" role="option">All Platforms</div>
+              <div class="pill-dropdown-item" data-value="Linux" role="option">Linux (Pacman / AppImage)</div>
+              <div class="pill-dropdown-item" data-value="Windows" role="option">Windows (EXE / MSI)</div>
+              <div class="pill-dropdown-item" data-value="macOS" role="option">macOS (Apple Silicon)</div>
+              <div class="pill-dropdown-item" data-value="Android" role="option">Android (APK)</div>
+            </div>
+            <input type="hidden" id="filter-platform" value="all">
           </div>
         </div>
 
@@ -478,7 +595,7 @@ function generateAppsPage() {
             
             <div>
               <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
-                <img src="../${p.icon}" alt="${p.name} logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3);">
+                ${renderCatalogAppIcon(p, '../')}
                 <div>
                   <h2 class="title-card" style="font-size:1.5rem;">${p.name}</h2>
                   <span style="font-size:0.8125rem; color:var(--text-muted);">${p.category}</span>
@@ -511,9 +628,9 @@ function generateAppsPage() {
                 `).join('')}
               </ul>
 
-              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Supported Platforms</div>
-              <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:1.25rem;">
-                ${p.platforms.map(plat => `<span class="badge badge-dev" style="font-size:0.75rem;">${plat}</span>`).join('')}
+              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Supported Platforms &amp; Direct Downloads</div>
+              <div style="display:flex; flex-wrap:wrap; gap:0.45rem; margin-bottom:1.5rem;">
+                ${renderPlatformCtaButtons(p)}
               </div>
 
               ${p.install_methods.arch ? `
@@ -567,7 +684,10 @@ function generateEvaPage() {
     <div class="ambient-flare flare-crimson" style="top:-80px; left:50%; width:600px; height:600px; transform:translateX(-50%);"></div>
     <div class="container" style="text-align:center; position:relative; z-index:2;">
       <div style="display:inline-flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem;" class="reveal">
-        <img src="../eva/assets/icon.png" alt="Eva Icon" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+        <div style="width:48px; height:48px; position:relative; flex-shrink:0;">
+          <img class="icon-theme-dark" src="../shared/assets/icons/eva-dark.png" alt="Eva Icon" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+          <img class="icon-theme-light" src="../shared/assets/icons/eva-light.png" alt="Eva Icon" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+        </div>
         <span class="badge badge-stable" style="font-size:0.8125rem;">${eva.version} Stable</span>
       </div>
 
@@ -648,8 +768,36 @@ function generateEvaPage() {
               <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Persistent conversational memory in local SQLite</li>
             </ul>
           </div>
-          <div style="border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border-medium);">
-            <img src="../eva/assets/photo-canopy.jpg" alt="Companion Studio Atmosphere" style="width:100%; height:320px; object-fit:cover;">
+          <div>
+            <div class="mockup-window" style="background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-lg); overflow:hidden; box-shadow:0 16px 40px rgba(0,0,0,0.5);">
+              <div style="padding:0.75rem 1rem; background:var(--bg-surface-2); border-bottom:1px solid var(--border-subtle); display:flex; align-items:center; justify-content:space-between; font-size:0.75rem;">
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <span style="width:10px; height:10px; border-radius:50%; background:#EF4444; display:inline-block;"></span>
+                  <span style="width:10px; height:10px; border-radius:50%; background:#F59E0B; display:inline-block;"></span>
+                  <span style="width:10px; height:10px; border-radius:50%; background:#10B981; display:inline-block;"></span>
+                  <span style="font-weight:600; color:var(--text-secondary); margin-left:0.5rem;">Eva Companion &bull; Session #14</span>
+                </div>
+                <span class="badge badge-stable" style="font-size:0.6875rem; padding:0.15rem 0.5rem;">Groq Llama 3.3 70B &bull; 240ms</span>
+              </div>
+              <div style="padding:1.25rem; display:flex; flex-direction:column; gap:1rem; font-size:0.875rem;">
+                <div style="align-self:flex-end; max-width:85%; background:var(--accent-surface); border:1px solid var(--border-accent); border-radius:14px 14px 2px 14px; padding:0.75rem 1rem; color:var(--text-primary);">
+                  Eva, sync current conversation milestones to persistent SQLite and summarize memory state.
+                </div>
+                <div style="align-self:flex-start; max-width:90%; background:var(--bg-surface-0); border:1px solid var(--border-medium); border-radius:14px 14px 14px 2px; padding:0.85rem 1rem;">
+                  <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.4rem;">
+                    <span style="width:6px; height:6px; border-radius:50%; background:var(--accent-primary);"></span>
+                    <strong style="color:var(--accent-primary); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em;">Eva Memory Engine</strong>
+                  </div>
+                  <p style="color:var(--text-secondary); font-size:0.875rem; line-height:1.5; margin:0;">
+                    Memory commit complete. 14 psychological vectors synced to encrypted local database. Context affinity: 96.4%. Zero external telemetry recorded.
+                  </p>
+                </div>
+                <div style="display:flex; gap:0.5rem; margin-top:0.25rem;">
+                  <span class="badge badge-dev" style="font-size:0.6875rem;">Ollama Offline Ready</span>
+                  <span class="badge badge-dev" style="font-size:0.6875rem;">Local DB: eva_store.db</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -669,8 +817,36 @@ function generateEvaPage() {
               <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Complete uncensored creative canvas on your local machine</li>
             </ul>
           </div>
-          <div style="border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border-medium);">
-            <img src="../eva/assets/sky-figure.jpg" alt="Anime Roleplay Atmosphere" style="width:100%; height:320px; object-fit:cover;">
+          <div>
+            <div class="mockup-window" style="background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-lg); overflow:hidden; box-shadow:0 16px 40px rgba(0,0,0,0.5);">
+              <div style="padding:0.75rem 1rem; background:var(--bg-surface-2); border-bottom:1px solid var(--border-subtle); display:flex; align-items:center; justify-content:space-between; font-size:0.75rem;">
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <span style="color:var(--accent-primary); font-weight:700;">ARC III</span>
+                  <span style="color:var(--text-muted);">&bull;</span>
+                  <span style="color:var(--text-secondary); font-weight:500;">Scenario: Neo-Tokyo Command Outpost</span>
+                </div>
+                <span class="badge badge-preview" style="font-size:0.6875rem; padding:0.15rem 0.5rem;">Affection: 88% (+6)</span>
+              </div>
+              <div style="padding:1.25rem; display:flex; flex-direction:column; gap:1rem;">
+                <div style="display:flex; gap:1rem; align-items:center; background:var(--bg-surface-0); border:1px solid var(--border-subtle); padding:0.75rem 1rem; border-radius:var(--radius-md);">
+                  <div style="width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg, #E11D48, #881337); display:flex; align-items:center; justify-content:center; color:#FFF; font-weight:700; font-size:0.9375rem; flex-shrink:0;">
+                    AL
+                  </div>
+                  <div>
+                    <div style="font-size:0.875rem; font-weight:700; color:var(--text-primary);">Asuka &bull; Neural Sync Pilot</div>
+                    <div style="font-size:0.75rem; color:var(--text-muted);">Mood: Defiant &bull; Expression: Flustered &bull; Voice: Neural JA</div>
+                  </div>
+                </div>
+                <div style="background:var(--bg-surface-0); border-left:3px solid var(--accent-primary); padding:0.85rem 1rem; border-radius:0 var(--radius-md) var(--radius-md) 0; font-size:0.875rem; color:var(--text-secondary); line-height:1.6;">
+                  <span style="color:var(--accent-hover); font-weight:600;">"Don't get the wrong idea!</span> I only routed auxiliary power to your workstation because your system crash would slow down the entire defensive grid. Don't make me repeat myself, idiot!"
+                </div>
+                <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                  <span class="badge badge-dev" style="font-size:0.6875rem;">14-Field Persona</span>
+                  <span class="badge badge-dev" style="font-size:0.6875rem;">Speech Habit: Tsundere</span>
+                  <span class="badge badge-dev" style="font-size:0.6875rem;">Lore Lock: Persistent</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -690,8 +866,38 @@ function generateEvaPage() {
               <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Long-term memory injection across multi-turn story arcs</li>
             </ul>
           </div>
-          <div style="border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border-medium);">
-            <img src="../eva/assets/photo-ridge.jpg" alt="World Simulator Atmosphere" style="width:100%; height:320px; object-fit:cover;">
+          <div>
+            <div class="mockup-window" style="background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-lg); overflow:hidden; box-shadow:0 16px 40px rgba(0,0,0,0.5);">
+              <div style="padding:0.75rem 1rem; background:var(--bg-surface-2); border-bottom:1px solid var(--border-subtle); display:flex; align-items:center; justify-content:space-between; font-size:0.75rem;">
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <span style="color:var(--accent-primary); font-weight:700;">WORLD SANDBOX</span>
+                  <span style="color:var(--text-muted);">&bull;</span>
+                  <span style="color:var(--text-secondary); font-weight:500;">Sector 9: Nightfall</span>
+                </div>
+                <span class="badge badge-dev" style="font-size:0.6875rem; padding:0.15rem 0.5rem;">Tick Rate: 1.0x &bull; Cycle 42</span>
+              </div>
+              <div style="padding:1.25rem; display:flex; flex-direction:column; gap:0.875rem; font-size:0.8125rem;">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+                  <div style="background:var(--bg-surface-0); border:1px solid var(--border-subtle); padding:0.625rem 0.85rem; border-radius:var(--radius-sm);">
+                    <div style="color:var(--text-muted); font-size:0.6875rem; margin-bottom:0.25rem;">FACTION TENSION</div>
+                    <div style="font-weight:700; color:#F43F5E;">High &bull; 78% Escalation</div>
+                  </div>
+                  <div style="background:var(--bg-surface-0); border:1px solid var(--border-subtle); padding:0.625rem 0.85rem; border-radius:var(--radius-sm);">
+                    <div style="color:var(--text-muted); font-size:0.6875rem; margin-bottom:0.25rem;">PLAYER REPUTATION</div>
+                    <div style="font-weight:700; color:#10B981;">Revered &bull; 92 Affinity</div>
+                  </div>
+                </div>
+                <div style="background:var(--bg-surface-0); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:0.75rem 0.875rem; font-family:var(--font-mono); font-size:0.75rem; line-height:1.6; color:var(--text-secondary);">
+                  <div style="color:var(--accent-hover);">&gt; [18:42:01] EVENT: Blackout triggered across Sector 9 power grid.</div>
+                  <div style="color:var(--text-muted);">&gt; [18:42:05] LORE: The Cyber Syndicate confirms diplomatic pact.</div>
+                  <div style="color:var(--text-primary);">&gt; [18:42:10] PERSIST: Story state variables written to local session.</div>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:var(--text-muted);">
+                  <span>Multi-turn memory retention</span>
+                  <span style="color:var(--accent-primary); font-weight:600;">3 Active Characters</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -707,7 +913,7 @@ function generateEvaPage() {
         <h2 class="title-section reveal delay-100">Every Detail Built for Control</h2>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
+      <div class="grid-2x2">
         <div class="card reveal delay-100">
           <div class="badge badge-dev" style="margin-bottom:1rem;">14-FIELD GENERATOR</div>
           <h3 class="title-card" style="margin-bottom:0.75rem;">Independent Persona Section Regeneration</h3>
@@ -1095,7 +1301,7 @@ function generateAstraPage() {
     <div class="ambient-flare flare-crimson" style="top:-80px; left:50%; width:600px; height:600px; transform:translateX(-50%);"></div>
     <div class="container" style="text-align:center; position:relative; z-index:2;">
       <div style="display:inline-flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem;" class="reveal">
-        <img src="../astra/assets/icon.png" alt="Astra Icon" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+        <img src="../shared/assets/icons/astra.png" alt="Astra Icon" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.4);">
         <span class="badge badge-preview" style="font-size:0.8125rem;">${astra.version} Pre-release</span>
       </div>
 
@@ -1145,7 +1351,7 @@ function generateAstraPage() {
         </p>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:2rem;">
+      <div class="grid-3col">
         
         <div class="card reveal delay-100">
           <div class="badge badge-stable" style="margin-bottom:1rem;">TIER 1 &bull; LOW RISK</div>
@@ -1474,7 +1680,7 @@ function generateAstraOsPage() {
     <div class="ambient-flare flare-crimson" style="top:-80px; left:50%; width:650px; height:650px; transform:translateX(-50%);"></div>
     <div class="container" style="text-align:center; position:relative; z-index:2;">
       <div style="display:inline-flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem;" class="reveal">
-        <img src="../astra-os/assets/astraos-logo.svg" alt="AstraOS Logo" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+        <img src="../shared/assets/icons/astra-os.svg" alt="AstraOS Logo" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.4);">
         <span class="badge badge-dev" style="font-size:0.8125rem;">${astraOs.version}</span>
       </div>
 
@@ -1524,7 +1730,7 @@ function generateAstraOsPage() {
         </p>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
+      <div class="grid-2x2">
         
         <div class="card reveal delay-100">
           <div class="badge badge-dev" style="margin-bottom:1rem;">WINDOW COMPOSITOR</div>

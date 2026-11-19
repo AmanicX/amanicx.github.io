@@ -33,6 +33,8 @@ if (existsSync(join(REPO_ROOT, 'astra'))) {
   mkdirSync(join(astraTarget, 'releases'), { recursive: true });
   mkdirSync(join(astraTarget, 'shared'), { recursive: true });
 
+  mkdirSync(join(astraTarget, 'assets'), { recursive: true });
+  cpSync(join(ROOT, 'shared/assets/icons/astra.png'), join(astraTarget, 'assets/icon.png'));
   cpSync(join(ROOT, 'astra/index.html'), join(astraTarget, 'index.html'));
   cpSync(join(ROOT, 'astra/catalog/index.html'), join(astraTarget, 'catalog/index.html'));
   cpSync(join(ROOT, 'astra/releases/index.html'), join(astraTarget, 'releases/index.html'));
@@ -50,6 +52,8 @@ if (existsSync(astraOsTarget)) {
   mkdirSync(join(astraOsTarget, 'releases'), { recursive: true });
   mkdirSync(join(astraOsTarget, 'shared'), { recursive: true });
 
+  mkdirSync(join(astraOsTarget, 'assets'), { recursive: true });
+  cpSync(join(ROOT, 'shared/assets/icons/astra-os.svg'), join(astraOsTarget, 'assets/astraos-logo.svg'));
   cpSync(join(ROOT, 'astra-os/index.html'), join(astraOsTarget, 'index.html'));
   cpSync(join(ROOT, 'astra-os/catalog/index.html'), join(astraOsTarget, 'catalog/index.html'));
   cpSync(join(ROOT, 'astra-os/releases/index.html'), join(astraOsTarget, 'releases/index.html'));
