@@ -1,0 +1,272 @@
+{
+  "brand": {
+    "name": "AmanicX",
+    "domain": "https://amanicx.github.io",
+    "tagline": "Software Systems for Autonomy & Control",
+    "description": "AmanicX creates privacy-first AI studios, intelligent local desktop assistants, and custom Linux distributions engineered with intention.",
+    "accent": "#E11D48",
+    "github": "https://github.com/AmanicX"
+  },
+  "projects": [
+    {
+      "id": "eva",
+      "name": "Eva",
+      "tagline": "Characters with a world of their own",
+      "short_description": "A privacy-first, multi-theme, memory-aware AI character and world conversation studio for Desktop, Android, and Web.",
+      "full_description": "Eva is an advanced client studio for chatting with and designing multi-dimensional AI characters. Unlike typical single-prompt web interfaces, Eva gives you a complete creative canvas: design deep personas across 14 distinct psychological fields with independent section regeneration, drop them into evolving worlds with dynamic reputation and lore tracking, and connect to any model (Groq, OpenRouter, OpenAI, or offline Ollama/LM Studio) with 100% local privacy and zero telemetry.",
+      "category": "AI Character & Conversation Studio",
+      "status": "Stable",
+      "status_code": "stable",
+      "version": "v2.2.2",
+      "release_date": "November 19, 2026",
+      "license": "MIT",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "Arch Linux",
+        "macOS",
+        "Android"
+      ],
+      "tags": [
+        "AI Companion",
+        "Multi-Theme",
+        "Roleplay",
+        "World Sim",
+        "BYOK",
+        "Privacy-First",
+        "Offline Models",
+        "Android 16"
+      ],
+      "icon": "eva/assets/icon.png",
+      "hero_image": "eva/assets/app-showcase.png",
+      "website_url": "/eva/",
+      "catalog_url": "/eva/catalog/",
+      "releases_url": "/eva/releases/",
+      "github_url": "https://github.com/AmanicX/eva",
+      "highlights": [
+        "Three tailored visual studios: Companion Chatbot, Anime Roleplay, and World Simulator",
+        "14-field Persona Generator with section-by-section independent regeneration",
+        "Universal BYOK: Groq, OpenRouter, OpenAI, and fully offline Ollama/LM Studio",
+        "Edge-to-edge Android 16 APK + Windows, Linux, and Apple Silicon builds"
+      ],
+      "key_features": [
+        {
+          "title": "Three Distinct Studios",
+          "description": "Minimalist companion assistant, vibrant anime character roleplay, and a deep narrative world simulator with factions and state variables."
+        },
+        {
+          "title": "Independent Persona Regeneration",
+          "description": "Craft detailed 14-field character profiles and regenerate individual sections like speech patterns or backstories without altering the rest."
+        },
+        {
+          "title": "Zero-Telemetry Architecture",
+          "description": "Your chats, character definitions, API keys, and memory snapshots never touch an intermediary cloud server."
+        },
+        {
+          "title": "Cross-Platform Ecosystem",
+          "description": "Available natively on Windows 10/11, Arch Linux (native pacman), universal AppImage, deb, rpm, Apple Silicon macOS, and edge-to-edge Android."
+        }
+      ],
+      "install_methods": {
+        "arch": {
+          "label": "Arch Linux (Native Pacman)",
+          "command": "sudo pacman -U https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.pacman",
+          "note": "Installs the verified pre-built package directly into your system package database without requiring AUR account or compilation."
+        },
+        "arch_appimage": {
+          "label": "Arch / Linux (User-Space Script)",
+          "command": "mkdir -p ~/.local/bin && curl -fsSL https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.AppImage -o ~/.local/bin/eva && chmod +x ~/.local/bin/eva",
+          "note": "Portable single-binary installation directly into your user path. No root privileges required."
+        },
+        "debian": {
+          "label": "Ubuntu / Debian (.deb)",
+          "command": "curl -LO https://github.com/AmanicX/eva/releases/download/v2.2.2/eva_2.2.2_amd64.deb && sudo dpkg -i eva_2.2.2_amd64.deb",
+          "note": "Native Debian/Ubuntu package with desktop shortcut and icon registration."
+        },
+        "fedora": {
+          "label": "Fedora / RHEL (.rpm)",
+          "command": "sudo dnf install https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.x86_64.rpm",
+          "note": "Direct RPM package install via dnf."
+        },
+        "windows": {
+          "label": "Windows 10 / 11 (.exe)",
+          "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-Setup-2.2.2.exe",
+          "note": "Full NSIS installer with frameless frosted glass desktop interface."
+        },
+        "macos": {
+          "label": "macOS Apple Silicon (.dmg)",
+          "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.dmg",
+          "note": "Optimized arm64 binary for M1/M2/M3/M4 Apple Silicon Macs."
+        },
+        "android": {
+          "label": "Android APK",
+          "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-android.apk",
+          "note": "Edge-to-edge APK compatible with Android 8.0 through Android 16 (API 36). Requires enabling Unknown Sources for your browser/file manager."
+        }
+      }
+    },
+    {
+      "id": "astra",
+      "name": "Astra",
+      "tagline": "Permission-safe AI desktop assistant",
+      "short_description": "A local-first AI desktop assistant for Windows and Linux with voice control, intelligent automation, and a risk-gated native permission engine.",
+      "full_description": "Astra is a local-first, permission-safe desktop AI assistant built on Tauri and Rust. Astra is not a chat box: it understands natural language and executes real work across your operating system through a typed, risk-gated tool system. From system control (audio, brightness, network, theme) to app launching, authorized shell execution, file management with automatic backups, web research, and screen vision analysis, every consequential action is approved by a native permission engine in the shell before execution.",
+      "category": "AI Desktop Assistant & OS Automation",
+      "status": "Pre-Release",
+      "status_code": "preview",
+      "version": "v0.1.0-pre.1",
+      "release_date": "October 17, 2026",
+      "license": "Apache-2.0",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "Arch Linux"
+      ],
+      "tags": [
+        "Desktop Assistant",
+        "Tauri",
+        "Rust",
+        "Voice Control",
+        "OS Automation",
+        "Permission Engine",
+        "Whisper",
+        "Local SQLite"
+      ],
+      "icon": "astra/assets/icon.png",
+      "hero_image": "astra/assets/og.png",
+      "website_url": "/astra/",
+      "catalog_url": "/astra/catalog/",
+      "releases_url": "/astra/releases/",
+      "github_url": "https://github.com/AmanicX/astra",
+      "highlights": [
+        "Three-tier native permission engine (low / moderate / high) protecting system security",
+        "Deep OS control: volume, brightness, Wi-Fi, Bluetooth, wallpaper, shell, and backups",
+        "Push-to-talk voice with Groq Whisper transcription and neural speech synthesis",
+        "Dual window: full conversation workspace + compact always-on-top global overlay"
+      ],
+      "key_features": [
+        {
+          "title": "Three-Tier Permission Engine",
+          "description": "High-risk actions require explicit user approval. Web content can never grant privileges, and AI models cannot bypass native shell gates."
+        },
+        {
+          "title": "Native OS Control & Tools",
+          "description": "Automate routine tasks: launch applications, inspect displays, adjust volume/brightness, capture screens with vision analysis, and run authorized commands."
+        },
+        {
+          "title": "Voice Interaction Suite",
+          "description": "Global shortcut push-to-talk, lightning-fast Groq Whisper transcription, and Edge neural TTS with offline system-voice fallback."
+        },
+        {
+          "title": "Dual Window Architecture",
+          "description": "Work in the full conversation workspace or summon the minimalist floating overlay whenever you need quick answers or actions."
+        }
+      ],
+      "install_methods": {
+        "windows": {
+          "label": "Windows 11 Installer (.exe / .msi)",
+          "download_url": "https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_x64-setup.exe",
+          "msi_url": "https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_x64_en-US.msi",
+          "note": "Official pre-release bundle for Windows 11. Requires WebView2 runtime."
+        },
+        "linux_appimage": {
+          "label": "Linux Universal AppImage",
+          "download_url": "https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_amd64.AppImage",
+          "command": "mkdir -p ~/.local/bin && curl -fsSL https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_amd64.AppImage -o ~/.local/bin/astra && chmod +x ~/.local/bin/astra",
+          "note": "Portable AppImage for Arch Linux, Ubuntu, Fedora, and Debian."
+        },
+        "fedora": {
+          "label": "Fedora / RHEL (.rpm)",
+          "download_url": "https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra-0.1.0-1.x86_64.rpm",
+          "command": "sudo dnf install https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra-0.1.0-1.x86_64.rpm",
+          "note": "Direct RPM package installation."
+        },
+        "arch": {
+          "label": "Arch Linux (Source / AppImage Script)",
+          "command": "git clone https://github.com/AmanicX/astra.git && cd astra && ./scripts/install-arch.sh",
+          "note": "Builds and configures Astra natively under /opt/astra with desktop entries."
+        }
+      }
+    },
+    {
+      "id": "astra-os",
+      "name": "AstraOS",
+      "tagline": "Design-focused Arch Linux with Niri & Noctalia",
+      "short_description": "A curated, design-driven Arch-based Linux distribution featuring the Niri scrollable tiling compositor and Noctalia v5 desktop shell.",
+      "full_description": "AstraOS is a curated Arch-based Linux distribution for developers and power users who want a coherent, quiet, and beautiful desktop without assembling it themselves. It pairs the horizontal scrollable tiling model of Niri with the Noctalia v5 shell, shipping with a pinned package archive snapshot, seeded Kitty terminal with Oh My Posh, pre-baked LazyVim editor, Btrfs subvolumes, custom SDDM Astronaut theme, and custom system tools.",
+      "category": "Operating System / Linux Distribution",
+      "status": "In Development",
+      "status_code": "dev",
+      "version": "v1.0 Preview",
+      "release_date": "Active Development",
+      "license": "MIT",
+      "platforms": [
+        "x86_64 UEFI"
+      ],
+      "tags": [
+        "Arch Linux",
+        "Niri",
+        "Noctalia v5",
+        "Wayland",
+        "LazyVim",
+        "Kitty",
+        "Btrfs",
+        "UEFI"
+      ],
+      "icon": "astra-os/assets/astraos-logo.svg",
+      "hero_image": "astra-os/assets/wallpaper.png",
+      "website_url": "/astra-os/",
+      "catalog_url": "/astra-os/catalog/",
+      "releases_url": "/astra-os/releases/",
+      "github_url": "https://github.com/AmanicX/astra-os",
+      "highlights": [
+        "Niri Wayland compositor with infinite horizontal scrollable tiling",
+        "Noctalia v5 dynamic shell with widgets, launchers, and system status",
+        "Pre-configured development stack: Kitty, Zsh, Oh My Posh, and LazyVim",
+        "Production Btrfs layout (@, @home, @snapshots) with UEFI boot"
+      ],
+      "key_features": [
+        {
+          "title": "Niri Scrollable Tiling",
+          "description": "Windows arrange themselves along an infinite horizontal ribbon. Move across workspaces fluidly with trackpad gestures or keyboard shortcuts."
+        },
+        {
+          "title": "Noctalia v5 Desktop Shell",
+          "description": "Integrated Wayland control center, application launcher (Super+Space), notifications, audio mixer, and system monitors."
+        },
+        {
+          "title": "Pre-Baked Developer Environment",
+          "description": "Kitty GPU terminal with Oh My Posh 1_shell prompt, Neovim with LazyVim pre-installed and pre-cached, and fastfetch."
+        },
+        {
+          "title": "Robust Btrfs Foundation",
+          "description": "Partitioned with dedicated subvolumes for root, home, snapshots, and pacman cache. Pinned Arch Linux Archive snapshot ensures reproducible builds."
+        }
+      ],
+      "system_requirements": {
+        "cpu": "64-bit x86_64 processor (Intel Core i3 / AMD Ryzen 3 or higher)",
+        "ram": "4 GB RAM minimum (8 GB recommended)",
+        "storage": "25 GB free disk space (Btrfs root filesystem)",
+        "firmware": "UEFI firmware only (CSM/Legacy not supported; Secure Boot disabled)",
+        "graphics": "Intel / AMD open graphics (Mesa); NVIDIA proprietary 580xx series supported"
+      },
+      "install_methods": {
+        "build_iso": {
+          "label": "Build ISO from Source (Arch Linux Host)",
+          "command": "git clone https://github.com/AmanicX/astra-os.git && cd astra-os && sudo ./scripts/build-iso.sh",
+          "note": "Requires archiso, git, base-devel, and 15 GiB free disk space. Produces a bootable astraos-*.iso."
+        },
+        "usb_flash": {
+          "label": "Flash to USB Stick",
+          "command": "sudo dd if=astraos-v1-x86_64.iso of=/dev/sdX bs=4M status=progress conv=fsync",
+          "note": "Write the bootable image to a USB flash drive. Boot in UEFI mode with Secure Boot disabled."
+        },
+        "live_session": {
+          "label": "Live Desktop Credentials",
+          "command": "User: astra | Password: astra | Root: passwordless sudo in live session",
+          "note": "Boots straight into Niri + Noctalia desktop. Launch installer with Super + Space."
+        }
+      }
+    }
+  ]
+}

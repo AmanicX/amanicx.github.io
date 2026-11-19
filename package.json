@@ -1,0 +1,14 @@
+{
+  "name": "amanicx-ecosystem-website",
+  "version": "1.0.0",
+  "description": "Unified public website ecosystem for AmanicX software projects",
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-releases.mjs",
+    "build": "node scripts/build.mjs",
+    "export": "node scripts/export-to-repos.mjs",
+    "test": "node scripts/test-ecosystem.mjs"
+  },
+  "author": "AmanicX",
+  "license": "MIT"
+}

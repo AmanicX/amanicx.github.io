@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Application Catalog | AmanicX</title>
+  <meta name="description" content="Search and explore all projects in the AmanicX software ecosystem.">
+  <link rel="canonical" href="https://amanicx.github.io/apps/">
+  <meta name="theme-color" content="#0B0D12">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Application Catalog | AmanicX">
+  <meta property="og:description" content="Search and explore all projects in the AmanicX software ecosystem.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amanicx.github.io/apps/">
+  <meta property="og:image" content="https://amanicx.github.io/shared/assets/favicon.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Application Catalog | AmanicX">
+  <meta name="twitter:description" content="Search and explore all projects in the AmanicX software ecosystem.">
+  <meta name="twitter:image" content="https://amanicx.github.io/shared/assets/favicon.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../shared/assets/favicon.svg">
+
+  <!-- Unified Stylesheets -->
+  <link rel="stylesheet" href="../shared/styles/design-system.css">
+  <link rel="stylesheet" href="../shared/styles/motion.css">
+
+  <!-- Instant Theme Script (Zero-FOUC) -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('amanicx_theme') || 'system';
+        var effective = theme === 'system' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+        document.documentElement.setAttribute('data-theme', effective);
+        document.documentElement.setAttribute('data-theme-setting', theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div id="scroll-progress"></div>
+
+    <!-- Floating Pill Navigation (Nexora Inspired) -->
+  <div class="nav-wrapper">
+    <header class="nav-bar">
+      <a href="../" class="nav-brand" aria-label="AmanicX Ecosystem Home">
+        <img class="nav-brand-mark" src="../shared/assets/favicon.svg" alt="AmanicX" width="26" height="26">
+        <span>AmanicX</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="../" class="nav-link ">Overview</a>
+        <a href="../apps/" class="nav-link active">Apps</a>
+        <a href="../eva/" class="nav-link ">Eva</a>
+        <a href="../astra/" class="nav-link ">Astra</a>
+        <a href="../astra-os/" class="nav-link ">AstraOS</a>
+      </nav>
+
+      <div class="nav-controls">
+        <div class="theme-switcher" role="group" aria-label="Theme mode switcher">
+          <button class="theme-btn" data-mode="dark" title="Dark Theme" aria-label="Dark Theme">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+          <button class="theme-btn" data-mode="light" title="Light Theme" aria-label="Light Theme">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          </button>
+          <button class="theme-btn" data-mode="system" title="System Theme" aria-label="System Theme">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+          </button>
+        </div>
+
+        <a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub Profile">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </header>
+  </div>
+
+
+  <section class="section-lg" style="position:relative;">
+    <div class="ambient-flare flare-crimson" style="top:-50px; right:15%; width:500px; height:500px;"></div>
+    <div class="container">
+      <div style="margin-bottom:3.5rem;">
+        <div class="eyebrow reveal">SOFTWARE REGISTRY</div>
+        <h1 class="title-section reveal delay-100" style="margin-bottom:1rem;">Application Catalog</h1>
+        <p class="lead reveal delay-200">
+          A centralized, searchable registry of all active projects in the AmanicX software ecosystem with verified release status and direct native download assets.
+        </p>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="card card-glass reveal delay-300" style="margin-bottom:3rem; padding:1.25rem 1.75rem;">
+        <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:1rem; align-items:center;">
+          <div style="position:relative;">
+            <input type="text" id="catalog-search" placeholder="Search by name, tags, description, or features..." 
+              style="width:100%; padding:0.75rem 1rem 0.75rem 2.5rem; background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-full); font-size:0.9375rem; color:var(--text-primary);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position:absolute; left:1rem; top:50%; transform:translateY(-50%); color:var(--text-muted);">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </div>
+
+          <div>
+            <select id="filter-category" style="width:100%; padding:0.75rem 1rem; background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-full); font-size:0.875rem; color:var(--text-primary); cursor:pointer;">
+              <option value="all">All Categories</option>
+              <option value="AI Character">AI Character & Studio</option>
+              <option value="Assistant">Desktop Assistant</option>
+              <option value="Operating System">Operating System</option>
+            </select>
+          </div>
+
+          <div>
+            <select id="filter-platform" style="width:100%; padding:0.75rem 1rem; background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-full); font-size:0.875rem; color:var(--text-primary); cursor:pointer;">
+              <option value="all">All Platforms</option>
+              <option value="Linux">Linux (Pacman / AppImage)</option>
+              <option value="Windows">Windows (EXE / MSI)</option>
+              <option value="macOS">macOS (Apple Silicon)</option>
+              <option value="Android">Android (APK)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1rem; padding-top:1rem; border-top:1px solid var(--border-subtle); font-size:0.8125rem; color:var(--text-muted);">
+          <span id="catalog-count">3 Projects Available</span>
+          <span>Filtered live against verified repository metadata</span>
+        </div>
+      </div>
+
+      <!-- Catalog Project List -->
+      <div id="catalog-list" style="display:flex; flex-direction:column; gap:2rem;">
+        
+          <article class="card catalog-item reveal" 
+            data-name="Eva" 
+            data-desc="A privacy-first, multi-theme, memory-aware AI character and world conversation studio for Desktop, Android, and Web." 
+            data-tags="AI Companion Multi-Theme Roleplay World Sim BYOK Privacy-First Offline Models Android 16" 
+            data-category="AI Character & Conversation Studio" 
+            data-platforms="Windows Linux Arch Linux macOS Android"
+            style="display:grid; grid-template-columns:1fr 2fr; gap:2.5rem; align-items:center;">
+            
+            <div>
+              <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                <img src="../eva/assets/icon.png" alt="Eva logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3);">
+                <div>
+                  <h2 class="title-card" style="font-size:1.5rem;">Eva</h2>
+                  <span style="font-size:0.8125rem; color:var(--text-muted);">AI Character & Conversation Studio</span>
+                </div>
+              </div>
+              <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:1.5rem;">
+                <span class="badge badge-stable">
+                  v2.2.2 &bull; Stable
+                </span>
+                <span style="font-size:0.75rem; color:var(--text-muted);">License: MIT</span>
+              </div>
+              <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1.5rem;">
+                Eva is an advanced client studio for chatting with and designing multi-dimensional AI characters. Unlike typical single-prompt web interfaces, Eva gives you a complete creative canvas: design deep personas across 14 distinct psychological fields with independent section regeneration, drop them into evolving worlds with dynamic reputation and lore tracking, and connect to any model (Groq, OpenRouter, OpenAI, or offline Ollama/LM Studio) with 100% local privacy and zero telemetry.
+              </p>
+              <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                <a href="../eva/" class="btn btn-sm btn-primary">Visit Project Website</a>
+                <a href="../eva/releases/" class="btn btn-sm btn-secondary">Downloads & Releases</a>
+                <a href="../eva/catalog/" class="btn btn-sm btn-ghost">Changelog</a>
+              </div>
+            </div>
+
+            <div style="background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-lg); padding:1.5rem;">
+              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:1rem;">Key Highlights</div>
+              <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.5rem;">
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Three tailored visual studios: Companion Chatbot, Anime Roleplay, and World Simulator</span>
+                  </li>
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>14-field Persona Generator with section-by-section independent regeneration</span>
+                  </li>
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Universal BYOK: Groq, OpenRouter, OpenAI, and fully offline Ollama/LM Studio</span>
+                  </li>
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Edge-to-edge Android 16 APK + Windows, Linux, and Apple Silicon builds</span>
+                  </li>
+                
+              </ul>
+
+              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Supported Platforms</div>
+              <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:1.25rem;">
+                <span class="badge badge-dev" style="font-size:0.75rem;">Windows</span><span class="badge badge-dev" style="font-size:0.75rem;">Linux</span><span class="badge badge-dev" style="font-size:0.75rem;">Arch Linux</span><span class="badge badge-dev" style="font-size:0.75rem;">macOS</span><span class="badge badge-dev" style="font-size:0.75rem;">Android</span>
+              </div>
+
+              
+                <div style="margin-top:1rem;">
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.35rem;">Quick Install (Arch Linux Native)</div>
+                  <div class="cmd-box">
+                    <code style="font-size:0.75rem;">sudo pacman -U https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.pacman</code>
+                    <button class="copy-btn" data-copy-text="sudo pacman -U https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.pacman" title="Copy command" aria-label="Copy command">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                    </button>
+                  </div>
+                </div>
+              
+            </div>
+
+          </article>
+        
+          <article class="card catalog-item reveal" 
+            data-name="Astra" 
+            data-desc="A local-first AI desktop assistant for Windows and Linux with voice control, intelligent automation, and a risk-gated native permission engine." 
+            data-tags="Desktop Assistant Tauri Rust Voice Control OS Automation Permission Engine Whisper Local SQLite" 
+            data-category="AI Desktop Assistant & OS Automation" 
+            data-platforms="Windows Linux Arch Linux"
+            style="display:grid; grid-template-columns:1fr 2fr; gap:2.5rem; align-items:center;">
+            
+            <div>
+              <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                <img src="../astra/assets/icon.png" alt="Astra logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3);">
+                <div>
+                  <h2 class="title-card" style="font-size:1.5rem;">Astra</h2>
+                  <span style="font-size:0.8125rem; color:var(--text-muted);">AI Desktop Assistant & OS Automation</span>
+                </div>
+              </div>
+              <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:1.5rem;">
+                <span class="badge badge-preview">
+                  v0.1.0-pre.1 &bull; Pre-Release
+                </span>
+                <span style="font-size:0.75rem; color:var(--text-muted);">License: Apache-2.0</span>
+              </div>
+              <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1.5rem;">
+                Astra is a local-first, permission-safe desktop AI assistant built on Tauri and Rust. Astra is not a chat box: it understands natural language and executes real work across your operating system through a typed, risk-gated tool system. From system control (audio, brightness, network, theme) to app launching, authorized shell execution, file management with automatic backups, web research, and screen vision analysis, every consequential action is approved by a native permission engine in the shell before execution.
+              </p>
+              <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                <a href="../astra/" class="btn btn-sm btn-primary">Visit Project Website</a>
+                <a href="../astra/releases/" class="btn btn-sm btn-secondary">Downloads & Releases</a>
+                <a href="../astra/catalog/" class="btn btn-sm btn-ghost">Changelog</a>
+              </div>
+            </div>
+
+            <div style="background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-lg); padding:1.5rem;">
+              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:1rem;">Key Highlights</div>
+              <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.5rem;">
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Three-tier native permission engine (low / moderate / high) protecting system security</span>
+                  </li>
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Deep OS control: volume, brightness, Wi-Fi, Bluetooth, wallpaper, shell, and backups</span>
+                  </li>
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Push-to-talk voice with Groq Whisper transcription and neural speech synthesis</span>
+                  </li>
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Dual window: full conversation workspace + compact always-on-top global overlay</span>
+                  </li>
+                
+              </ul>
+
+              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Supported Platforms</div>
+              <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:1.25rem;">
+                <span class="badge badge-dev" style="font-size:0.75rem;">Windows</span><span class="badge badge-dev" style="font-size:0.75rem;">Linux</span><span class="badge badge-dev" style="font-size:0.75rem;">Arch Linux</span>
+              </div>
+
+              
+                <div style="margin-top:1rem;">
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.35rem;">Quick Install (Arch Linux Native)</div>
+                  <div class="cmd-box">
+                    <code style="font-size:0.75rem;">git clone https://github.com/AmanicX/astra.git && cd astra && ./scripts/install-arch.sh</code>
+                    <button class="copy-btn" data-copy-text="git clone https://github.com/AmanicX/astra.git && cd astra && ./scripts/install-arch.sh" title="Copy command" aria-label="Copy command">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                    </button>
+                  </div>
+                </div>
+              
+            </div>
+
+          </article>
+        
+          <article class="card catalog-item reveal" 
+            data-name="AstraOS" 
+            data-desc="A curated, design-driven Arch-based Linux distribution featuring the Niri scrollable tiling compositor and Noctalia v5 desktop shell." 
+            data-tags="Arch Linux Niri Noctalia v5 Wayland LazyVim Kitty Btrfs UEFI" 
+            data-category="Operating System / Linux Distribution" 
+            data-platforms="x86_64 UEFI"
+            style="display:grid; grid-template-columns:1fr 2fr; gap:2.5rem; align-items:center;">
+            
+            <div>
+              <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                <img src="../astra-os/assets/astraos-logo.svg" alt="AstraOS logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3);">
+                <div>
+                  <h2 class="title-card" style="font-size:1.5rem;">AstraOS</h2>
+                  <span style="font-size:0.8125rem; color:var(--text-muted);">Operating System / Linux Distribution</span>
+                </div>
+              </div>
+              <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:1.5rem;">
+                <span class="badge badge-dev">
+                  v1.0 Preview &bull; In Development
+                </span>
+                <span style="font-size:0.75rem; color:var(--text-muted);">License: MIT</span>
+              </div>
+              <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1.5rem;">
+                AstraOS is a curated Arch-based Linux distribution for developers and power users who want a coherent, quiet, and beautiful desktop without assembling it themselves. It pairs the horizontal scrollable tiling model of Niri with the Noctalia v5 shell, shipping with a pinned package archive snapshot, seeded Kitty terminal with Oh My Posh, pre-baked LazyVim editor, Btrfs subvolumes, custom SDDM Astronaut theme, and custom system tools.
+              </p>
+              <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                <a href="../astra-os/" class="btn btn-sm btn-primary">Visit Project Website</a>
+                <a href="../astra-os/releases/" class="btn btn-sm btn-secondary">Downloads & Releases</a>
+                <a href="../astra-os/catalog/" class="btn btn-sm btn-ghost">Changelog</a>
+              </div>
+            </div>
+
+            <div style="background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-lg); padding:1.5rem;">
+              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:1rem;">Key Highlights</div>
+              <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.5rem;">
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Niri Wayland compositor with infinite horizontal scrollable tiling</span>
+                  </li>
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Noctalia v5 dynamic shell with widgets, launchers, and system status</span>
+                  </li>
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Pre-configured development stack: Kitty, Zsh, Oh My Posh, and LazyVim</span>
+                  </li>
+                
+                  <li style="display:flex; align-items:center; gap:0.625rem; font-size:0.875rem; color:var(--text-primary);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Production Btrfs layout (@, @home, @snapshots) with UEFI boot</span>
+                  </li>
+                
+              </ul>
+
+              <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Supported Platforms</div>
+              <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:1.25rem;">
+                <span class="badge badge-dev" style="font-size:0.75rem;">x86_64 UEFI</span>
+              </div>
+
+              
+            </div>
+
+          </article>
+        
+      </div>
+
+      <!-- Empty State -->
+      <div id="catalog-empty-state" class="card" style="display:none; text-align:center; padding:4rem 2rem; margin-top:2rem;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="1.5" style="margin:0 auto 1.5rem;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <h3 class="title-card" style="margin-bottom:0.5rem;">No matching software found</h3>
+        <p style="color:var(--text-secondary); max-width:480px; margin:0 auto 1.5rem;">We could not find any projects matching your current search or filter combination.</p>
+        <button class="btn btn-secondary" onclick="document.getElementById('catalog-search').value=''; document.getElementById('filter-category').value='all'; document.getElementById('filter-platform').value='all'; document.getElementById('catalog-search').dispatchEvent(new Event('input'));">Reset All Filters</button>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- Unified Ecosystem Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:0.625rem; font-weight:700; font-size:1.125rem; margin-bottom:0.75rem;">
+            <img src="../shared/assets/favicon.svg" alt="AmanicX" width="24" height="24">
+            <span>AmanicX Ecosystem</span>
+          </div>
+          <p style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1.25rem;">
+            Software systems engineered for autonomy, control, and privacy. Built with open standards and verified local performance.
+          </p>
+          <div class="badge badge-dev">CRIMSON SYSTEM</div>
+        </div>
+
+        <div>
+          <div class="footer-title">Software Projects</div>
+          <ul class="footer-links">
+            <li><a href="../eva/">Eva Studio</a></li>
+            <li><a href="../astra/">Astra Assistant</a></li>
+            <li><a href="../astra-os/">AstraOS Linux</a></li>
+            <li><a href="../apps/">Application Catalog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Releases & Docs</div>
+          <ul class="footer-links">
+            <li><a href="../eva/releases/">Eva Downloads (v2.2.2)</a></li>
+            <li><a href="../astra/releases/">Astra Downloads (v0.1.0-pre)</a></li>
+            <li><a href="../astra-os/releases/">AstraOS Build & ISO</a></li>
+            <li><a href="../eva/catalog/">Eva Evolution Catalog</a></li>
+            <li><a href="../astra/catalog/">Astra Architecture</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Community & Source</div>
+          <ul class="footer-links">
+            <li><a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer">GitHub Organization</a></li>
+            <li><a href="https://github.com/AmanicX/eva" target="_blank" rel="noopener noreferrer">Eva Repository</a></li>
+            <li><a href="https://github.com/AmanicX/astra" target="_blank" rel="noopener noreferrer">Astra Repository</a></li>
+            <li><a href="https://github.com/AmanicX/astra-os" target="_blank" rel="noopener noreferrer">AstraOS Repository</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AmanicX. Released under open-source licenses (MIT & Apache-2.0).</div>
+        <div>Hosted natively on GitHub Pages with automated release sync.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../shared/scripts/theme.js"></script>
+  <script src="../shared/scripts/motion.js"></script>
+  <script src="../shared/scripts/ecosystem-client.js"></script>
+</body>
+</html>
+

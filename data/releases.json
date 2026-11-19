@@ -1,0 +1,1134 @@
+{
+  "generated_at": "2026-11-19T17:00:53.783Z",
+  "projects": {
+    "eva": {
+      "latest_stable": "v2.2.2",
+      "latest_release_date": "2026-11-19T16:00:35Z",
+      "releases": [
+        {
+          "tag": "v2.2.2",
+          "name": "2.2.2",
+          "published_at": "2026-11-19T16:00:35Z",
+          "prerelease": false,
+          "html_url": "https://github.com/AmanicX/eva/releases/tag/v2.2.2",
+          "body": "",
+          "assets": [
+            {
+              "name": "Eva-2.2.2-arm64-mac.zip",
+              "size": 134977521,
+              "size_formatted": "128.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2-arm64-mac.zip",
+              "platform": "macos",
+              "pkg_type": "zip"
+            },
+            {
+              "name": "Eva-2.2.2-arm64-mac.zip.blockmap",
+              "size": 141660,
+              "size_formatted": "138.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2-arm64-mac.zip.blockmap",
+              "platform": "macos",
+              "pkg_type": "zip"
+            },
+            {
+              "name": "Eva-2.2.2.AppImage",
+              "size": 132372844,
+              "size_formatted": "126.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.AppImage",
+              "platform": "linux",
+              "pkg_type": "appimage"
+            },
+            {
+              "name": "Eva-2.2.2.dmg",
+              "size": 134880594,
+              "size_formatted": "128.6 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.dmg",
+              "platform": "macos",
+              "pkg_type": "dmg"
+            },
+            {
+              "name": "Eva-2.2.2.dmg.blockmap",
+              "size": 141417,
+              "size_formatted": "138.1 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.dmg.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "eva-2.2.2.pacman",
+              "size": 94709568,
+              "size_formatted": "90.3 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.pacman",
+              "platform": "linux",
+              "pkg_type": "pacman"
+            },
+            {
+              "name": "eva-2.2.2.x86_64.rpm",
+              "size": 90941218,
+              "size_formatted": "86.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.x86_64.rpm",
+              "platform": "linux",
+              "pkg_type": "rpm"
+            },
+            {
+              "name": "Eva-android.apk",
+              "size": 3763236,
+              "size_formatted": "3.6 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-android.apk",
+              "platform": "android",
+              "pkg_type": "apk"
+            },
+            {
+              "name": "Eva-Setup-2.2.2.exe",
+              "size": 115538508,
+              "size_formatted": "110.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-Setup-2.2.2.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Eva-Setup-2.2.2.exe.blockmap",
+              "size": 121665,
+              "size_formatted": "118.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-Setup-2.2.2.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Eva.Setup.2.2.2.exe",
+              "size": 115538508,
+              "size_formatted": "110.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva.Setup.2.2.2.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Eva.Setup.2.2.2.exe.blockmap",
+              "size": 121665,
+              "size_formatted": "118.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva.Setup.2.2.2.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "eva_2.2.2_amd64.deb",
+              "size": 103493068,
+              "size_formatted": "98.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/eva_2.2.2_amd64.deb",
+              "platform": "linux",
+              "pkg_type": "deb"
+            },
+            {
+              "name": "latest-linux.yml",
+              "size": 804,
+              "size_formatted": "0.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/latest-linux.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest-mac.yml",
+              "size": 487,
+              "size_formatted": "0.5 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/latest-mac.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest.yml",
+              "size": 335,
+              "size_formatted": "0.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.2/latest.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            }
+          ]
+        },
+        {
+          "tag": "v2.2.1",
+          "name": "2.2.1",
+          "published_at": "2026-11-19T12:44:08Z",
+          "prerelease": false,
+          "html_url": "https://github.com/AmanicX/eva/releases/tag/v2.2.1",
+          "body": "**Full Changelog**: https://github.com/AmanicX/eva/compare/v2.1.0...v2.2.1\n\n**Full Changelog**: https://github.com/AmanicX/eva/compare/v2.2.0...v2.2.1",
+          "assets": [
+            {
+              "name": "Eva-2.2.1-arm64-mac.zip",
+              "size": 134977527,
+              "size_formatted": "128.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/Eva-2.2.1-arm64-mac.zip",
+              "platform": "macos",
+              "pkg_type": "zip"
+            },
+            {
+              "name": "Eva-2.2.1-arm64-mac.zip.blockmap",
+              "size": 141617,
+              "size_formatted": "138.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/Eva-2.2.1-arm64-mac.zip.blockmap",
+              "platform": "macos",
+              "pkg_type": "zip"
+            },
+            {
+              "name": "Eva-2.2.1.AppImage",
+              "size": 132372820,
+              "size_formatted": "126.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/Eva-2.2.1.AppImage",
+              "platform": "linux",
+              "pkg_type": "appimage"
+            },
+            {
+              "name": "Eva-2.2.1.dmg",
+              "size": 134880808,
+              "size_formatted": "128.6 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/Eva-2.2.1.dmg",
+              "platform": "macos",
+              "pkg_type": "dmg"
+            },
+            {
+              "name": "Eva-2.2.1.dmg.blockmap",
+              "size": 141536,
+              "size_formatted": "138.2 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/Eva-2.2.1.dmg.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "eva-2.2.1.pacman",
+              "size": 94702872,
+              "size_formatted": "90.3 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/eva-2.2.1.pacman",
+              "platform": "linux",
+              "pkg_type": "pacman"
+            },
+            {
+              "name": "eva-2.2.1.x86_64.rpm",
+              "size": 90940722,
+              "size_formatted": "86.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/eva-2.2.1.x86_64.rpm",
+              "platform": "linux",
+              "pkg_type": "rpm"
+            },
+            {
+              "name": "Eva-android.apk",
+              "size": 3763249,
+              "size_formatted": "3.6 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/Eva-android.apk",
+              "platform": "android",
+              "pkg_type": "apk"
+            },
+            {
+              "name": "Eva-Setup-2.2.1.exe",
+              "size": 115555190,
+              "size_formatted": "110.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/Eva-Setup-2.2.1.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Eva-Setup-2.2.1.exe.blockmap",
+              "size": 121671,
+              "size_formatted": "118.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/Eva-Setup-2.2.1.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Eva.Setup.2.2.1.exe",
+              "size": 115539325,
+              "size_formatted": "110.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/Eva.Setup.2.2.1.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Eva.Setup.2.2.1.exe.blockmap",
+              "size": 121710,
+              "size_formatted": "118.9 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/Eva.Setup.2.2.1.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "eva_2.2.1_amd64.deb",
+              "size": 103494036,
+              "size_formatted": "98.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/eva_2.2.1_amd64.deb",
+              "platform": "linux",
+              "pkg_type": "deb"
+            },
+            {
+              "name": "latest-linux.yml",
+              "size": 804,
+              "size_formatted": "0.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/latest-linux.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest-mac.yml",
+              "size": 487,
+              "size_formatted": "0.5 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/latest-mac.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest.yml",
+              "size": 335,
+              "size_formatted": "0.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.1/latest.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            }
+          ]
+        },
+        {
+          "tag": "v2.2.0",
+          "name": "2.2.0",
+          "published_at": "2026-11-19T08:20:04Z",
+          "prerelease": false,
+          "html_url": "https://github.com/AmanicX/eva/releases/tag/v2.2.0",
+          "body": "",
+          "assets": [
+            {
+              "name": "Eva-2.2.0-arm64-mac.zip",
+              "size": 134978264,
+              "size_formatted": "128.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/Eva-2.2.0-arm64-mac.zip",
+              "platform": "macos",
+              "pkg_type": "zip"
+            },
+            {
+              "name": "Eva-2.2.0-arm64-mac.zip.blockmap",
+              "size": 141598,
+              "size_formatted": "138.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/Eva-2.2.0-arm64-mac.zip.blockmap",
+              "platform": "macos",
+              "pkg_type": "zip"
+            },
+            {
+              "name": "Eva-2.2.0.AppImage",
+              "size": 132376814,
+              "size_formatted": "126.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/Eva-2.2.0.AppImage",
+              "platform": "linux",
+              "pkg_type": "appimage"
+            },
+            {
+              "name": "Eva-2.2.0.dmg",
+              "size": 134885280,
+              "size_formatted": "128.6 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/Eva-2.2.0.dmg",
+              "platform": "macos",
+              "pkg_type": "dmg"
+            },
+            {
+              "name": "Eva-2.2.0.dmg.blockmap",
+              "size": 141592,
+              "size_formatted": "138.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/Eva-2.2.0.dmg.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "eva-2.2.0.pacman",
+              "size": 94702948,
+              "size_formatted": "90.3 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/eva-2.2.0.pacman",
+              "platform": "linux",
+              "pkg_type": "pacman"
+            },
+            {
+              "name": "eva-2.2.0.x86_64.rpm",
+              "size": 90942742,
+              "size_formatted": "86.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/eva-2.2.0.x86_64.rpm",
+              "platform": "linux",
+              "pkg_type": "rpm"
+            },
+            {
+              "name": "Eva-android.apk",
+              "size": 3764158,
+              "size_formatted": "3.6 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/Eva-android.apk",
+              "platform": "android",
+              "pkg_type": "apk"
+            },
+            {
+              "name": "Eva-Setup-2.2.0.exe",
+              "size": 115539537,
+              "size_formatted": "110.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/Eva-Setup-2.2.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Eva-Setup-2.2.0.exe.blockmap",
+              "size": 121846,
+              "size_formatted": "119.0 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/Eva-Setup-2.2.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Eva.Setup.2.2.0.exe",
+              "size": 115539537,
+              "size_formatted": "110.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/Eva.Setup.2.2.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Eva.Setup.2.2.0.exe.blockmap",
+              "size": 121846,
+              "size_formatted": "119.0 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/Eva.Setup.2.2.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "eva_2.2.0_amd64.deb",
+              "size": 103494056,
+              "size_formatted": "98.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/eva_2.2.0_amd64.deb",
+              "platform": "linux",
+              "pkg_type": "deb"
+            },
+            {
+              "name": "latest-linux.yml",
+              "size": 804,
+              "size_formatted": "0.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/latest-linux.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest-mac.yml",
+              "size": 487,
+              "size_formatted": "0.5 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/latest-mac.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest.yml",
+              "size": 335,
+              "size_formatted": "0.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.2.0/latest.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            }
+          ]
+        },
+        {
+          "tag": "v2.1.0",
+          "name": "2.1.0",
+          "published_at": "2026-11-16T22:05:06Z",
+          "prerelease": false,
+          "html_url": "https://github.com/AmanicX/eva/releases/tag/v2.1.0",
+          "body": "",
+          "assets": [
+            {
+              "name": "Eva-2.1.0-arm64-mac.zip",
+              "size": 134995283,
+              "size_formatted": "128.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/Eva-2.1.0-arm64-mac.zip",
+              "platform": "macos",
+              "pkg_type": "zip"
+            },
+            {
+              "name": "Eva-2.1.0-arm64-mac.zip.blockmap",
+              "size": 141905,
+              "size_formatted": "138.6 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/Eva-2.1.0-arm64-mac.zip.blockmap",
+              "platform": "macos",
+              "pkg_type": "zip"
+            },
+            {
+              "name": "Eva-2.1.0.AppImage",
+              "size": 132372711,
+              "size_formatted": "126.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/Eva-2.1.0.AppImage",
+              "platform": "linux",
+              "pkg_type": "appimage"
+            },
+            {
+              "name": "Eva-2.1.0.dmg",
+              "size": 134948793,
+              "size_formatted": "128.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/Eva-2.1.0.dmg",
+              "platform": "macos",
+              "pkg_type": "dmg"
+            },
+            {
+              "name": "Eva-2.1.0.dmg.blockmap",
+              "size": 142510,
+              "size_formatted": "139.2 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/Eva-2.1.0.dmg.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "eva-2.1.0.pacman",
+              "size": 94719184,
+              "size_formatted": "90.3 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/eva-2.1.0.pacman",
+              "platform": "linux",
+              "pkg_type": "pacman"
+            },
+            {
+              "name": "eva-2.1.0.x86_64.rpm",
+              "size": 90952854,
+              "size_formatted": "86.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/eva-2.1.0.x86_64.rpm",
+              "platform": "linux",
+              "pkg_type": "rpm"
+            },
+            {
+              "name": "Eva-android.apk",
+              "size": 3777110,
+              "size_formatted": "3.6 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/Eva-android.apk",
+              "platform": "android",
+              "pkg_type": "apk"
+            },
+            {
+              "name": "Eva-Setup-2.1.0.exe",
+              "size": 115550976,
+              "size_formatted": "110.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/Eva-Setup-2.1.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Eva-Setup-2.1.0.exe.blockmap",
+              "size": 121813,
+              "size_formatted": "119.0 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/Eva-Setup-2.1.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Eva.Setup.2.1.0.exe",
+              "size": 115550976,
+              "size_formatted": "110.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/Eva.Setup.2.1.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Eva.Setup.2.1.0.exe.blockmap",
+              "size": 121813,
+              "size_formatted": "119.0 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/Eva.Setup.2.1.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "eva_2.1.0_amd64.deb",
+              "size": 103498080,
+              "size_formatted": "98.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/eva_2.1.0_amd64.deb",
+              "platform": "linux",
+              "pkg_type": "deb"
+            },
+            {
+              "name": "latest-linux.yml",
+              "size": 804,
+              "size_formatted": "0.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/latest-linux.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest-mac.yml",
+              "size": 487,
+              "size_formatted": "0.5 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/latest-mac.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest.yml",
+              "size": 335,
+              "size_formatted": "0.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.1.0/latest.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            }
+          ]
+        },
+        {
+          "tag": "v2.0.0",
+          "name": "2.0.0",
+          "published_at": "2026-11-15T11:04:26Z",
+          "prerelease": false,
+          "html_url": "https://github.com/AmanicX/eva/releases/tag/v2.0.0",
+          "body": "**Full Changelog**: https://github.com/AmanicX/eva/compare/v1.3.0...v2.0.0",
+          "assets": [
+            {
+              "name": "Eva-2.0.0.AppImage",
+              "size": 132286963,
+              "size_formatted": "126.2 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.0.0/Eva-2.0.0.AppImage",
+              "platform": "linux",
+              "pkg_type": "appimage"
+            },
+            {
+              "name": "eva-2.0.0.pacman",
+              "size": 94712428,
+              "size_formatted": "90.3 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.0.0/eva-2.0.0.pacman",
+              "platform": "linux",
+              "pkg_type": "pacman"
+            },
+            {
+              "name": "eva-2.0.0.x86_64.rpm",
+              "size": 90896106,
+              "size_formatted": "86.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.0.0/eva-2.0.0.x86_64.rpm",
+              "platform": "linux",
+              "pkg_type": "rpm"
+            },
+            {
+              "name": "Eva-android.apk",
+              "size": 3712152,
+              "size_formatted": "3.5 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.0.0/Eva-android.apk",
+              "platform": "android",
+              "pkg_type": "apk"
+            },
+            {
+              "name": "Eva-Setup-2.0.0.exe",
+              "size": 115449730,
+              "size_formatted": "110.1 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.0.0/Eva-Setup-2.0.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Eva-Setup-2.0.0.exe.blockmap",
+              "size": 121698,
+              "size_formatted": "118.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.0.0/Eva-Setup-2.0.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Eva.Setup.2.0.0.exe",
+              "size": 115467166,
+              "size_formatted": "110.1 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.0.0/Eva.Setup.2.0.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Eva.Setup.2.0.0.exe.blockmap",
+              "size": 122017,
+              "size_formatted": "119.2 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.0.0/Eva.Setup.2.0.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "eva_2.0.0_amd64.deb",
+              "size": 103477508,
+              "size_formatted": "98.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.0.0/eva_2.0.0_amd64.deb",
+              "platform": "linux",
+              "pkg_type": "deb"
+            },
+            {
+              "name": "latest-linux.yml",
+              "size": 804,
+              "size_formatted": "0.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.0.0/latest-linux.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest.yml",
+              "size": 335,
+              "size_formatted": "0.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v2.0.0/latest.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            }
+          ]
+        },
+        {
+          "tag": "v1.3.0",
+          "name": "1.3.0",
+          "published_at": "2026-10-17T15:20:17Z",
+          "prerelease": false,
+          "html_url": "https://github.com/AmanicX/eva/releases/tag/v1.3.0",
+          "body": "",
+          "assets": [
+            {
+              "name": "latest-linux.yml",
+              "size": 814,
+              "size_formatted": "0.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.3.0/latest-linux.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest.yml",
+              "size": 339,
+              "size_formatted": "0.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.3.0/latest.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Nexus-1.3.0.AppImage",
+              "size": 132422057,
+              "size_formatted": "126.3 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.3.0/Nexus-1.3.0.AppImage",
+              "platform": "linux",
+              "pkg_type": "appimage"
+            },
+            {
+              "name": "nexus-1.3.0.pacman",
+              "size": 94169872,
+              "size_formatted": "89.8 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.3.0/nexus-1.3.0.pacman",
+              "platform": "linux",
+              "pkg_type": "pacman"
+            },
+            {
+              "name": "nexus-1.3.0.x86_64.rpm",
+              "size": 91196293,
+              "size_formatted": "87.0 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.3.0/nexus-1.3.0.x86_64.rpm",
+              "platform": "linux",
+              "pkg_type": "rpm"
+            },
+            {
+              "name": "Nexus-android.apk",
+              "size": 3969697,
+              "size_formatted": "3.8 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.3.0/Nexus-android.apk",
+              "platform": "android",
+              "pkg_type": "apk"
+            },
+            {
+              "name": "Nexus-Setup-1.3.0.exe",
+              "size": 115742939,
+              "size_formatted": "110.4 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.3.0/Nexus-Setup-1.3.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Nexus-Setup-1.3.0.exe.blockmap",
+              "size": 122237,
+              "size_formatted": "119.4 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.3.0/Nexus-Setup-1.3.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Nexus.Setup.1.3.0.exe",
+              "size": 115742939,
+              "size_formatted": "110.4 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.3.0/Nexus.Setup.1.3.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Nexus.Setup.1.3.0.exe.blockmap",
+              "size": 122237,
+              "size_formatted": "119.4 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.3.0/Nexus.Setup.1.3.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "nexus_1.3.0_amd64.deb",
+              "size": 102827752,
+              "size_formatted": "98.1 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.3.0/nexus_1.3.0_amd64.deb",
+              "platform": "linux",
+              "pkg_type": "deb"
+            }
+          ]
+        },
+        {
+          "tag": "v1.2.1",
+          "name": "1.2.1",
+          "published_at": "2026-10-17T14:24:01Z",
+          "prerelease": false,
+          "html_url": "https://github.com/AmanicX/eva/releases/tag/v1.2.1",
+          "body": "Changes:\r\n\r\n1. Changed the age to be only 18+\r\n2. Made a new android .apk build\r\n3. made a new web app which can be used on anything",
+          "assets": [
+            {
+              "name": "latest-linux.yml",
+              "size": 814,
+              "size_formatted": "0.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.1/latest-linux.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest.yml",
+              "size": 339,
+              "size_formatted": "0.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.1/latest.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Nexus-1.2.1.AppImage",
+              "size": 132417907,
+              "size_formatted": "126.3 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.1/Nexus-1.2.1.AppImage",
+              "platform": "linux",
+              "pkg_type": "appimage"
+            },
+            {
+              "name": "nexus-1.2.1.pacman",
+              "size": 94177344,
+              "size_formatted": "89.8 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.1/nexus-1.2.1.pacman",
+              "platform": "linux",
+              "pkg_type": "pacman"
+            },
+            {
+              "name": "nexus-1.2.1.x86_64.rpm",
+              "size": 91201909,
+              "size_formatted": "87.0 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.1/nexus-1.2.1.x86_64.rpm",
+              "platform": "linux",
+              "pkg_type": "rpm"
+            },
+            {
+              "name": "Nexus-android.apk",
+              "size": 3966829,
+              "size_formatted": "3.8 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.1/Nexus-android.apk",
+              "platform": "android",
+              "pkg_type": "apk"
+            },
+            {
+              "name": "Nexus-Setup-1.2.1.exe",
+              "size": 115741081,
+              "size_formatted": "110.4 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.1/Nexus-Setup-1.2.1.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Nexus-Setup-1.2.1.exe.blockmap",
+              "size": 122227,
+              "size_formatted": "119.4 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.1/Nexus-Setup-1.2.1.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "nexus_1.2.1_amd64.deb",
+              "size": 102826644,
+              "size_formatted": "98.1 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.1/nexus_1.2.1_amd64.deb",
+              "platform": "linux",
+              "pkg_type": "deb"
+            }
+          ]
+        },
+        {
+          "tag": "v1.2.0",
+          "name": "1.2.0",
+          "published_at": "2026-10-17T11:59:59Z",
+          "prerelease": false,
+          "html_url": "https://github.com/AmanicX/eva/releases/tag/v1.2.0",
+          "body": "",
+          "assets": [
+            {
+              "name": "latest-linux.yml",
+              "size": 814,
+              "size_formatted": "0.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.0/latest-linux.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest.yml",
+              "size": 339,
+              "size_formatted": "0.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.0/latest.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Nexus-1.2.0.AppImage",
+              "size": 132413844,
+              "size_formatted": "126.3 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.0/Nexus-1.2.0.AppImage",
+              "platform": "linux",
+              "pkg_type": "appimage"
+            },
+            {
+              "name": "nexus-1.2.0.pacman",
+              "size": 94178672,
+              "size_formatted": "89.8 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.0/nexus-1.2.0.pacman",
+              "platform": "linux",
+              "pkg_type": "pacman"
+            },
+            {
+              "name": "nexus-1.2.0.x86_64.rpm",
+              "size": 91202493,
+              "size_formatted": "87.0 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.0/nexus-1.2.0.x86_64.rpm",
+              "platform": "linux",
+              "pkg_type": "rpm"
+            },
+            {
+              "name": "Nexus-Setup-1.2.0.exe",
+              "size": 115739984,
+              "size_formatted": "110.4 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.0/Nexus-Setup-1.2.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Nexus-Setup-1.2.0.exe.blockmap",
+              "size": 122244,
+              "size_formatted": "119.4 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.0/Nexus-Setup-1.2.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Nexus.Setup.1.2.0.exe",
+              "size": 115739984,
+              "size_formatted": "110.4 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.0/Nexus.Setup.1.2.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Nexus.Setup.1.2.0.exe.blockmap",
+              "size": 122244,
+              "size_formatted": "119.4 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.0/Nexus.Setup.1.2.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "nexus_1.2.0_amd64.deb",
+              "size": 102826432,
+              "size_formatted": "98.1 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.2.0/nexus_1.2.0_amd64.deb",
+              "platform": "linux",
+              "pkg_type": "deb"
+            }
+          ]
+        },
+        {
+          "tag": "v1.1.0",
+          "name": "1.1.0",
+          "published_at": "2026-10-15T12:36:41Z",
+          "prerelease": false,
+          "html_url": "https://github.com/AmanicX/eva/releases/tag/v1.1.0",
+          "body": "",
+          "assets": [
+            {
+              "name": "latest-linux.yml",
+              "size": 814,
+              "size_formatted": "0.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.1.0/latest-linux.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest.yml",
+              "size": 339,
+              "size_formatted": "0.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.1.0/latest.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Nexus-1.1.0.AppImage",
+              "size": 131962906,
+              "size_formatted": "125.8 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.1.0/Nexus-1.1.0.AppImage",
+              "platform": "linux",
+              "pkg_type": "appimage"
+            },
+            {
+              "name": "nexus-1.1.0.pacman",
+              "size": 93782808,
+              "size_formatted": "89.4 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.1.0/nexus-1.1.0.pacman",
+              "platform": "linux",
+              "pkg_type": "pacman"
+            },
+            {
+              "name": "nexus-1.1.0.x86_64.rpm",
+              "size": 90816665,
+              "size_formatted": "86.6 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.1.0/nexus-1.1.0.x86_64.rpm",
+              "platform": "linux",
+              "pkg_type": "rpm"
+            },
+            {
+              "name": "Nexus-Setup-1.1.0.exe",
+              "size": 115289800,
+              "size_formatted": "109.9 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.1.0/Nexus-Setup-1.1.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Nexus-Setup-1.1.0.exe.blockmap",
+              "size": 121988,
+              "size_formatted": "119.1 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.1.0/Nexus-Setup-1.1.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "nexus_1.1.0_amd64.deb",
+              "size": 102416176,
+              "size_formatted": "97.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.1.0/nexus_1.1.0_amd64.deb",
+              "platform": "linux",
+              "pkg_type": "deb"
+            }
+          ]
+        },
+        {
+          "tag": "v1.0.0",
+          "name": "1.0.0",
+          "published_at": "2026-10-15T11:54:31Z",
+          "prerelease": false,
+          "html_url": "https://github.com/AmanicX/eva/releases/tag/v1.0.0",
+          "body": "",
+          "assets": [
+            {
+              "name": "latest-linux.yml",
+              "size": 814,
+              "size_formatted": "0.8 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.0.0/latest-linux.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "latest.yml",
+              "size": 339,
+              "size_formatted": "0.3 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.0.0/latest.yml",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "Nexus-1.0.0.AppImage",
+              "size": 131962944,
+              "size_formatted": "125.8 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.0.0/Nexus-1.0.0.AppImage",
+              "platform": "linux",
+              "pkg_type": "appimage"
+            },
+            {
+              "name": "nexus-1.0.0.pacman",
+              "size": 93774796,
+              "size_formatted": "89.4 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.0.0/nexus-1.0.0.pacman",
+              "platform": "linux",
+              "pkg_type": "pacman"
+            },
+            {
+              "name": "nexus-1.0.0.x86_64.rpm",
+              "size": 90800757,
+              "size_formatted": "86.6 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.0.0/nexus-1.0.0.x86_64.rpm",
+              "platform": "linux",
+              "pkg_type": "rpm"
+            },
+            {
+              "name": "Nexus-Setup-1.0.0.exe",
+              "size": 115288107,
+              "size_formatted": "109.9 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.0.0/Nexus-Setup-1.0.0.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Nexus-Setup-1.0.0.exe.blockmap",
+              "size": 121912,
+              "size_formatted": "119.1 KB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.0.0/Nexus-Setup-1.0.0.exe.blockmap",
+              "platform": "meta",
+              "pkg_type": "metadata"
+            },
+            {
+              "name": "nexus_1.0.0_amd64.deb",
+              "size": 102414692,
+              "size_formatted": "97.7 MB",
+              "download_url": "https://github.com/AmanicX/eva/releases/download/v1.0.0/nexus_1.0.0_amd64.deb",
+              "platform": "linux",
+              "pkg_type": "deb"
+            }
+          ]
+        }
+      ]
+    },
+    "astra": {
+      "latest_stable": null,
+      "latest_prerelease": "v0.1.0-pre.1",
+      "latest_release_date": "2026-10-17T18:13:06Z",
+      "releases": [
+        {
+          "tag": "v0.1.0-pre.1",
+          "name": "Astra v0.1.0-pre.1",
+          "published_at": "2026-10-17T18:13:06Z",
+          "prerelease": true,
+          "html_url": "https://github.com/AmanicX/astra/releases/tag/v0.1.0-pre.1",
+          "body": "Pre-release testing build. Download the package for your platform below.\n\n- **Windows** - `.exe` (NSIS) or `.msi`\n- **Fedora / RHEL** - `.rpm`\n- **Arch / other Linux** - `.AppImage` (portable)\n\nAstra is local-first: you supply your own API key in Settings after installing.",
+          "assets": [
+            {
+              "name": "Astra-0.1.0-1.x86_64.rpm",
+              "size": 8956899,
+              "size_formatted": "8.5 MB",
+              "download_url": "https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra-0.1.0-1.x86_64.rpm",
+              "platform": "linux",
+              "pkg_type": "rpm"
+            },
+            {
+              "name": "Astra_0.1.0_amd64.AppImage",
+              "size": 118532600,
+              "size_formatted": "113.0 MB",
+              "download_url": "https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_amd64.AppImage",
+              "platform": "linux",
+              "pkg_type": "appimage"
+            },
+            {
+              "name": "Astra_0.1.0_x64-setup.exe",
+              "size": 5991769,
+              "size_formatted": "5.7 MB",
+              "download_url": "https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_x64-setup.exe",
+              "platform": "windows",
+              "pkg_type": "installer"
+            },
+            {
+              "name": "Astra_0.1.0_x64_en-US.msi",
+              "size": 7974912,
+              "size_formatted": "7.6 MB",
+              "download_url": "https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_x64_en-US.msi",
+              "platform": "windows",
+              "pkg_type": "msi"
+            }
+          ]
+        }
+      ]
+    },
+    "astra-os": {
+      "latest_stable": null,
+      "latest_prerelease": null,
+      "status": "Development Preview",
+      "releases": []
+    }
+  }
+}

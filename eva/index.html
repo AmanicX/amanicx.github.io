@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Eva Studio — Characters with a world of their own | AmanicX</title>
+  <meta name="description" content="Eva is an advanced client studio for chatting with and designing multi-dimensional AI characters. Unlike typical single-prompt web interfaces, Eva gives you a complete creative canvas: design deep personas across 14 distinct psychological fields with independent section regeneration, drop them into evolving worlds with dynamic reputation and lore tracking, and connect to any model (Groq, OpenRouter, OpenAI, or offline Ollama/LM Studio) with 100% local privacy and zero telemetry.">
+  <link rel="canonical" href="https://amanicx.github.io/eva/">
+  <meta name="theme-color" content="#0B0D12">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Eva Studio — Characters with a world of their own | AmanicX">
+  <meta property="og:description" content="Eva is an advanced client studio for chatting with and designing multi-dimensional AI characters. Unlike typical single-prompt web interfaces, Eva gives you a complete creative canvas: design deep personas across 14 distinct psychological fields with independent section regeneration, drop them into evolving worlds with dynamic reputation and lore tracking, and connect to any model (Groq, OpenRouter, OpenAI, or offline Ollama/LM Studio) with 100% local privacy and zero telemetry.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amanicx.github.io/eva/">
+  <meta property="og:image" content="https://amanicx.github.io/eva/assets/icon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Eva Studio — Characters with a world of their own | AmanicX">
+  <meta name="twitter:description" content="Eva is an advanced client studio for chatting with and designing multi-dimensional AI characters. Unlike typical single-prompt web interfaces, Eva gives you a complete creative canvas: design deep personas across 14 distinct psychological fields with independent section regeneration, drop them into evolving worlds with dynamic reputation and lore tracking, and connect to any model (Groq, OpenRouter, OpenAI, or offline Ollama/LM Studio) with 100% local privacy and zero telemetry.">
+  <meta name="twitter:image" content="https://amanicx.github.io/eva/assets/icon.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../shared/assets/favicon.svg">
+
+  <!-- Unified Stylesheets -->
+  <link rel="stylesheet" href="../shared/styles/design-system.css">
+  <link rel="stylesheet" href="../shared/styles/motion.css">
+
+  <!-- Instant Theme Script (Zero-FOUC) -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('amanicx_theme') || 'system';
+        var effective = theme === 'system' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+        document.documentElement.setAttribute('data-theme', effective);
+        document.documentElement.setAttribute('data-theme-setting', theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div id="scroll-progress"></div>
+
+    <!-- Floating Pill Navigation (Nexora Inspired) -->
+  <div class="nav-wrapper">
+    <header class="nav-bar">
+      <a href="../" class="nav-brand" aria-label="AmanicX Ecosystem Home">
+        <img class="nav-brand-mark" src="../shared/assets/favicon.svg" alt="AmanicX" width="26" height="26">
+        <span>AmanicX</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="../" class="nav-link ">Overview</a>
+        <a href="../apps/" class="nav-link ">Apps</a>
+        <a href="../eva/" class="nav-link active">Eva</a>
+        <a href="../astra/" class="nav-link ">Astra</a>
+        <a href="../astra-os/" class="nav-link ">AstraOS</a>
+      </nav>
+
+      <div class="nav-controls">
+        <div class="theme-switcher" role="group" aria-label="Theme mode switcher">
+          <button class="theme-btn" data-mode="dark" title="Dark Theme" aria-label="Dark Theme">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+          <button class="theme-btn" data-mode="light" title="Light Theme" aria-label="Light Theme">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          </button>
+          <button class="theme-btn" data-mode="system" title="System Theme" aria-label="System Theme">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+          </button>
+        </div>
+
+        <a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub Profile">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </header>
+  </div>
+
+
+  <!-- Eva Hero -->
+  <section class="section-lg" style="position:relative; overflow:hidden;">
+    <div class="ambient-flare flare-crimson" style="top:-80px; left:50%; width:600px; height:600px; transform:translateX(-50%);"></div>
+    <div class="container" style="text-align:center; position:relative; z-index:2;">
+      <div style="display:inline-flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem;" class="reveal">
+        <img src="../eva/assets/icon.png" alt="Eva Icon" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+        <span class="badge badge-stable" style="font-size:0.8125rem;">v2.2.2 Stable</span>
+      </div>
+
+      <h1 class="title-display reveal delay-100" style="margin-bottom:1.5rem; max-width:860px; margin-left:auto; margin-right:auto;">
+        Characters with a world of their own
+      </h1>
+      <p class="lead reveal delay-200" style="margin:0 auto 2.5rem;">
+        A privacy-first, multi-theme, memory-aware AI character and world conversation studio for Desktop, Android, and Web.
+      </p>
+
+      <div class="reveal delay-300" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:4rem;">
+        <a href="#download" class="btn btn-lg btn-primary">
+          <span>Download Eva v2.2.2</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <a href="./catalog/" class="btn btn-lg btn-secondary">
+          <span>Evolution Catalog & Changelog</span>
+        </a>
+      </div>
+
+      <!-- App Showcase Preview Mockup -->
+      <div class="reveal delay-400 mockup-window" style="max-width:1040px; margin:0 auto;">
+        <div class="mockup-header">
+          <div class="mockup-dots">
+            <span class="mockup-dot"></span>
+            <span class="mockup-dot"></span>
+            <span class="mockup-dot"></span>
+          </div>
+          <span style="font-size:0.8125rem; color:var(--text-muted); font-family:var(--font-mono);">Eva AI Character Studio — v2.2.2</span>
+          <span class="badge badge-dev" style="padding:0.15rem 0.5rem; font-size:0.7rem;">OBSIDIAN & FROSTED GLASS</span>
+        </div>
+        <div style="background:var(--bg-surface-0); padding:0.5rem; display:flex; justify-content:center;">
+          <img src="../eva/assets/app-showcase.png" alt="Eva Studio Showcase" style="border-radius:var(--radius-md); width:100%; height:auto;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 3 Studios Tab Section -->
+  <section class="section" id="studios" style="background:var(--bg-surface-0); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:3rem;">
+        <div class="eyebrow reveal">THREE DEDICATED STUDIOS</div>
+        <h2 class="title-section reveal delay-100">One App. Three Creative Worlds.</h2>
+        <p class="lead reveal delay-200" style="margin:1rem auto 2.5rem;">
+          Eva ships with three distinct visual modes, each hand-crafted with tailored typography, background atmospherics, and customized interaction dynamics.
+        </p>
+
+        <!-- Studio Tab Buttons -->
+        <div class="tabs-nav reveal delay-300" data-tabs-group="studios">
+          <button class="tab-btn active" data-tab="chatbot">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>Companion Chatbot</span>
+          </button>
+          <button class="tab-btn" data-tab="anime">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+            <span>Anime Roleplay</span>
+          </button>
+          <button class="tab-btn" data-tab="world">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>World Simulator</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Studio Tab 1: Chatbot -->
+      <div data-tab-content="studios" data-tab-pane="chatbot" class="card card-glass" style="display:block;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+          <div>
+            <div class="badge badge-dev" style="margin-bottom:1rem;">STUDIO I &bull; COMPANION</div>
+            <h3 class="title-section" style="font-size:2rem; margin-bottom:1rem;">Minimalist, laser-focused conversation.</h3>
+            <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:1.5rem;">
+              Built for everyday productivity, deep discussions, and thoughtful companion interaction. Features deep obsidian surfaces, crisp typography, and an uncluttered canvas that lets ideas flow.
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem; color:var(--text-primary); font-size:0.9375rem;">
+              <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Obsidian dark surfaces with low cognitive load</li>
+              <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Instant switching between cloud and local Ollama models</li>
+              <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Persistent conversational memory in local SQLite</li>
+            </ul>
+          </div>
+          <div style="border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border-medium);">
+            <img src="../eva/assets/photo-canopy.jpg" alt="Companion Studio Atmosphere" style="width:100%; height:320px; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Studio Tab 2: Anime -->
+      <div data-tab-content="studios" data-tab-pane="anime" class="card card-glass" style="display:none;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+          <div>
+            <div class="badge badge-dev" style="margin-bottom:1rem;">STUDIO II &bull; ANIME ROLEPLAY</div>
+            <h3 class="title-section" style="font-size:2rem; margin-bottom:1rem;">Dynamic character storytelling with backdrops.</h3>
+            <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:1.5rem;">
+              Craft and immerse yourself in canon or original anime characters with expressive dialog, visual backdrops, customizable portraits, and rich multi-turn storytelling.
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem; color:var(--text-primary); font-size:0.9375rem;">
+              <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Rich character persona cards with voice & speech traits</li>
+              <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dynamic scenic backdrops and ambient mood lighting</li>
+              <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Complete uncensored creative canvas on your local machine</li>
+            </ul>
+          </div>
+          <div style="border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border-medium);">
+            <img src="../eva/assets/sky-figure.jpg" alt="Anime Roleplay Atmosphere" style="width:100%; height:320px; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Studio Tab 3: World -->
+      <div data-tab-content="studios" data-tab-pane="world" class="card card-glass" style="display:none;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+          <div>
+            <div class="badge badge-dev" style="margin-bottom:1rem;">STUDIO III &bull; WORLD SIMULATOR</div>
+            <h3 class="title-section" style="font-size:2rem; margin-bottom:1rem;">Deep interactive narrative sandbox.</h3>
+            <p style="color:var(--text-secondary); line-height:1.7; margin-bottom:1.5rem;">
+              Like an interactive fanfiction and RPG engine. Tracks character reputation, world events, political factions, and persistent lore variables across sessions.
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem; color:var(--text-primary); font-size:0.9375rem;">
+              <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dynamic world state variables and event flags</li>
+              <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Character relationship milestones and affinity tracking</li>
+              <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Long-term memory injection across multi-turn story arcs</li>
+            </ul>
+          </div>
+          <div style="border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border-medium);">
+            <img src="../eva/assets/photo-ridge.jpg" alt="World Simulator Atmosphere" style="width:100%; height:320px; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Deep Features Grid -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:4rem;">
+        <div class="eyebrow reveal">ENGINEERED FOR IMMERSION</div>
+        <h2 class="title-section reveal delay-100">Every Detail Built for Control</h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
+        <div class="card reveal delay-100">
+          <div class="badge badge-dev" style="margin-bottom:1rem;">14-FIELD GENERATOR</div>
+          <h3 class="title-card" style="margin-bottom:0.75rem;">Independent Persona Section Regeneration</h3>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Describe any character in freeform natural language. Eva crafts a structured 14-field persona (appearance, psychology, speech habits, greeting). Regenerate any single field independently with custom instructions while preserving the rest of the character.
+          </p>
+        </div>
+
+        <div class="card reveal delay-200">
+          <div class="badge badge-dev" style="margin-bottom:1rem;">FROSTED ACRYLIC UI</div>
+          <h3 class="title-card" style="margin-bottom:0.75rem;">Frameless Translucent Design</h3>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Modern translucent acrylic design with adaptive blur, subtle border highlights, customized accent palettes, and a blended frameless titlebar on desktop.
+          </p>
+        </div>
+
+        <div class="card reveal delay-300">
+          <div class="badge badge-dev" style="margin-bottom:1rem;">BYOK ARCHITECTURE</div>
+          <h3 class="title-card" style="margin-bottom:0.75rem;">Universal Model Freedom</h3>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Connect directly to Groq, OpenRouter, or OpenAI via your personal API keys, or run completely offline with local models via Ollama or LM Studio. Zero intermediary proxy servers.
+          </p>
+        </div>
+
+        <div class="card reveal delay-400">
+          <div class="badge badge-dev" style="margin-bottom:1rem;">ANDROID 16 RUNTIME</div>
+          <h3 class="title-card" style="margin-bottom:0.75rem;">Edge-to-Edge Mobile APK</h3>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Verified Android 16 (API 36) runtime compatibility with safe-area insets, immersive navigation gestures, and streamlined mobile layout that maximizes vertical conversation space.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download & Installation Section -->
+  <section class="section-lg" id="download" style="background:var(--bg-surface-0); border-top:1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:3.5rem;">
+        <div class="eyebrow reveal">NATIVE INSTALLATION</div>
+        <h2 class="title-section reveal delay-100">Get Eva v2.2.2 for Your Device</h2>
+        <p class="lead reveal delay-200" style="margin:1rem auto 0;">
+          All packages are verified, compiled directly from repository source, and hosted on official GitHub releases.
+        </p>
+        <div id="detected-os-notice" class="badge badge-dev" style="margin-top:1rem; display:none;"></div>
+      </div>
+
+      <!-- Platform Selection Tabs -->
+      <div style="max-width:880px; margin:0 auto;" class="reveal delay-300">
+        <div class="tabs-nav" data-tabs-group="eva-dl" style="margin-bottom:2rem; width:100%; justify-content:center; flex-wrap:wrap;">
+          <button class="tab-btn active" data-tab="arch" data-platform="arch">Arch Linux (Pacman)</button>
+          <button class="tab-btn" data-tab="appimage" data-platform="linux">Universal AppImage</button>
+          <button class="tab-btn" data-tab="windows" data-platform="windows">Windows</button>
+          <button class="tab-btn" data-tab="macos" data-platform="macos">macOS (Apple Silicon)</button>
+          <button class="tab-btn" data-tab="android" data-platform="android">Android APK</button>
+          <button class="tab-btn" data-tab="debian" data-platform="debian">Debian / Ubuntu</button>
+        </div>
+
+        <!-- Arch Linux Pane -->
+        <div data-tab-content="eva-dl" data-tab-pane="arch" class="card card-glass" style="display:block;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h3 class="title-card">Arch Linux Native Pacman Install</h3>
+            <span class="badge badge-stable">94.7 MB &bull; Official Package</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); margin-bottom:1rem;">
+            Install Eva directly into your local pacman database without needing an AUR account or compilation:
+          </p>
+          <div class="cmd-box" style="margin-bottom:1.5rem;">
+            <code>sudo pacman -U https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.pacman</code>
+            <button class="copy-btn" data-copy-text="sudo pacman -U https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.pacman" title="Copy Command">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            </button>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.8125rem; color:var(--text-muted);">
+            <span>Uninstall anytime: <code>sudo pacman -R eva</code></span>
+            <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.pacman" class="btn btn-sm btn-primary">Direct .pacman Download</a>
+          </div>
+        </div>
+
+        <!-- Universal AppImage Pane -->
+        <div data-tab-content="eva-dl" data-tab-pane="appimage" class="card card-glass" style="display:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h3 class="title-card">Portable AppImage (Any Linux Distribution)</h3>
+            <span class="badge badge-stable">132.4 MB &bull; Standalone</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); margin-bottom:1rem;">
+            Download and run directly into your user-space path. No root privileges or package manager needed:
+          </p>
+          <div class="cmd-box" style="margin-bottom:1.5rem;">
+            <code>mkdir -p ~/.local/bin && curl -fsSL https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.AppImage -o ~/.local/bin/eva && chmod +x ~/.local/bin/eva</code>
+            <button class="copy-btn" data-copy-text="mkdir -p ~/.local/bin && curl -fsSL https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.AppImage -o ~/.local/bin/eva && chmod +x ~/.local/bin/eva" title="Copy Command">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            </button>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.8125rem; color:var(--text-muted);">
+            <span>Launch by typing <code>eva</code> in your terminal</span>
+            <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.AppImage" class="btn btn-sm btn-primary">Download AppImage</a>
+          </div>
+        </div>
+
+        <!-- Windows Pane -->
+        <div data-tab-content="eva-dl" data-tab-pane="windows" class="card card-glass" style="display:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h3 class="title-card">Windows 10 / 11 Native Installer</h3>
+            <span class="badge badge-stable">115.5 MB &bull; NSIS Setup</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); margin-bottom:1.5rem;">
+            Includes automatic shortcut creation, frameless acrylic titlebar support, and integrated auto-updates.
+          </p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.8125rem; color:var(--text-muted);">Compatible with Windows 10 (1903+) and Windows 11</span>
+            <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-Setup-2.2.2.exe" class="btn btn-primary">Download Eva-Setup-2.2.2.exe</a>
+          </div>
+        </div>
+
+        <!-- macOS Apple Silicon Pane -->
+        <div data-tab-content="eva-dl" data-tab-pane="macos" class="card card-glass" style="display:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h3 class="title-card">macOS Apple Silicon (M1/M2/M3/M4)</h3>
+            <span class="badge badge-stable">134.9 MB &bull; ARM64 DMG</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); margin-bottom:1.5rem;">
+            Optimized natively for Apple Silicon hardware. Drag Eva into your Applications folder.
+          </p>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.8125rem; color:var(--text-muted);">Requires macOS 11.0 Big Sur or later</span>
+            <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.dmg" class="btn btn-primary">Download Eva-2.2.2.dmg</a>
+          </div>
+        </div>
+
+        <!-- Android Pane -->
+        <div data-tab-content="eva-dl" data-tab-pane="android" class="card card-glass" style="display:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h3 class="title-card">Android APK (Universal Native)</h3>
+            <span class="badge badge-stable">3.76 MB &bull; Android 16 Ready</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); margin-bottom:1rem;">
+            Direct APK download for Android phones and tablets. Features edge-to-edge layout and offline model connectivity:
+          </p>
+          <ol style="margin-left:1.5rem; color:var(--text-secondary); font-size:0.875rem; line-height:1.7; margin-bottom:1.5rem;">
+            <li>Download <code>Eva-android.apk</code> using the button below.</li>
+            <li>Tap the downloaded file in your browser or file manager.</li>
+            <li>If prompted, allow "Install unknown apps" for that browser or manager.</li>
+            <li>Complete installation and launch Eva.</li>
+          </ol>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.8125rem; color:var(--text-muted);">Compatible with Android 8.0 up to Android 16 (API 36)</span>
+            <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-android.apk" class="btn btn-primary">Download Eva-android.apk</a>
+          </div>
+        </div>
+
+        <!-- Debian Pane -->
+        <div data-tab-content="eva-dl" data-tab-pane="debian" class="card card-glass" style="display:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h3 class="title-card">Ubuntu / Debian Native Package</h3>
+            <span class="badge badge-stable">103.5 MB &bull; .deb</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); margin-bottom:1rem;">
+            Install via dpkg with standard desktop shortcuts and mime associations:
+          </p>
+          <div class="cmd-box" style="margin-bottom:1.5rem;">
+            <code>curl -LO https://github.com/AmanicX/eva/releases/download/v2.2.2/eva_2.2.2_amd64.deb && sudo dpkg -i eva_2.2.2_amd64.deb</code>
+            <button class="copy-btn" data-copy-text="curl -LO https://github.com/AmanicX/eva/releases/download/v2.2.2/eva_2.2.2_amd64.deb && sudo dpkg -i eva_2.2.2_amd64.deb" title="Copy Command">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            </button>
+          </div>
+          <div style="display:flex; justify-content:flex-end;">
+            <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/eva_2.2.2_amd64.deb" class="btn btn-sm btn-primary">Direct .deb Download</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Release & Catalog Link Bar -->
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="./releases/" class="btn btn-secondary">View Full Release History & Checksums</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Unified Ecosystem Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:0.625rem; font-weight:700; font-size:1.125rem; margin-bottom:0.75rem;">
+            <img src="../shared/assets/favicon.svg" alt="AmanicX" width="24" height="24">
+            <span>AmanicX Ecosystem</span>
+          </div>
+          <p style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1.25rem;">
+            Software systems engineered for autonomy, control, and privacy. Built with open standards and verified local performance.
+          </p>
+          <div class="badge badge-dev">CRIMSON SYSTEM</div>
+        </div>
+
+        <div>
+          <div class="footer-title">Software Projects</div>
+          <ul class="footer-links">
+            <li><a href="../eva/">Eva Studio</a></li>
+            <li><a href="../astra/">Astra Assistant</a></li>
+            <li><a href="../astra-os/">AstraOS Linux</a></li>
+            <li><a href="../apps/">Application Catalog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Releases & Docs</div>
+          <ul class="footer-links">
+            <li><a href="../eva/releases/">Eva Downloads (v2.2.2)</a></li>
+            <li><a href="../astra/releases/">Astra Downloads (v0.1.0-pre)</a></li>
+            <li><a href="../astra-os/releases/">AstraOS Build & ISO</a></li>
+            <li><a href="../eva/catalog/">Eva Evolution Catalog</a></li>
+            <li><a href="../astra/catalog/">Astra Architecture</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Community & Source</div>
+          <ul class="footer-links">
+            <li><a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer">GitHub Organization</a></li>
+            <li><a href="https://github.com/AmanicX/eva" target="_blank" rel="noopener noreferrer">Eva Repository</a></li>
+            <li><a href="https://github.com/AmanicX/astra" target="_blank" rel="noopener noreferrer">Astra Repository</a></li>
+            <li><a href="https://github.com/AmanicX/astra-os" target="_blank" rel="noopener noreferrer">AstraOS Repository</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AmanicX. Released under open-source licenses (MIT & Apache-2.0).</div>
+        <div>Hosted natively on GitHub Pages with automated release sync.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../shared/scripts/theme.js"></script>
+  <script src="../shared/scripts/motion.js"></script>
+  <script src="../shared/scripts/ecosystem-client.js"></script>
+</body>
+</html>
+
