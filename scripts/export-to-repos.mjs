@@ -67,4 +67,15 @@ if (existsSync(evaLinuxTarget)) {
   console.warn('  ⚠️ eva-linux repository not found, skipping');
 }
 
+// 4. Export to AstraOS (../astra-os)
+const astraOsTarget = join(REPO_ROOT, 'astra-os');
+if (existsSync(astraOsTarget)) {
+  mkdirSync(join(astraOsTarget, 'shared'), { recursive: true });
+  cpSync(join(ROOT, 'shared'), join(astraOsTarget, 'shared'), { recursive: true });
+  cpSync(join(ROOT, '.nojekyll'), join(astraOsTarget, '.nojekyll'));
+  console.log(`  ✓ Exported to ${astraOsTarget}/shared/`);
+} else {
+  console.warn('  ⚠️ ../astra-os repository not found, skipping');
+}
+
 console.log('✨ Multi-repo export completed successfully!');

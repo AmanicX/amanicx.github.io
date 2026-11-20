@@ -63,7 +63,7 @@ function renderNav(activeRoute, prefix = '') {
     <header class="nav-bar">
       <a href="${prefix}" class="nav-brand" aria-label="AmanicX Ecosystem Home">
         <img class="nav-brand-mark" src="${prefix}shared/assets/favicon.svg" alt="AmanicX" width="26" height="26">
-        <span>AmanicX</span>
+        <span class="nav-brand-text">AmanicX</span>
       </a>
 
       <nav class="nav-links" aria-label="Main Navigation">
@@ -87,12 +87,110 @@ function renderNav(activeRoute, prefix = '') {
           </button>
         </div>
 
-        <a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" aria-label="GitHub Profile">
+        <a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary nav-github" aria-label="GitHub Profile">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           <span>GitHub</span>
         </a>
+
+        <!-- Mobile Navigation Hamburger Toggle Button -->
+        <button type="button" class="nav-toggle-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <span class="nav-toggle-icon">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+          </span>
+        </button>
       </div>
     </header>
+
+    <!-- Full-Screen Glassmorphic Mobile Drawer -->
+    <div id="mobile-nav-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation" hidden>
+      <div class="mobile-drawer-backdrop" data-action="close-menu"></div>
+      <div class="mobile-drawer-content">
+        <div class="mobile-drawer-header">
+          <div class="nav-brand">
+            <img class="nav-brand-mark" src="${prefix}shared/assets/favicon.svg" alt="AmanicX" width="24" height="24">
+            <span class="nav-brand-text">AmanicX</span>
+          </div>
+          <button type="button" class="mobile-drawer-close" aria-label="Close navigation" data-action="close-menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <div class="mobile-drawer-body">
+          <div class="mobile-drawer-section-label">ECOSYSTEM DIRECTORY</div>
+          <nav class="mobile-nav-links">
+            <a href="${prefix}" class="mobile-nav-link ${activeRoute === 'home' ? 'active' : ''}">
+              <div class="mobile-nav-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="mobile-nav-text">
+                <span class="mobile-nav-title">Overview</span>
+                <span class="mobile-nav-desc">Ecosystem hub and flagship software</span>
+              </div>
+              <svg class="mobile-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+
+            <a href="${prefix}apps/" class="mobile-nav-link ${activeRoute === 'apps' ? 'active' : ''}">
+              <div class="mobile-nav-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+              </div>
+              <div class="mobile-nav-text">
+                <span class="mobile-nav-title">Application Catalog</span>
+                <span class="mobile-nav-desc">Searchable registry and platform releases</span>
+              </div>
+              <svg class="mobile-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+
+            <a href="${prefix}eva/" class="mobile-nav-link ${activeRoute === 'eva' ? 'active' : ''}">
+              <div class="mobile-nav-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="mobile-nav-text">
+                <span class="mobile-nav-title">Eva AI Studio</span>
+                <span class="mobile-nav-desc">Private AI character conversation studio</span>
+              </div>
+              <svg class="mobile-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+
+            <a href="${prefix}astra/" class="mobile-nav-link ${activeRoute === 'astra' ? 'active' : ''}">
+              <div class="mobile-nav-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+              </div>
+              <div class="mobile-nav-text">
+                <span class="mobile-nav-title">Astra Assistant</span>
+                <span class="mobile-nav-desc">Permission-gated desktop assistant & automation</span>
+              </div>
+              <svg class="mobile-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+
+            <a href="${prefix}eva-linux/" class="mobile-nav-link ${activeRoute === 'eva-linux' ? 'active' : ''}">
+              <div class="mobile-nav-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              </div>
+              <div class="mobile-nav-text">
+                <span class="mobile-nav-title">Eva Linux</span>
+                <span class="mobile-nav-desc">Curated Arch Linux distribution</span>
+              </div>
+              <svg class="mobile-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </nav>
+
+          <div class="mobile-drawer-section-label" style="margin-top:1.5rem;">QUICK ACTIONS</div>
+          <div class="mobile-drawer-actions">
+            <a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer" class="btn btn-secondary mobile-action-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span>GitHub Organization Profile</span>
+            </a>
+          </div>
+
+          <div class="mobile-drawer-footer">
+            <span class="badge badge-dev">AMANICX ECOSYSTEM</span>
+            <span style="font-size:0.75rem; color:var(--text-muted);">v2.2 &bull; Open Source</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 `;
 }
@@ -296,7 +394,7 @@ function generateHomePage() {
         A unified ecosystem of privacy-first AI studios, permission-gated desktop automation, and custom Linux operating systems. Designed with intention and built for local performance.
       </p>
 
-      <div class="reveal delay-300" style="display:flex; align-items:center; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:3.5rem;">
+      <div class="hero-actions reveal delay-300">
         <a href="./apps/" class="btn btn-lg btn-primary">
           <span>Explore Application Catalog</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
@@ -307,17 +405,17 @@ function generateHomePage() {
       </div>
 
       <!-- Live Ecosystem Activity Ticker -->
-      <div class="card card-glass reveal delay-400" style="display:inline-flex; align-items:center; gap:1.5rem; padding:0.875rem 1.75rem; border-radius:var(--radius-full); max-width:100%;">
-        <div style="display:flex; align-items:center; gap:0.5rem; font-size:0.8125rem; font-weight:600; color:var(--accent-primary); flex-shrink:0;">
+      <div class="card card-glass live-ticker reveal delay-400">
+        <div class="live-ticker-badge">
           <span class="live-dot"></span>
           LIVE UPDATES
         </div>
-        <div style="height:14px; width:1px; background:var(--border-subtle); flex-shrink:0;"></div>
-        <div style="font-size:0.875rem; color:var(--text-secondary); display:flex; gap:1.5rem; white-space:nowrap; overflow-x:auto;">
-          <span><strong>Eva v2.2.2</strong> released (Universal & Arch pacman)</span>
-          <span>&bull;</span>
+        <div class="live-ticker-sep"></div>
+        <div class="live-ticker-content">
+          <span><strong>Eva v2.2.2</strong> released (Universal &amp; Arch pacman)</span>
+          <span class="ticker-bullet">&bull;</span>
           <span><strong>Astra v0.1.0-pre.1</strong> permission engine testing</span>
-          <span>&bull;</span>
+          <span class="ticker-bullet">&bull;</span>
           <span><strong>Eva Linux v2.0.0</strong> Stable released</span>
         </div>
       </div>
@@ -542,7 +640,7 @@ function generateAppsPage() {
 
       <!-- Search & Filter Controls -->
       <div class="card card-glass card-filter reveal delay-300" style="margin-bottom:3rem; padding:1.25rem 1.75rem; overflow:visible; position:relative; z-index:50;">
-        <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:1rem; align-items:center;">
+        <div class="catalog-filters-grid">
           <div style="position:relative;">
             <input type="text" id="catalog-search" placeholder="Search by name, tags, description, or features..." 
               style="width:100%; padding:0.75rem 1rem 0.75rem 2.5rem; background:var(--bg-surface-1); border:1px solid var(--border-medium); border-radius:var(--radius-full); font-size:0.9375rem; color:var(--text-primary);">
@@ -581,7 +679,7 @@ function generateAppsPage() {
           </div>
         </div>
 
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1rem; padding-top:1rem; border-top:1px solid var(--border-subtle); font-size:0.8125rem; color:var(--text-muted);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1rem; padding-top:1rem; border-top:1px solid var(--border-subtle); font-size:0.8125rem; color:var(--text-muted); flex-wrap:wrap; gap:0.5rem;">
           <span id="catalog-count">${ecosystem.projects.length} Projects Available</span>
           <span>Filtered live against verified repository metadata</span>
         </div>
@@ -590,13 +688,12 @@ function generateAppsPage() {
       <!-- Catalog Project List -->
       <div id="catalog-list" style="display:flex; flex-direction:column; gap:2rem;">
         ${ecosystem.projects.map(p => `
-          <article class="card catalog-item reveal" 
+          <article class="card catalog-item catalog-project-card reveal" 
             data-name="${p.name}" 
             data-desc="${p.short_description}" 
             data-tags="${p.tags.join(' ')}" 
             data-category="${p.category}" 
-            data-platforms="${p.platforms.join(' ')}"
-            style="display:grid; grid-template-columns:1fr 2fr; gap:2.5rem; align-items:center;">
+            data-platforms="${p.platforms.join(' ')}">
             
             <div>
               <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
@@ -703,7 +800,7 @@ function generateEvaPage() {
         ${eva.short_description}
       </p>
 
-      <div class="reveal delay-300" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:4rem;">
+      <div class="hero-actions reveal delay-300">
         <a href="#download" class="btn btn-lg btn-primary">
           <span>Download Eva ${eva.version}</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -760,7 +857,7 @@ function generateEvaPage() {
 
       <!-- Studio Tab 1: Chatbot -->
       <div data-tab-content="studios" data-tab-pane="chatbot" class="card card-glass" style="display:block;">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+        <div class="studio-tab-layout">
           <div>
             <div class="badge badge-dev" style="margin-bottom:1rem;">STUDIO I &bull; COMPANION</div>
             <h3 class="title-section" style="font-size:2rem; margin-bottom:1rem;">Minimalist, laser-focused conversation.</h3>
@@ -797,7 +894,7 @@ function generateEvaPage() {
                     Memory commit complete. 14 psychological vectors synced to encrypted local database. Context affinity: 96.4%. Zero external telemetry recorded.
                   </p>
                 </div>
-                <div style="display:flex; gap:0.5rem; margin-top:0.25rem;">
+                <div style="display:flex; gap:0.5rem; margin-top:0.25rem; flex-wrap:wrap;">
                   <span class="badge badge-dev" style="font-size:0.6875rem;">Ollama Offline Ready</span>
                   <span class="badge badge-dev" style="font-size:0.6875rem;">Local DB: eva_store.db</span>
                 </div>
@@ -809,7 +906,7 @@ function generateEvaPage() {
 
       <!-- Studio Tab 2: Anime -->
       <div data-tab-content="studios" data-tab-pane="anime" class="card card-glass" style="display:none;">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+        <div class="studio-tab-layout">
           <div>
             <div class="badge badge-dev" style="margin-bottom:1rem;">STUDIO II &bull; ANIME ROLEPLAY</div>
             <h3 class="title-section" style="font-size:2rem; margin-bottom:1rem;">Dynamic character storytelling with backdrops.</h3>
@@ -858,7 +955,7 @@ function generateEvaPage() {
 
       <!-- Studio Tab 3: World -->
       <div data-tab-content="studios" data-tab-pane="world" class="card card-glass" style="display:none;">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+        <div class="studio-tab-layout">
           <div>
             <div class="badge badge-dev" style="margin-bottom:1rem;">STUDIO III &bull; WORLD SIMULATOR</div>
             <h3 class="title-section" style="font-size:2rem; margin-bottom:1rem;">Deep interactive narrative sandbox.</h3>
@@ -882,7 +979,16 @@ function generateEvaPage() {
                 <span class="badge badge-dev" style="font-size:0.6875rem; padding:0.15rem 0.5rem;">Tick Rate: 1.0x &bull; Cycle 42</span>
               </div>
               <div style="padding:1.25rem; display:flex; flex-direction:column; gap:0.875rem; font-size:0.8125rem;">
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+                <div class="mockup-stats-grid">
+                  <div style="background:var(--bg-surface-0); border:1px solid var(--border-subtle); padding:0.625rem 0.85rem; border-radius:var(--radius-sm);">
+                    <div style="color:var(--text-muted); font-size:0.6875rem; margin-bottom:0.25rem;">FACTION TENSION</div>
+                    <div style="font-weight:700; color:#F43F5E;">High &bull; 78% Escalation</div>
+                  </div>
+                  <div style="background:var(--bg-surface-0); border:1px solid var(--border-subtle); padding:0.625rem 0.85rem; border-radius:var(--radius-sm);">
+                    <div style="color:var(--text-muted); font-size:0.6875rem; margin-bottom:0.25rem;">PLAYER REPUTATION</div>
+                    <div style="font-weight:700; color:#10B981;">Revered &bull; 92 Affinity</div>
+                  </div>
+                </div>
                   <div style="background:var(--bg-surface-0); border:1px solid var(--border-subtle); padding:0.625rem 0.85rem; border-radius:var(--radius-sm);">
                     <div style="color:var(--text-muted); font-size:0.6875rem; margin-bottom:0.25rem;">FACTION TENSION</div>
                     <div style="font-weight:700; color:#F43F5E;">High &bull; 78% Escalation</div>
@@ -1220,7 +1326,7 @@ function generateEvaReleasesPage() {
           </a>
         </div>
 
-        <div style="overflow-x:auto;">
+        <div class="table-responsive">
           <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9375rem;">
             <thead>
               <tr style="border-bottom:1px solid var(--border-medium); color:var(--text-muted); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em;">
@@ -1249,7 +1355,7 @@ function generateEvaReleasesPage() {
       </div>
 
       <!-- Command Line Install Guide -->
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;" class="reveal delay-400">
+      <div class="grid-2col-responsive reveal delay-400">
         <div class="card">
           <h3 class="title-card" style="margin-bottom:0.75rem;">Arch Linux Native Install</h3>
           <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem;">
@@ -1317,7 +1423,7 @@ function generateAstraPage() {
         ${astra.short_description}
       </p>
 
-      <div class="reveal delay-300" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:4rem;">
+      <div class="hero-actions reveal delay-300">
         <a href="#download" class="btn btn-lg btn-primary">
           <span>Download Astra (${latest.tag})</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -1403,7 +1509,7 @@ function generateAstraPage() {
         <h2 class="title-section reveal delay-100">Work, Not Just Chat</h2>
       </div>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem;">
+      <div class="grid-2col-responsive">
         <div class="card card-glass reveal delay-100">
           <h3 class="title-card" style="margin-bottom:0.75rem;">Voice Automation & Push-to-Talk</h3>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1rem;">
@@ -1635,7 +1741,7 @@ function generateAstraReleasesPage() {
           </a>
         </div>
 
-        <div style="overflow-x:auto;">
+        <div class="table-responsive">
           <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9375rem;">
             <thead>
               <tr style="border-bottom:1px solid var(--border-medium); color:var(--text-muted); font-size:0.75rem; text-transform:uppercase;">
@@ -1696,7 +1802,7 @@ function generateEvaLinuxPage() {
         ${evaLinux.short_description}
       </p>
 
-      <div class="reveal delay-300" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:4rem;">
+      <div class="hero-actions reveal delay-300">
         <a href="#install" class="btn btn-lg btn-primary">
           <span>Quick Installation</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
