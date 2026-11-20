@@ -37,8 +37,6 @@ function renderHead(title, description, canonicalPath, prefix = '', ogImage = 's
   <!-- Unified Stylesheets -->
   <link rel="stylesheet" href="${prefix}shared/styles/design-system.css">
   <link rel="stylesheet" href="${prefix}shared/styles/motion.css">
-  ${prefix !== './' ? `  <link rel="stylesheet" href="./shared/styles/design-system.css">
-  <link rel="stylesheet" href="./shared/styles/motion.css">` : ''}
 
   <!-- Instant Theme Script (Zero-FOUC) -->
   <script>
@@ -274,9 +272,6 @@ function renderFooter(prefix = '') {
   <script src="${prefix}shared/scripts/theme.js"></script>
   <script src="${prefix}shared/scripts/motion.js"></script>
   <script src="${prefix}shared/scripts/ecosystem-client.js"></script>
-  ${prefix !== './' ? `  <script src="./shared/scripts/theme.js"></script>
-  <script src="./shared/scripts/motion.js"></script>
-  <script src="./shared/scripts/ecosystem-client.js"></script>` : ''}
 </body>
 </html>
 `;
