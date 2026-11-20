@@ -45,23 +45,7 @@ if (existsSync(join(REPO_ROOT, 'astra'))) {
   console.warn('  ⚠️ ../astra repository not found, skipping');
 }
 
-// 3. Export to AstraOS (root / site files)
-const astraOsTarget = join(REPO_ROOT, 'astra-os');
-if (existsSync(astraOsTarget)) {
-  mkdirSync(join(astraOsTarget, 'catalog'), { recursive: true });
-  mkdirSync(join(astraOsTarget, 'releases'), { recursive: true });
-  mkdirSync(join(astraOsTarget, 'shared'), { recursive: true });
-
-  mkdirSync(join(astraOsTarget, 'assets'), { recursive: true });
-  cpSync(join(ROOT, 'shared/assets/icons/astra-os.svg'), join(astraOsTarget, 'assets/astraos-logo.svg'));
-  cpSync(join(ROOT, 'astra-os/index.html'), join(astraOsTarget, 'index.html'));
-  cpSync(join(ROOT, 'astra-os/catalog/index.html'), join(astraOsTarget, 'catalog/index.html'));
-  cpSync(join(ROOT, 'astra-os/releases/index.html'), join(astraOsTarget, 'releases/index.html'));
-  cpSync(join(ROOT, 'shared'), join(astraOsTarget, 'shared'), { recursive: true });
-  cpSync(join(ROOT, '.nojekyll'), join(astraOsTarget, '.nojekyll'));
-  console.log('  ✓ Exported to ../astra-os/');
-} else {
-  console.warn('  ⚠️ ../astra-os repository not found, skipping');
-}
+// Note: Eva Linux is strictly an installer/config repo and does not host a standalone site.
+// Its documentation and web presence live unified at https://amanicx.github.io/eva-linux/
 
 console.log('✨ Multi-repo export completed successfully!');

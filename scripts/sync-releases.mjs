@@ -86,7 +86,7 @@ async function main() {
 
   const evaRaw = await fetchReleases('eva');
   const astraRaw = await fetchReleases('astra');
-  const astraOsRaw = await fetchReleases('astra-os');
+  const evaLinuxRaw = await fetchReleases('eva-linux');
 
   const projects = existing.projects || {};
 
@@ -117,14 +117,18 @@ async function main() {
     console.log('ℹ️ Astra: Preserving cached releases data.');
   }
 
-  if (astraOsRaw && Array.isArray(astraOsRaw)) {
-    const list = transform(astraOsRaw);
-    projects['astra-os'] = {
-      latest_stable: null,
-      latest_prerelease: list.length > 0 ? list[0].tag : null,
-      status: 'Development Preview',
+  if (evaLinuxRaw && Array.isArray(evaLinuxRaw)) {
+    const list = transform(evaLinuxRaw);
+    const stable = list.find(r => !r.prerelease);
+    projects['eva-linux'] = {
+      latest_stable: stable ? stable.tag : 'v2.0.0',
+      latest_release_date: stable ? stable.published_at : '2026-11-20T14:39:00Z',
+      status: 'Stable',
       releases: list
     };
+    console.log(`✅ Eva Linux: Synced ${list.length} releases (latest: ${projects['eva-linux'].latest_stable})`);
+  } else {
+    console.log('ℹ️ Eva Linux: Preserving cached releases data.');
   }
 
   const output = {

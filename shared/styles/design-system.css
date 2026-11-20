@@ -567,6 +567,13 @@ kbd {
   overflow: hidden;
 }
 
+.card-filter,
+.card:has(.pill-dropdown) {
+  overflow: visible !important;
+  position: relative;
+  z-index: 50;
+}
+
 .card:hover {
   border-color: var(--border-accent);
   box-shadow: var(--shadow-card);

@@ -536,7 +536,7 @@ function generateAppsPage() {
       </div>
 
       <!-- Search & Filter Controls -->
-      <div class="card card-glass reveal delay-300" style="margin-bottom:3rem; padding:1.25rem 1.75rem;">
+      <div class="card card-glass card-filter reveal delay-300" style="margin-bottom:3rem; padding:1.25rem 1.75rem; overflow:visible; position:relative; z-index:50;">
         <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:1rem; align-items:center;">
           <div style="position:relative;">
             <input type="text" id="catalog-search" placeholder="Search by name, tags, description, or features..." 
