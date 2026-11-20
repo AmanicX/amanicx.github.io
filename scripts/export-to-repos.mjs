@@ -47,6 +47,7 @@ if (existsSync(join(REPO_ROOT, 'astra'))) {
 
 // 3. Export to Eva Linux
 const evaLinuxPaths = [
+  '/run/media/apex/New Volume/Chat-GPT/Eva-linux',
   join(REPO_ROOT, 'eva-linux'),
   '/home/apex/eva-linux'
 ];
