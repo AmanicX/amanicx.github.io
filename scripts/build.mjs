@@ -37,6 +37,8 @@ function renderHead(title, description, canonicalPath, prefix = '', ogImage = 's
   <!-- Unified Stylesheets -->
   <link rel="stylesheet" href="${prefix}shared/styles/design-system.css">
   <link rel="stylesheet" href="${prefix}shared/styles/motion.css">
+  ${prefix !== './' ? `  <link rel="stylesheet" href="./shared/styles/design-system.css">
+  <link rel="stylesheet" href="./shared/styles/motion.css">` : ''}
 
   <!-- Instant Theme Script (Zero-FOUC) -->
   <script>
@@ -154,6 +156,9 @@ function renderFooter(prefix = '') {
   <script src="${prefix}shared/scripts/theme.js"></script>
   <script src="${prefix}shared/scripts/motion.js"></script>
   <script src="${prefix}shared/scripts/ecosystem-client.js"></script>
+  ${prefix !== './' ? `  <script src="./shared/scripts/theme.js"></script>
+  <script src="./shared/scripts/motion.js"></script>
+  <script src="./shared/scripts/ecosystem-client.js"></script>` : ''}
 </body>
 </html>
 `;
@@ -1680,7 +1685,7 @@ function generateEvaLinuxPage() {
     <div class="ambient-flare flare-crimson" style="top:-80px; left:50%; width:650px; height:650px; transform:translateX(-50%);"></div>
     <div class="container" style="text-align:center; position:relative; z-index:2;">
       <div style="display:inline-flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem;" class="reveal">
-        <img src="../shared/assets/icons/eva-linux.svg" alt="Eva Linux Logo" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+        <img src="./assets/icon.png" alt="Eva Linux Logo" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.4);">
         <span class="badge badge-stable" style="font-size:0.8125rem;">${evaLinux.version} Stable</span>
       </div>
 
@@ -1714,8 +1719,8 @@ function generateEvaLinuxPage() {
         </div>
         <div style="background:var(--bg-surface-0); padding:0.5rem; display:flex; justify-content:center;">
           <picture>
-            <source srcset="../eva-linux/assets/screenshot-desktop.webp" type="image/webp">
-            <img src="../eva-linux/assets/screenshot-desktop.jpg" alt="Eva Linux Desktop with Niri, Noctalia 5, and Kitty" style="border-radius:var(--radius-md); width:100%; height:auto;" loading="eager">
+            <source srcset="./assets/screenshot-desktop.webp" type="image/webp">
+            <img src="./assets/screenshot-desktop.jpg" alt="Eva Linux Desktop with Niri, Noctalia 5, and Kitty" style="border-radius:var(--radius-md); width:100%; height:auto;" loading="eager">
           </picture>
         </div>
         <div class="preview-caption">
@@ -1800,8 +1805,8 @@ function generateEvaLinuxPage() {
         </div>
         <div style="background:var(--bg-surface-0); padding:0.5rem; display:flex; justify-content:center;">
           <picture>
-            <source srcset="../eva-linux/assets/screenshot-keybinds.webp" type="image/webp">
-            <img src="../eva-linux/assets/screenshot-keybinds.png" alt="Quickshell Keybind Cheatsheet Overlay" style="border-radius:var(--radius-md); width:100%; height:auto;" loading="lazy">
+            <source srcset="./assets/screenshot-keybinds.webp" type="image/webp">
+            <img src="./assets/screenshot-keybinds.png" alt="Quickshell Keybind Cheatsheet Overlay" style="border-radius:var(--radius-md); width:100%; height:auto;" loading="eager">
           </picture>
         </div>
         <div class="preview-caption">

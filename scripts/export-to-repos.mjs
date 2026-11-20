@@ -45,7 +45,26 @@ if (existsSync(join(REPO_ROOT, 'astra'))) {
   console.warn('  ⚠️ ../astra repository not found, skipping');
 }
 
-// Note: Eva Linux is strictly an installer/config repo and does not host a standalone site.
-// Its documentation and web presence live unified at https://amanicx.github.io/eva-linux/
+// 3. Export to Eva Linux (/home/apex/eva-linux)
+const evaLinuxTarget = existsSync('/home/apex/eva-linux')
+  ? '/home/apex/eva-linux'
+  : join(REPO_ROOT, 'eva-linux');
+
+if (existsSync(evaLinuxTarget)) {
+  mkdirSync(join(evaLinuxTarget, 'catalog'), { recursive: true });
+  mkdirSync(join(evaLinuxTarget, 'releases'), { recursive: true });
+  mkdirSync(join(evaLinuxTarget, 'shared'), { recursive: true });
+  mkdirSync(join(evaLinuxTarget, 'assets'), { recursive: true });
+
+  cpSync(join(ROOT, 'eva-linux/index.html'), join(evaLinuxTarget, 'index.html'));
+  cpSync(join(ROOT, 'eva-linux/catalog/index.html'), join(evaLinuxTarget, 'catalog/index.html'));
+  cpSync(join(ROOT, 'eva-linux/releases/index.html'), join(evaLinuxTarget, 'releases/index.html'));
+  cpSync(join(ROOT, 'eva-linux/assets'), join(evaLinuxTarget, 'assets'), { recursive: true });
+  cpSync(join(ROOT, 'shared'), join(evaLinuxTarget, 'shared'), { recursive: true });
+  cpSync(join(ROOT, '.nojekyll'), join(evaLinuxTarget, '.nojekyll'));
+  console.log(`  ✓ Exported to ${evaLinuxTarget}/`);
+} else {
+  console.warn('  ⚠️ eva-linux repository not found, skipping');
+}
 
 console.log('✨ Multi-repo export completed successfully!');
