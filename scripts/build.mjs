@@ -112,9 +112,22 @@ function renderNav(activeRoute, prefix = '') {
             <img class="nav-brand-mark" src="${prefix}shared/assets/favicon.svg" alt="AmanicX" width="24" height="24">
             <span class="nav-brand-text">AmanicX</span>
           </div>
-          <button type="button" class="mobile-drawer-close" aria-label="Close navigation" data-action="close-menu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          </button>
+          <div class="mobile-drawer-header-actions">
+            <div class="theme-switcher" role="group" aria-label="Theme mode switcher">
+              <button class="theme-btn" data-mode="dark" title="Dark Theme" aria-label="Dark Theme">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+              </button>
+              <button class="theme-btn" data-mode="light" title="Light Theme" aria-label="Light Theme">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+              </button>
+              <button class="theme-btn" data-mode="system" title="System Theme" aria-label="System Theme">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              </button>
+            </div>
+            <button type="button" class="mobile-drawer-close" aria-label="Close navigation" data-action="close-menu">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
         </div>
 
         <div class="mobile-drawer-body">
@@ -126,7 +139,7 @@ function renderNav(activeRoute, prefix = '') {
               </div>
               <div class="mobile-nav-text">
                 <span class="mobile-nav-title">Overview</span>
-                <span class="mobile-nav-desc">Ecosystem hub and flagship software</span>
+                <span class="mobile-nav-desc">Flagship hub and software ecosystem</span>
               </div>
               <svg class="mobile-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
             </a>
@@ -137,7 +150,7 @@ function renderNav(activeRoute, prefix = '') {
               </div>
               <div class="mobile-nav-text">
                 <span class="mobile-nav-title">Application Catalog</span>
-                <span class="mobile-nav-desc">Searchable registry and platform releases</span>
+                <span class="mobile-nav-desc">Searchable registry and platform assets</span>
               </div>
               <svg class="mobile-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
             </a>
@@ -148,7 +161,7 @@ function renderNav(activeRoute, prefix = '') {
               </div>
               <div class="mobile-nav-text">
                 <span class="mobile-nav-title">Eva AI Studio</span>
-                <span class="mobile-nav-desc">Private AI character conversation studio</span>
+                <span class="mobile-nav-desc">Private AI character conversation canvas</span>
               </div>
               <svg class="mobile-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
             </a>
@@ -159,7 +172,7 @@ function renderNav(activeRoute, prefix = '') {
               </div>
               <div class="mobile-nav-text">
                 <span class="mobile-nav-title">Astra Assistant</span>
-                <span class="mobile-nav-desc">Permission-gated desktop assistant & automation</span>
+                <span class="mobile-nav-desc">Permission-gated desktop automation</span>
               </div>
               <svg class="mobile-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
             </a>
@@ -170,13 +183,13 @@ function renderNav(activeRoute, prefix = '') {
               </div>
               <div class="mobile-nav-text">
                 <span class="mobile-nav-title">Eva Linux</span>
-                <span class="mobile-nav-desc">Curated Arch Linux distribution</span>
+                <span class="mobile-nav-desc">Curated Arch Linux Wayland workstation</span>
               </div>
               <svg class="mobile-nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
             </a>
           </nav>
 
-          <div class="mobile-drawer-section-label" style="margin-top:1.5rem;">QUICK ACTIONS</div>
+          <div class="mobile-drawer-section-label" style="margin-top:1.25rem;">QUICK ACTIONS</div>
           <div class="mobile-drawer-actions">
             <a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer" class="btn btn-secondary mobile-action-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -196,56 +209,63 @@ function renderNav(activeRoute, prefix = '') {
 }
 
 function renderFooter(prefix = '') {
-  return `  <!-- Unified Ecosystem Footer -->
+  return `  <!-- Unified Responsive Ecosystem Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-top">
         <div class="footer-brand">
-          <div style="display:flex; align-items:center; gap:0.625rem; font-weight:700; font-size:1.125rem; margin-bottom:0.75rem;">
-            <img src="${prefix}shared/assets/favicon.svg" alt="AmanicX" width="24" height="24">
-            <span>AmanicX Ecosystem</span>
-          </div>
-          <p style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1.25rem;">
+          <a href="${prefix}" class="footer-brand-header" aria-label="AmanicX Ecosystem Home">
+            <img src="${prefix}shared/assets/favicon.svg" alt="AmanicX" width="28" height="28">
+            <span class="footer-brand-title">AmanicX Ecosystem</span>
+          </a>
+          <p class="footer-brand-desc">
             Software systems engineered for autonomy, control, and privacy. Built with open standards and verified local performance.
           </p>
-          <div class="badge badge-dev">CRIMSON SYSTEM</div>
+          <div class="footer-brand-badges">
+            <span class="badge badge-dev">CRIMSON SYSTEM</span>
+            <a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub Organization Profile">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
         </div>
 
-        <div>
-          <div class="footer-title">Software Projects</div>
-          <ul class="footer-links">
-            <li><a href="${prefix}eva/">Eva Studio</a></li>
-            <li><a href="${prefix}astra/">Astra Assistant</a></li>
-            <li><a href="${prefix}eva-linux/">Eva Linux</a></li>
-            <li><a href="${prefix}apps/">Application Catalog</a></li>
-          </ul>
-        </div>
+        <div class="footer-nav-groups">
+          <div class="footer-nav-col">
+            <div class="footer-title">Projects</div>
+            <ul class="footer-links">
+              <li><a href="${prefix}eva/">Eva Studio</a></li>
+              <li><a href="${prefix}astra/">Astra Assistant</a></li>
+              <li><a href="${prefix}eva-linux/">Eva Linux</a></li>
+              <li><a href="${prefix}apps/">Application Catalog</a></li>
+            </ul>
+          </div>
 
-        <div>
-          <div class="footer-title">Releases & Docs</div>
-          <ul class="footer-links">
-            <li><a href="${prefix}eva/releases/">Eva Downloads (v2.2.2)</a></li>
-            <li><a href="${prefix}astra/releases/">Astra Downloads (v0.1.0-pre)</a></li>
-            <li><a href="${prefix}eva-linux/releases/">Eva Linux (v2.0.0)</a></li>
-            <li><a href="${prefix}eva-linux/catalog/">Eva Linux Architecture</a></li>
-            <li><a href="${prefix}eva/catalog/">Eva Evolution Catalog</a></li>
-          </ul>
-        </div>
+          <div class="footer-nav-col">
+            <div class="footer-title">Releases & Docs</div>
+            <ul class="footer-links">
+              <li><a href="${prefix}eva/releases/">Eva Downloads (v2.2.2)</a></li>
+              <li><a href="${prefix}astra/releases/">Astra Downloads (v0.1.0-pre)</a></li>
+              <li><a href="${prefix}eva-linux/releases/">Eva Linux (v2.0.0)</a></li>
+              <li><a href="${prefix}eva-linux/catalog/">Architecture & Setup</a></li>
+            </ul>
+          </div>
 
-        <div>
-          <div class="footer-title">Community & Source</div>
-          <ul class="footer-links">
-            <li><a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer">GitHub Organization</a></li>
-            <li><a href="https://github.com/AmanicX/eva" target="_blank" rel="noopener noreferrer">Eva Repository</a></li>
-            <li><a href="https://github.com/AmanicX/astra" target="_blank" rel="noopener noreferrer">Astra Repository</a></li>
-            <li><a href="https://github.com/AmanicX/eva-linux" target="_blank" rel="noopener noreferrer">Eva Linux Repository</a></li>
-          </ul>
+          <div class="footer-nav-col">
+            <div class="footer-title">Source Repositories</div>
+            <ul class="footer-links">
+              <li><a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer">AmanicX Organization</a></li>
+              <li><a href="https://github.com/AmanicX/eva" target="_blank" rel="noopener noreferrer">Eva Repository</a></li>
+              <li><a href="https://github.com/AmanicX/astra" target="_blank" rel="noopener noreferrer">Astra Repository</a></li>
+              <li><a href="https://github.com/AmanicX/eva-linux" target="_blank" rel="noopener noreferrer">Eva Linux Repository</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; ${new Date().getFullYear()} AmanicX. Released under open-source licenses (MIT & Apache-2.0).</div>
-        <div>Hosted natively on GitHub Pages with automated release sync.</div>
+        <div class="footer-copyright">&copy; ${new Date().getFullYear()} AmanicX. Released under open-source licenses (MIT & Apache-2.0).</div>
+        <div class="footer-meta">Hosted natively on GitHub Pages with automated release sync.</div>
       </div>
     </div>
   </footer>
@@ -580,7 +600,7 @@ function generateHomePage() {
               <span style="color:var(--accent-primary); font-weight:600;">$</span> astra status --ecosystem
             </p>
 
-            <div style="background:var(--bg-surface-1); border-radius:var(--radius-md); padding:1rem; font-family:var(--font-mono); font-size:0.78125rem; line-height:1.7; color:var(--text-secondary); margin-bottom:1.5rem;">
+            <div style="background:var(--bg-surface-1); border-radius:var(--radius-md); padding:1rem; font-family:var(--font-mono); font-size:0.78125rem; line-height:1.7; color:var(--text-secondary); margin-bottom:1.5rem; overflow-x:auto;">
               <div>[AMANICX] Local Runtime Active: Linux 6.12-arch</div>
               <div>[SECURITY] Permission Engine: STRICT (Shell Approval Enforced)</div>
               <div>[STUDIO] Eva Studio v2.2.2: Connected (Groq / Ollama Offline)</div>
@@ -588,7 +608,7 @@ function generateHomePage() {
               <div>[WORKSPACE] Eva Linux Niri Wayland Compositor: Online</div>
             </div>
 
-            <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
               <span style="font-size:0.8125rem; color:var(--text-muted);">Universal Crimson Architecture</span>
               <a href="./apps/" class="btn btn-sm btn-primary">Open App Catalog</a>
             </div>
@@ -739,7 +759,9 @@ function generateAppsPage() {
                 <div style="margin-top:1rem;">
                   <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.35rem;">Quick Install (Arch Linux Native)</div>
                   <div class="cmd-box">
-                    <code style="font-size:0.75rem;">${p.install_methods.arch.command}</code>
+                    <div class="cmd-box-scroll">
+                      <code style="font-size:0.75rem;">${p.install_methods.arch.command}</code>
+                    </div>
                     <button class="copy-btn" data-copy-text="${p.install_methods.arch.command}" title="Copy command" aria-label="Copy command">
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                     </button>
@@ -838,19 +860,22 @@ function generateEvaPage() {
           Eva ships with three distinct visual modes, each hand-crafted with tailored typography, background atmospherics, and customized interaction dynamics.
         </p>
 
-        <!-- Studio Tab Buttons -->
-        <div class="tabs-nav reveal delay-300" data-tabs-group="studios">
-          <button class="tab-btn active" data-tab="chatbot">
+        <!-- Studio Selector Segmented Control -->
+        <div class="studio-selector reveal delay-300" data-tabs-group="studios">
+          <button class="studio-tab-btn active" data-tab="chatbot">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            <span>Companion Chatbot</span>
+            <span class="label-full">Companion Chatbot</span>
+            <span class="label-short">Chatbot</span>
           </button>
-          <button class="tab-btn" data-tab="anime">
+          <button class="studio-tab-btn" data-tab="anime">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
-            <span>Anime Roleplay</span>
+            <span class="label-full">Anime Roleplay</span>
+            <span class="label-short">Anime</span>
           </button>
-          <button class="tab-btn" data-tab="world">
+          <button class="studio-tab-btn" data-tab="world">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span>World Simulator</span>
+            <span class="label-full">World Simulator</span>
+            <span class="label-short">World</span>
           </button>
         </div>
       </div>
@@ -1074,18 +1099,18 @@ function generateEvaPage() {
 
       <!-- Platform Selection Tabs -->
       <div style="max-width:880px; margin:0 auto;" class="reveal delay-300">
-        <div class="tabs-nav" data-tabs-group="eva-dl" style="margin-bottom:2rem; width:100%; justify-content:center; flex-wrap:wrap;">
-          <button class="tab-btn active" data-tab="arch" data-platform="arch">Arch Linux (Pacman)</button>
-          <button class="tab-btn" data-tab="appimage" data-platform="linux">Universal AppImage</button>
-          <button class="tab-btn" data-tab="windows" data-platform="windows">Windows</button>
-          <button class="tab-btn" data-tab="macos" data-platform="macos">macOS (Apple Silicon)</button>
-          <button class="tab-btn" data-tab="android" data-platform="android">Android APK</button>
-          <button class="tab-btn" data-tab="debian" data-platform="debian">Debian / Ubuntu</button>
+        <div class="platform-selector" data-tabs-group="eva-dl">
+          <button class="platform-tab-btn active" data-tab="arch" data-platform="arch">Arch Linux (Pacman)</button>
+          <button class="platform-tab-btn" data-tab="appimage" data-platform="linux">Universal AppImage</button>
+          <button class="platform-tab-btn" data-tab="windows" data-platform="windows">Windows 10 / 11</button>
+          <button class="platform-tab-btn" data-tab="macos" data-platform="macos">macOS (Apple Silicon)</button>
+          <button class="platform-tab-btn" data-tab="android" data-platform="android">Android APK</button>
+          <button class="platform-tab-btn" data-tab="debian" data-platform="debian">Debian / Ubuntu</button>
         </div>
 
         <!-- Arch Linux Pane -->
         <div data-tab-content="eva-dl" data-tab-pane="arch" class="card card-glass" style="display:block;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
             <h3 class="title-card">Arch Linux Native Pacman Install</h3>
             <span class="badge badge-stable">94.7 MB &bull; Official Package</span>
           </div>
@@ -1093,12 +1118,14 @@ function generateEvaPage() {
             Install Eva directly into your local pacman database without needing an AUR account or compilation:
           </p>
           <div class="cmd-box" style="margin-bottom:1.5rem;">
-            <code>${eva.install_methods.arch.command}</code>
+            <div class="cmd-box-scroll">
+              <code>${eva.install_methods.arch.command}</code>
+            </div>
             <button class="copy-btn" data-copy-text="${eva.install_methods.arch.command}" title="Copy Command">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
           </div>
-          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.8125rem; color:var(--text-muted);">
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.8125rem; color:var(--text-muted); flex-wrap:wrap; gap:0.75rem;">
             <span>Uninstall anytime: <code>sudo pacman -R eva</code></span>
             <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/eva-2.2.2.pacman" class="btn btn-sm btn-primary">Direct .pacman Download</a>
           </div>
@@ -1106,7 +1133,7 @@ function generateEvaPage() {
 
         <!-- Universal AppImage Pane -->
         <div data-tab-content="eva-dl" data-tab-pane="appimage" class="card card-glass" style="display:none;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
             <h3 class="title-card">Portable AppImage (Any Linux Distribution)</h3>
             <span class="badge badge-stable">132.4 MB &bull; Standalone</span>
           </div>
@@ -1114,12 +1141,14 @@ function generateEvaPage() {
             Download and run directly into your user-space path. No root privileges or package manager needed:
           </p>
           <div class="cmd-box" style="margin-bottom:1.5rem;">
-            <code>${eva.install_methods.arch_appimage.command}</code>
+            <div class="cmd-box-scroll">
+              <code>${eva.install_methods.arch_appimage.command}</code>
+            </div>
             <button class="copy-btn" data-copy-text="${eva.install_methods.arch_appimage.command}" title="Copy Command">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
           </div>
-          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.8125rem; color:var(--text-muted);">
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.8125rem; color:var(--text-muted); flex-wrap:wrap; gap:0.75rem;">
             <span>Launch by typing <code>eva</code> in your terminal</span>
             <a href="https://github.com/AmanicX/eva/releases/download/v2.2.2/Eva-2.2.2.AppImage" class="btn btn-sm btn-primary">Download AppImage</a>
           </div>
@@ -1127,14 +1156,14 @@ function generateEvaPage() {
 
         <!-- Windows Pane -->
         <div data-tab-content="eva-dl" data-tab-pane="windows" class="card card-glass" style="display:none;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
             <h3 class="title-card">Windows 10 / 11 Native Installer</h3>
             <span class="badge badge-stable">115.5 MB &bull; NSIS Setup</span>
           </div>
           <p style="font-size:0.9375rem; color:var(--text-secondary); margin-bottom:1.5rem;">
             Includes automatic shortcut creation, frameless acrylic titlebar support, and integrated auto-updates.
           </p>
-          <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
             <span style="font-size:0.8125rem; color:var(--text-muted);">Compatible with Windows 10 (1903+) and Windows 11</span>
             <a href="${eva.install_methods.windows.download_url}" class="btn btn-primary">Download Eva-Setup-2.2.2.exe</a>
           </div>
@@ -1142,14 +1171,14 @@ function generateEvaPage() {
 
         <!-- macOS Apple Silicon Pane -->
         <div data-tab-content="eva-dl" data-tab-pane="macos" class="card card-glass" style="display:none;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
             <h3 class="title-card">macOS Apple Silicon (M1/M2/M3/M4)</h3>
             <span class="badge badge-stable">134.9 MB &bull; ARM64 DMG</span>
           </div>
           <p style="font-size:0.9375rem; color:var(--text-secondary); margin-bottom:1.5rem;">
             Optimized natively for Apple Silicon hardware. Drag Eva into your Applications folder.
           </p>
-          <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
             <span style="font-size:0.8125rem; color:var(--text-muted);">Requires macOS 11.0 Big Sur or later</span>
             <a href="${eva.install_methods.macos.download_url}" class="btn btn-primary">Download Eva-2.2.2.dmg</a>
           </div>
@@ -1157,7 +1186,7 @@ function generateEvaPage() {
 
         <!-- Android Pane -->
         <div data-tab-content="eva-dl" data-tab-pane="android" class="card card-glass" style="display:none;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
             <h3 class="title-card">Android APK (Universal Native)</h3>
             <span class="badge badge-stable">3.76 MB &bull; Android 16 Ready</span>
           </div>
@@ -1170,7 +1199,7 @@ function generateEvaPage() {
             <li>If prompted, allow "Install unknown apps" for that browser or manager.</li>
             <li>Complete installation and launch Eva.</li>
           </ol>
-          <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
             <span style="font-size:0.8125rem; color:var(--text-muted);">Compatible with Android 8.0 up to Android 16 (API 36)</span>
             <a href="${eva.install_methods.android.download_url}" class="btn btn-primary">Download Eva-android.apk</a>
           </div>
@@ -1178,7 +1207,7 @@ function generateEvaPage() {
 
         <!-- Debian Pane -->
         <div data-tab-content="eva-dl" data-tab-pane="debian" class="card card-glass" style="display:none;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
             <h3 class="title-card">Ubuntu / Debian Native Package</h3>
             <span class="badge badge-stable">103.5 MB &bull; .deb</span>
           </div>
@@ -1186,7 +1215,9 @@ function generateEvaPage() {
             Install via dpkg with standard desktop shortcuts and mime associations:
           </p>
           <div class="cmd-box" style="margin-bottom:1.5rem;">
-            <code>${eva.install_methods.debian.command}</code>
+            <div class="cmd-box-scroll">
+              <code>${eva.install_methods.debian.command}</code>
+            </div>
             <button class="copy-btn" data-copy-text="${eva.install_methods.debian.command}" title="Copy Command">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
@@ -1362,7 +1393,9 @@ function generateEvaReleasesPage() {
             Single command native installation directly into pacman database:
           </p>
           <div class="cmd-box" style="margin-bottom:1rem;">
-            <code style="font-size:0.8125rem;">sudo pacman -U https://github.com/AmanicX/eva/releases/download/${latest.tag}/eva-${latest.tag.replace('v','')}.pacman</code>
+            <div class="cmd-box-scroll">
+              <code style="font-size:0.8125rem;">sudo pacman -U https://github.com/AmanicX/eva/releases/download/${latest.tag}/eva-${latest.tag.replace('v','')}.pacman</code>
+            </div>
             <button class="copy-btn" data-copy-text="sudo pacman -U https://github.com/AmanicX/eva/releases/download/${latest.tag}/eva-${latest.tag.replace('v','')}.pacman">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
@@ -1376,7 +1409,9 @@ function generateEvaReleasesPage() {
             Single-line curl installation into user directory (~/.local/bin):
           </p>
           <div class="cmd-box" style="margin-bottom:1rem;">
-            <code style="font-size:0.8125rem;">mkdir -p ~/.local/bin && curl -fsSL https://github.com/AmanicX/eva/releases/download/${latest.tag}/Eva-${latest.tag.replace('v','')}.AppImage -o ~/.local/bin/eva && chmod +x ~/.local/bin/eva</code>
+            <div class="cmd-box-scroll">
+              <code style="font-size:0.8125rem;">mkdir -p ~/.local/bin && curl -fsSL https://github.com/AmanicX/eva/releases/download/${latest.tag}/Eva-${latest.tag.replace('v','')}.AppImage -o ~/.local/bin/eva && chmod +x ~/.local/bin/eva</code>
+            </div>
             <button class="copy-btn" data-copy-text="mkdir -p ~/.local/bin && curl -fsSL https://github.com/AmanicX/eva/releases/download/${latest.tag}/Eva-${latest.tag.replace('v','')}.AppImage -o ~/.local/bin/eva && chmod +x ~/.local/bin/eva">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
@@ -1548,16 +1583,16 @@ function generateAstraPage() {
       </div>
 
       <div style="max-width:860px; margin:0 auto;" class="reveal delay-300">
-        <div class="tabs-nav" data-tabs-group="astra-dl" style="margin-bottom:2rem; width:100%; justify-content:center; flex-wrap:wrap;">
-          <button class="tab-btn active" data-tab="windows" data-platform="windows">Windows 11 (NSIS / MSI)</button>
-          <button class="tab-btn" data-tab="appimage" data-platform="linux">Linux AppImage</button>
-          <button class="tab-btn" data-tab="arch" data-platform="arch">Arch Linux Script</button>
-          <button class="tab-btn" data-tab="fedora" data-platform="fedora">Fedora / RHEL RPM</button>
+        <div class="platform-selector" data-tabs-group="astra-dl">
+          <button class="platform-tab-btn active" data-tab="windows" data-platform="windows">Windows 11 (NSIS / MSI)</button>
+          <button class="platform-tab-btn" data-tab="appimage" data-platform="linux">Linux AppImage</button>
+          <button class="platform-tab-btn" data-tab="arch" data-platform="arch">Arch Linux Script</button>
+          <button class="platform-tab-btn" data-tab="fedora" data-platform="fedora">Fedora / RHEL RPM</button>
         </div>
 
         <!-- Windows Pane -->
         <div data-tab-content="astra-dl" data-tab-pane="windows" class="card card-glass" style="display:block;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
             <h3 class="title-card">Windows 11 Setup Bundle</h3>
             <span class="badge badge-preview">5.99 MB &bull; Pre-release</span>
           </div>
@@ -1565,8 +1600,8 @@ function generateAstraPage() {
             Includes the NSIS setup executable. Backend compiled and verified on Windows 11 with WebView2 runtime integration.
           </p>
           <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
-            <span style="font-size:0.8125rem; color:var(--text-muted);">Requires Windows 11 & WebView2 runtime</span>
-            <div style="display:flex; gap:0.5rem;">
+            <span style="font-size:0.8125rem; color:var(--text-muted);">Requires Windows 11 &amp; WebView2 runtime</span>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
               <a href="https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_x64-setup.exe" class="btn btn-primary">Download .exe Setup</a>
               <a href="https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_x64_en-US.msi" class="btn btn-secondary">Download .msi</a>
             </div>
@@ -1575,7 +1610,7 @@ function generateAstraPage() {
 
         <!-- Linux AppImage Pane -->
         <div data-tab-content="astra-dl" data-tab-pane="appimage" class="card card-glass" style="display:none;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
             <h3 class="title-card">Universal Linux AppImage</h3>
             <span class="badge badge-preview">118.5 MB &bull; Portable</span>
           </div>
@@ -1583,8 +1618,10 @@ function generateAstraPage() {
             Download and run directly on Arch Linux, Fedora, Ubuntu, or Debian:
           </p>
           <div class="cmd-box" style="margin-bottom:1.5rem;">
-            <code>mkdir -p ~/.local/bin && curl -fsSL https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_amd64.AppImage -o ~/.local/bin/astra && chmod +x ~/.local/bin/astra</code>
-            <button class="copy-btn" data-copy-text="mkdir -p ~/.local/bin && curl -fsSL https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_amd64.AppImage -o ~/.local/bin/astra && chmod +x ~/.local/bin/astra">
+            <div class="cmd-box-scroll">
+              <code>mkdir -p ~/.local/bin && curl -fsSL https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_amd64.AppImage -o ~/.local/bin/astra && chmod +x ~/.local/bin/astra</code>
+            </div>
+            <button class="copy-btn" data-copy-text="mkdir -p ~/.local/bin && curl -fsSL https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra_0.1.0_amd64.AppImage -o ~/.local/bin/astra && chmod +x ~/.local/bin/astra" title="Copy Command">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
           </div>
@@ -1595,7 +1632,7 @@ function generateAstraPage() {
 
         <!-- Arch Linux Script Pane -->
         <div data-tab-content="astra-dl" data-tab-pane="arch" class="card card-glass" style="display:none;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
             <h3 class="title-card">Arch Linux Dedicated Installer Script</h3>
             <span class="badge badge-dev">Official Script</span>
           </div>
@@ -1603,8 +1640,10 @@ function generateAstraPage() {
             Runs the official Arch installation script from the Astra repository to configure Astra under <code>/opt/astra</code>:
           </p>
           <div class="cmd-box" style="margin-bottom:1.5rem;">
-            <code>git clone https://github.com/AmanicX/astra.git && cd astra && ./scripts/install-arch.sh</code>
-            <button class="copy-btn" data-copy-text="git clone https://github.com/AmanicX/astra.git && cd astra && ./scripts/install-arch.sh">
+            <div class="cmd-box-scroll">
+              <code>git clone https://github.com/AmanicX/astra.git && cd astra && ./scripts/install-arch.sh</code>
+            </div>
+            <button class="copy-btn" data-copy-text="git clone https://github.com/AmanicX/astra.git && cd astra && ./scripts/install-arch.sh" title="Copy Command">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
           </div>
@@ -1612,7 +1651,7 @@ function generateAstraPage() {
 
         <!-- Fedora RPM Pane -->
         <div data-tab-content="astra-dl" data-tab-pane="fedora" class="card card-glass" style="display:none;">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
             <h3 class="title-card">Fedora / RHEL (.rpm) Package</h3>
             <span class="badge badge-preview">8.96 MB &bull; RPM</span>
           </div>
@@ -1620,8 +1659,10 @@ function generateAstraPage() {
             Install directly via dnf package manager:
           </p>
           <div class="cmd-box" style="margin-bottom:1.5rem;">
-            <code>sudo dnf install https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra-0.1.0-1.x86_64.rpm</code>
-            <button class="copy-btn" data-copy-text="sudo dnf install https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra-0.1.0-1.x86_64.rpm">
+            <div class="cmd-box-scroll">
+              <code>sudo dnf install https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra-0.1.0-1.x86_64.rpm</code>
+            </div>
+            <button class="copy-btn" data-copy-text="sudo dnf install https://github.com/AmanicX/astra/releases/download/v0.1.0-pre.1/Astra-0.1.0-1.x86_64.rpm" title="Copy Command">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
           </div>
@@ -2011,7 +2052,9 @@ function generateEvaLinuxPage() {
             Downloads and executes the modular installer directly in your terminal:
           </p>
           <div class="cmd-box">
-            <code>curl -fsSL https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh | bash</code>
+            <div class="cmd-box-scroll">
+              <code>curl -fsSL https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh | bash</code>
+            </div>
             <button class="copy-btn" data-copy-text="curl -fsSL https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh | bash" title="Copy command">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
@@ -2024,7 +2067,9 @@ function generateEvaLinuxPage() {
             Inspect modules, configs, and themes before executing:
           </p>
           <div class="cmd-box">
-            <code>git clone https://github.com/AmanicX/eva-linux.git &amp;&amp; cd eva-linux &amp;&amp; ./setup.sh</code>
+            <div class="cmd-box-scroll">
+              <code>git clone https://github.com/AmanicX/eva-linux.git &amp;&amp; cd eva-linux &amp;&amp; ./setup.sh</code>
+            </div>
             <button class="copy-btn" data-copy-text="git clone https://github.com/AmanicX/eva-linux.git &amp;&amp; cd eva-linux &amp;&amp; ./setup.sh" title="Copy command">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
             </button>
@@ -2257,7 +2302,9 @@ function generateEvaLinuxReleasesPage() {
 
         <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.5rem;">Quick Bootstrap Command</div>
         <div class="cmd-box" style="margin-bottom:1.5rem;">
-          <code>curl -fsSL https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh | bash</code>
+          <div class="cmd-box-scroll">
+            <code>curl -fsSL https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh | bash</code>
+          </div>
           <button class="copy-btn" data-copy-text="curl -fsSL https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh | bash" title="Copy command">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
           </button>
