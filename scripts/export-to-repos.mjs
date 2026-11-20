@@ -45,37 +45,27 @@ if (existsSync(join(REPO_ROOT, 'astra'))) {
   console.warn('  ⚠️ ../astra repository not found, skipping');
 }
 
-// 3. Export to Eva Linux (/home/apex/eva-linux)
-const evaLinuxTarget = existsSync('/home/apex/eva-linux')
-  ? '/home/apex/eva-linux'
-  : join(REPO_ROOT, 'eva-linux');
+// 3. Export to Eva Linux
+const evaLinuxPaths = [
+  join(REPO_ROOT, 'eva-linux'),
+  '/home/apex/eva-linux'
+];
 
-if (existsSync(evaLinuxTarget)) {
-  mkdirSync(join(evaLinuxTarget, 'catalog'), { recursive: true });
-  mkdirSync(join(evaLinuxTarget, 'releases'), { recursive: true });
-  mkdirSync(join(evaLinuxTarget, 'shared'), { recursive: true });
-  mkdirSync(join(evaLinuxTarget, 'assets'), { recursive: true });
+for (const target of evaLinuxPaths) {
+  if (existsSync(target)) {
+    mkdirSync(join(target, 'catalog'), { recursive: true });
+    mkdirSync(join(target, 'releases'), { recursive: true });
+    mkdirSync(join(target, 'shared'), { recursive: true });
+    mkdirSync(join(target, 'assets'), { recursive: true });
 
-  cpSync(join(ROOT, 'eva-linux/index.html'), join(evaLinuxTarget, 'index.html'));
-  cpSync(join(ROOT, 'eva-linux/catalog/index.html'), join(evaLinuxTarget, 'catalog/index.html'));
-  cpSync(join(ROOT, 'eva-linux/releases/index.html'), join(evaLinuxTarget, 'releases/index.html'));
-  cpSync(join(ROOT, 'eva-linux/assets'), join(evaLinuxTarget, 'assets'), { recursive: true });
-  cpSync(join(ROOT, 'shared'), join(evaLinuxTarget, 'shared'), { recursive: true });
-  cpSync(join(ROOT, '.nojekyll'), join(evaLinuxTarget, '.nojekyll'));
-  console.log(`  ✓ Exported to ${evaLinuxTarget}/`);
-} else {
-  console.warn('  ⚠️ eva-linux repository not found, skipping');
-}
-
-// 4. Export to AstraOS (../astra-os)
-const astraOsTarget = join(REPO_ROOT, 'astra-os');
-if (existsSync(astraOsTarget)) {
-  mkdirSync(join(astraOsTarget, 'shared'), { recursive: true });
-  cpSync(join(ROOT, 'shared'), join(astraOsTarget, 'shared'), { recursive: true });
-  cpSync(join(ROOT, '.nojekyll'), join(astraOsTarget, '.nojekyll'));
-  console.log(`  ✓ Exported to ${astraOsTarget}/shared/`);
-} else {
-  console.warn('  ⚠️ ../astra-os repository not found, skipping');
+    cpSync(join(ROOT, 'eva-linux/index.html'), join(target, 'index.html'));
+    cpSync(join(ROOT, 'eva-linux/catalog/index.html'), join(target, 'catalog/index.html'));
+    cpSync(join(ROOT, 'eva-linux/releases/index.html'), join(target, 'releases/index.html'));
+    cpSync(join(ROOT, 'eva-linux/assets'), join(target, 'assets'), { recursive: true });
+    cpSync(join(ROOT, 'shared'), join(target, 'shared'), { recursive: true });
+    cpSync(join(ROOT, '.nojekyll'), join(target, '.nojekyll'));
+    console.log(`  ✓ Exported to ${target}/`);
+  }
 }
 
 console.log('✨ Multi-repo export completed successfully!');
