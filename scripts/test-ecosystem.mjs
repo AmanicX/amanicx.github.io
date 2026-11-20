@@ -34,9 +34,9 @@ const requiredFiles = [
   'astra/index.html',
   'astra/catalog/index.html',
   'astra/releases/index.html',
-  'astra-os/index.html',
-  'astra-os/catalog/index.html',
-  'astra-os/releases/index.html',
+  'eva-linux/index.html',
+  'eva-linux/catalog/index.html',
+  'eva-linux/releases/index.html',
   '404.html',
   'sitemap.xml',
   'robots.txt',
@@ -68,14 +68,15 @@ for (const file of sharedFiles) {
 console.log('\n3. Validating Centralized Data Sources:');
 try {
   const eco = JSON.parse(readFileSync(join(ROOT, 'data/ecosystem.json'), 'utf-8'));
-  assert(eco.projects && eco.projects.length === 3, 'ecosystem.json has exactly 3 projects (Eva, Astra, AstraOS)');
+  assert(eco.projects && eco.projects.length === 3, 'ecosystem.json has exactly 3 projects (Eva, Astra, Eva Linux)');
   const eva = eco.projects.find(p => p.id === 'eva');
   const astra = eco.projects.find(p => p.id === 'astra');
-  const astraOs = eco.projects.find(p => p.id === 'astra-os');
+  const evaLinux = eco.projects.find(p => p.id === 'eva-linux');
 
   assert(eva.version === 'v2.2.2', `Eva version is v2.2.2 (${eva.version})`);
   assert(astra.version === 'v0.1.0-pre.1', `Astra version is v0.1.0-pre.1 (${astra.version})`);
-  assert(astraOs.status === 'In Development', `AstraOS is marked In Development`);
+  assert(evaLinux.status === 'Stable', `Eva Linux is marked Stable`);
+  assert(evaLinux.version === 'v2.0.0', `Eva Linux version is v2.0.0 (${evaLinux.version})`);
 
   assert(eva.install_methods.arch.command.includes('eva-2.2.2.pacman'), 'Eva Arch pacman command points to verified 2.2.2 pacman');
   assert(eva.install_methods.arch_appimage.command.includes('Eva-2.2.2.AppImage'), 'Eva AppImage command points to verified 2.2.2 AppImage');
@@ -87,13 +88,14 @@ try {
   const rel = JSON.parse(readFileSync(join(ROOT, 'data/releases.json'), 'utf-8'));
   assert(rel.projects.eva.releases.length >= 10, `Eva releases count is ${rel.projects.eva.releases.length} (>= 10 verified)`);
   assert(rel.projects.astra.releases.length >= 1, `Astra releases count is ${rel.projects.astra.releases.length} (>= 1 verified)`);
+  assert(rel.projects['eva-linux'].releases.length >= 1, `Eva Linux releases count is ${rel.projects['eva-linux'].releases.length} (>= 1 verified)`);
 } catch (e) {
   assert(false, `releases.json failed to parse: ${e.message}`);
 }
 
 // 4. HTML Links and Assets Consistency
 console.log('\n4. Verifying HTML Local Links & Theme Engine:');
-for (const file of ['index.html', 'apps/index.html', 'eva/index.html', 'astra/index.html', 'astra-os/index.html']) {
+for (const file of ['index.html', 'apps/index.html', 'eva/index.html', 'astra/index.html', 'eva-linux/index.html']) {
   const content = readFileSync(join(ROOT, file), 'utf-8');
   assert(content.includes('localStorage.getItem(\'amanicx_theme\')'), `${file} contains anti-FOUC theme script`);
   assert(content.includes('design-system.css'), `${file} links to design-system.css`);

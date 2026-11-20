@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>AstraOS ISO Build Guide | AmanicX</title>
-  <meta name="description" content="Instructions for building the official AstraOS live ISO from source.">
-  <link rel="canonical" href="https://amanicx.github.io/astra-os/releases/">
+  <title>Eva Linux Component Architecture | AmanicX</title>
+  <meta name="description" content="Technical architecture and modular components of Eva Linux.">
+  <link rel="canonical" href="https://amanicx.github.io/eva-linux/catalog/">
   <meta name="theme-color" content="#0B0D12">
 
   <!-- OpenGraph -->
-  <meta property="og:title" content="AstraOS ISO Build Guide | AmanicX">
-  <meta property="og:description" content="Instructions for building the official AstraOS live ISO from source.">
+  <meta property="og:title" content="Eva Linux Component Architecture | AmanicX">
+  <meta property="og:description" content="Technical architecture and modular components of Eva Linux.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://amanicx.github.io/astra-os/releases/">
+  <meta property="og:url" content="https://amanicx.github.io/eva-linux/catalog/">
   <meta property="og:image" content="https://amanicx.github.io/shared/assets/favicon.svg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AstraOS ISO Build Guide | AmanicX">
-  <meta name="twitter:description" content="Instructions for building the official AstraOS live ISO from source.">
+  <meta name="twitter:title" content="Eva Linux Component Architecture | AmanicX">
+  <meta name="twitter:description" content="Technical architecture and modular components of Eva Linux.">
   <meta name="twitter:image" content="https://amanicx.github.io/shared/assets/favicon.svg">
 
   <!-- Favicon -->
@@ -54,7 +54,7 @@
         <a href="../../apps/" class="nav-link ">Apps</a>
         <a href="../../eva/" class="nav-link ">Eva</a>
         <a href="../../astra/" class="nav-link ">Astra</a>
-        <a href="../../astra-os/" class="nav-link active">AstraOS</a>
+        <a href="../../eva-linux/" class="nav-link active">Eva Linux</a>
       </nav>
 
       <div class="nav-controls">
@@ -81,49 +81,102 @@
 
   <section class="section-lg">
     <div class="container container-narrow">
-      <div style="text-align:center; margin-bottom:3.5rem;">
+      <div style="margin-bottom:3.5rem;">
         <a href="../" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.875rem; color:var(--accent-primary); margin-bottom:1rem;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
-          Back to AstraOS Overview
+          Back to Eva Linux Overview
         </a>
-        <div class="eyebrow reveal">ISO SOURCE & BUILDS</div>
-        <h1 class="title-section reveal delay-100" style="margin-bottom:1rem;">AstraOS ISO Build Guide</h1>
-        <p class="lead reveal delay-200">
-          AstraOS is currently in active development. You can compile the official bootable live ISO directly using Archiso on an Arch Linux host.
+        <div class="eyebrow">SYSTEM COMPONENTS &amp; SCRIPTS</div>
+        <h1 class="title-section" style="margin-bottom:1rem;">Eva Linux Architecture Catalog</h1>
+        <p class="lead">
+          Eva Linux delivers a modular, script-driven stack where each desktop component is independent, inspectable, and safely upgradeable.
         </p>
       </div>
 
-      <div class="card card-glass" style="margin-bottom:2.5rem;">
-        <h3 class="title-card" style="margin-bottom:1rem;">Build Requirements</h3>
-        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9375rem; color:var(--text-secondary); margin-bottom:1.5rem;">
-          <li>&bull; An Arch Linux host system with <code>sudo</code> privileges</li>
-          <li>&bull; Required packages: <code>archiso</code>, <code>git</code>, <code>base-devel</code></li>
-          <li>&bull; At least 15 GiB of free disk space for the rootfs image build</li>
-        </ul>
-
-        <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; margin-bottom:0.5rem;">Build Commands</div>
-        <div class="cmd-box" style="margin-bottom:1rem;">
-          <code>git clone https://github.com/AmanicX/astra-os.git && cd astra-os && sudo ./scripts/build-iso.sh</code>
-          <button class="copy-btn" data-copy-text="git clone https://github.com/AmanicX/astra-os.git && cd astra-os && sudo ./scripts/build-iso.sh">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-          </button>
+      <div style="display:flex; flex-direction:column; gap:2rem;">
+        <div class="card card-glass">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <h3 class="title-card">eva-core (Installer &amp; Setup Engine)</h3>
+            <span class="badge badge-stable">CORE ENGINE</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            The modular execution runner (<code>install.sh</code> and <code>setup.sh</code>) driving pre-flight validation, package installation via pacman and yay, dotfile symlinking, backup manifest logging, and automated recovery handlers.
+          </p>
         </div>
-        <p style="font-size:0.8125rem; color:var(--text-muted);">
-          The script builds the local packages, syncs the pinned package snapshot, pre-bakes Neovim plugins, and outputs the final bootable ISO into <code>out/</code>.
-        </p>
+
+        <div class="card card-glass">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <h3 class="title-card">niri-workstation (Infinite Scrollable Compositor)</h3>
+            <span class="badge badge-stable">WAYLAND</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Niri scrollable tiling compositor configuration (<code>~/.config/niri/config.kdl</code>), tuned spring animation physics, column preset rules (33%, 50%, 66%), multi-monitor workspace boundaries, and trackpad gesture mappings.
+          </p>
+        </div>
+
+        <div class="card card-glass">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <h3 class="title-card">noctalia-shell (Desktop Shell &amp; Widgets)</h3>
+            <span class="badge badge-stable">SHELL</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Noctalia 5 desktop shell integrating the top status capsule bar, quick settings flyout, PipeWire audio mixer, MPRIS media playback widget, and application launcher triggered by <code>Super + Space</code>.
+          </p>
+        </div>
+
+        <div class="card card-glass">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <h3 class="title-card">quickshell-overlay (Interactive Keybind Cheatsheet)</h3>
+            <span class="badge badge-stable">OVERLAY</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Interactive Wayland overlay triggered via <code>Super + Shift + /</code> that renders searchable hotkey categories, real-time conflict indicators, and physical key recording for fast customization.
+          </p>
+        </div>
+
+        <div class="card card-glass">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <h3 class="title-card">terminal-dev (Kitty &amp; LazyVim)</h3>
+            <span class="badge badge-stable">DEV TOOLS</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            GPU-accelerated Kitty terminal configured with Tokyo-Night palette, JetBrains Mono Nerd Font, Fastfetch system diagnostics, and LazyVim IDE pre-configured with Treesitter and LSP support.
+          </p>
+        </div>
+
+        <div class="card card-glass">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <h3 class="title-card">eva-wallpaper-sync (Zero-Risk Bootloader Sync)</h3>
+            <span class="badge badge-stable">UTILITY</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Safe synchronization utility that extracts Noctalia's active desktop wallpaper and seamlessly updates SilentSDDM and HyperFluent GRUB background images directly in place without dangerous <code>grub-mkconfig</code> rebuilds.
+          </p>
+        </div>
+
+        <div class="card card-glass">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <h3 class="title-card">eva-restore (Automated Rollback Engine)</h3>
+            <span class="badge badge-stable">SAFETY</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Instant rollback tool located in <code>bin/eva-restore</code>. Restores previous desktop configurations from timestamped tarball archives generated automatically prior to any installer execution.
+          </p>
+        </div>
+
+        <div class="card card-glass">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <h3 class="title-card">Optional Themes (SilentSDDM, HyperFluent GRUB, Plymouth)</h3>
+            <span class="badge badge-preview">OPTIONAL</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Modular styling packages for your login screen and boot sequence. Users choose whether to install or omit each component during the interactive setup process.
+          </p>
+        </div>
       </div>
 
-      <div class="card" style="margin-bottom:2.5rem;">
-        <h3 class="title-card" style="margin-bottom:0.75rem;">Public ISO Releases Status</h3>
-        <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
-          Public pre-compiled ISO images are currently undergoing live hardware validation across AMD and Intel testbeds. As soon as release v1.0 passes certification, downloadable ISO links and SHA256 checksums will appear here automatically via GitHub Releases automation.
-        </p>
-      </div>
-
-      <div style="text-align:center;">
-        <a href="https://github.com/AmanicX/astra-os" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          Track AstraOS on GitHub
-        </a>
+      <div style="text-align:center; margin-top:3.5rem;">
+        <a href="../releases/" class="btn btn-primary">Eva Linux v2.0.0 Releases</a>
       </div>
     </div>
   </section>
@@ -148,7 +201,7 @@
           <ul class="footer-links">
             <li><a href="../../eva/">Eva Studio</a></li>
             <li><a href="../../astra/">Astra Assistant</a></li>
-            <li><a href="../../astra-os/">AstraOS Linux</a></li>
+            <li><a href="../../eva-linux/">Eva Linux</a></li>
             <li><a href="../../apps/">Application Catalog</a></li>
           </ul>
         </div>
@@ -158,9 +211,9 @@
           <ul class="footer-links">
             <li><a href="../../eva/releases/">Eva Downloads (v2.2.2)</a></li>
             <li><a href="../../astra/releases/">Astra Downloads (v0.1.0-pre)</a></li>
-            <li><a href="../../astra-os/releases/">AstraOS Build & ISO</a></li>
+            <li><a href="../../eva-linux/releases/">Eva Linux (v2.0.0)</a></li>
+            <li><a href="../../eva-linux/catalog/">Eva Linux Architecture</a></li>
             <li><a href="../../eva/catalog/">Eva Evolution Catalog</a></li>
-            <li><a href="../../astra/catalog/">Astra Architecture</a></li>
           </ul>
         </div>
 
@@ -170,7 +223,7 @@
             <li><a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer">GitHub Organization</a></li>
             <li><a href="https://github.com/AmanicX/eva" target="_blank" rel="noopener noreferrer">Eva Repository</a></li>
             <li><a href="https://github.com/AmanicX/astra" target="_blank" rel="noopener noreferrer">Astra Repository</a></li>
-            <li><a href="https://github.com/AmanicX/astra-os" target="_blank" rel="noopener noreferrer">AstraOS Repository</a></li>
+            <li><a href="https://github.com/AmanicX/eva-linux" target="_blank" rel="noopener noreferrer">Eva Linux Repository</a></li>
           </ul>
         </div>
       </div>

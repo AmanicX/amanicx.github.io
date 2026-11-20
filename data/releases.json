@@ -1124,11 +1124,21 @@
         }
       ]
     },
-    "astra-os": {
-      "latest_stable": null,
-      "latest_prerelease": null,
-      "status": "Development Preview",
-      "releases": []
+    "eva-linux": {
+      "latest_stable": "v2.0.0",
+      "latest_release_date": "2026-11-20T14:39:00Z",
+      "status": "Stable",
+      "releases": [
+        {
+          "tag": "v2.0.0",
+          "name": "Eva Linux v2.0.0 Stable",
+          "published_at": "2026-11-20T14:39:00Z",
+          "prerelease": false,
+          "html_url": "https://github.com/AmanicX/eva-linux/releases/tag/v2.0.0",
+          "body": "Eva Linux v2.0.0 Stable release: modular setup installer for Arch Linux featuring Niri scrollable tiling compositor, Noctalia 5 desktop shell, Kitty GPU terminal, LazyVim IDE, Quickshell interactive keybind overlay, SilentSDDM, HyperFluent GRUB, and zero-risk wallpaper synchronization.",
+          "assets": []
+        }
+      ]
     }
   }
 }

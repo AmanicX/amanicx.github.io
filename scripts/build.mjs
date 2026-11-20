@@ -69,7 +69,7 @@ function renderNav(activeRoute, prefix = '') {
         <a href="${prefix}apps/" class="nav-link ${activeRoute === 'apps' ? 'active' : ''}">Apps</a>
         <a href="${prefix}eva/" class="nav-link ${activeRoute === 'eva' ? 'active' : ''}">Eva</a>
         <a href="${prefix}astra/" class="nav-link ${activeRoute === 'astra' ? 'active' : ''}">Astra</a>
-        <a href="${prefix}astra-os/" class="nav-link ${activeRoute === 'astra-os' ? 'active' : ''}">AstraOS</a>
+        <a href="${prefix}eva-linux/" class="nav-link ${activeRoute === 'eva-linux' ? 'active' : ''}">Eva Linux</a>
       </nav>
 
       <div class="nav-controls">
@@ -116,7 +116,7 @@ function renderFooter(prefix = '') {
           <ul class="footer-links">
             <li><a href="${prefix}eva/">Eva Studio</a></li>
             <li><a href="${prefix}astra/">Astra Assistant</a></li>
-            <li><a href="${prefix}astra-os/">AstraOS Linux</a></li>
+            <li><a href="${prefix}eva-linux/">Eva Linux</a></li>
             <li><a href="${prefix}apps/">Application Catalog</a></li>
           </ul>
         </div>
@@ -126,9 +126,9 @@ function renderFooter(prefix = '') {
           <ul class="footer-links">
             <li><a href="${prefix}eva/releases/">Eva Downloads (v2.2.2)</a></li>
             <li><a href="${prefix}astra/releases/">Astra Downloads (v0.1.0-pre)</a></li>
-            <li><a href="${prefix}astra-os/releases/">AstraOS Build & ISO</a></li>
+            <li><a href="${prefix}eva-linux/releases/">Eva Linux (v2.0.0)</a></li>
+            <li><a href="${prefix}eva-linux/catalog/">Eva Linux Architecture</a></li>
             <li><a href="${prefix}eva/catalog/">Eva Evolution Catalog</a></li>
-            <li><a href="${prefix}astra/catalog/">Astra Architecture</a></li>
           </ul>
         </div>
 
@@ -138,7 +138,7 @@ function renderFooter(prefix = '') {
             <li><a href="https://github.com/AmanicX" target="_blank" rel="noopener noreferrer">GitHub Organization</a></li>
             <li><a href="https://github.com/AmanicX/eva" target="_blank" rel="noopener noreferrer">Eva Repository</a></li>
             <li><a href="https://github.com/AmanicX/astra" target="_blank" rel="noopener noreferrer">Astra Repository</a></li>
-            <li><a href="https://github.com/AmanicX/astra-os" target="_blank" rel="noopener noreferrer">AstraOS Repository</a></li>
+            <li><a href="https://github.com/AmanicX/eva-linux" target="_blank" rel="noopener noreferrer">Eva Linux Repository</a></li>
           </ul>
         </div>
       </div>
@@ -173,8 +173,8 @@ function renderAppIcon(p, prefix = './') {
   if (p.id === 'astra') {
     return `<img src="${prefix}shared/assets/icons/astra.png" alt="Astra" width="44" height="44" style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3); flex-shrink:0;">`;
   }
-  if (p.id === 'astra-os') {
-    return `<img src="${prefix}shared/assets/icons/astra-os.svg" alt="AstraOS" width="44" height="44" style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3); flex-shrink:0;">`;
+  if (p.id === 'eva-linux') {
+    return `<img src="${prefix}shared/assets/icons/eva-linux.svg" alt="Eva Linux" width="44" height="44" style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3); flex-shrink:0;">`;
   }
   return `<img src="${prefix}shared/assets/favicon.svg" alt="${p.name}" width="44" height="44" style="border-radius:12px;">`;
 }
@@ -191,8 +191,8 @@ function renderCatalogAppIcon(p, prefix = '../') {
   if (p.id === 'astra') {
     return `<img src="${prefix}shared/assets/icons/astra.png" alt="Astra logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3); flex-shrink:0;">`;
   }
-  if (p.id === 'astra-os') {
-    return `<img src="${prefix}shared/assets/icons/astra-os.svg" alt="AstraOS logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3); flex-shrink:0;">`;
+  if (p.id === 'eva-linux') {
+    return `<img src="${prefix}shared/assets/icons/eva-linux.svg" alt="Eva Linux logo" width="56" height="56" style="border-radius:14px; box-shadow:0 6px 16px rgba(0,0,0,0.3); flex-shrink:0;">`;
   }
   return `<img src="${prefix}shared/assets/favicon.svg" alt="${p.name}" width="56" height="56">`;
 }
@@ -251,17 +251,17 @@ function renderPlatformCtaButtons(p) {
       </a>
     `;
   }
-  if (p.id === 'astra-os') {
+  if (p.id === 'eva-linux') {
     return `
-      <a href="https://github.com/AmanicX/astra-os#building-the-iso" target="_blank" rel="noopener" class="platform-cta-btn" title="Build AstraOS ISO (x86_64 UEFI)">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="m8 12 4 4 4-4"/></svg>
-        <span>x86_64 UEFI</span>
-        <span class="dl-ext">Build ISO</span>
-      </a>
-      <a href="https://github.com/AmanicX/astra-os/blob/main/setup.sh" target="_blank" rel="noopener" class="platform-cta-btn" title="View setup.sh Live Installer">
+      <a href="https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh" target="_blank" rel="noopener" class="platform-cta-btn" title="Quick Bootstrap Script (Arch Linux)">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
-        <span>Live Shell</span>
-        <span class="dl-ext">setup.sh</span>
+        <span>Arch Linux</span>
+        <span class="dl-ext">install.sh</span>
+      </a>
+      <a href="https://github.com/AmanicX/eva-linux" target="_blank" rel="noopener" class="platform-cta-btn" title="View Source & Setup on GitHub">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        <span>GitHub</span>
+        <span class="dl-ext">Source</span>
       </a>
     `;
   }
@@ -274,7 +274,7 @@ function renderPlatformCtaButtons(p) {
 function generateHomePage() {
   const eva = ecosystem.projects.find(p => p.id === 'eva');
   const astra = ecosystem.projects.find(p => p.id === 'astra');
-  const astraOs = ecosystem.projects.find(p => p.id === 'astra-os');
+  const evaLinux = ecosystem.projects.find(p => p.id === 'eva-linux');
 
   const content = `
   ${renderNav('home', './')}
@@ -309,11 +309,11 @@ function generateHomePage() {
         </div>
         <div style="height:14px; width:1px; background:var(--border-subtle); flex-shrink:0;"></div>
         <div style="font-size:0.875rem; color:var(--text-secondary); display:flex; gap:1.5rem; white-space:nowrap; overflow-x:auto;">
-          <span><strong>Eva v2.2.2</strong> released today (Universal & Arch pacman)</span>
+          <span><strong>Eva v2.2.2</strong> released (Universal & Arch pacman)</span>
           <span>&bull;</span>
           <span><strong>Astra v0.1.0-pre.1</strong> permission engine testing</span>
           <span>&bull;</span>
-          <span><strong>AstraOS</strong> Niri + Noctalia v5 ISO preview</span>
+          <span><strong>Eva Linux v2.0.0</strong> Stable released</span>
         </div>
       </div>
     </div>
@@ -390,32 +390,32 @@ function generateHomePage() {
           </div>
         </div>
 
-        <!-- AstraOS Card -->
+        <!-- Eva Linux Card -->
         <div class="card card-feature reveal delay-300">
           <div>
             <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem;">
               <div style="display:flex; align-items:center; gap:0.875rem;">
-                ${renderAppIcon(astraOs, './')}
+                ${renderAppIcon(evaLinux, './')}
                 <div>
-                  <h3 class="title-card">AstraOS</h3>
-                  <span style="font-size:0.8125rem; color:var(--text-muted);">Cosmic Arch Linux</span>
+                  <h3 class="title-card">Eva Linux</h3>
+                  <span style="font-size:0.8125rem; color:var(--text-muted);">Wayland Workstation</span>
                 </div>
               </div>
-              <span class="badge badge-dev">v1.0 Preview</span>
+              <span class="badge badge-stable">v2.0.0 Stable</span>
             </div>
             <p style="color:var(--text-secondary); font-size:0.9375rem; line-height:1.6; margin-bottom:1.5rem;">
-              ${astraOs.short_description}
+              ${evaLinux.short_description}
             </p>
             <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:2rem;">
-              <span class="badge badge-dev">Niri Wayland</span>
-              <span class="badge badge-dev">Noctalia v5 Shell</span>
-              <span class="badge badge-dev">LazyVim Pre-baked</span>
-              <span class="badge badge-dev">Btrfs UEFI</span>
+              <span class="badge badge-dev">Niri + Noctalia 5</span>
+              <span class="badge badge-dev">Kitty + LazyVim</span>
+              <span class="badge badge-dev">Quickshell Overlay</span>
+              <span class="badge badge-dev">Zero-Risk Boot Sync</span>
             </div>
           </div>
           <div style="display:flex; gap:0.75rem;">
-            <a href="./astra-os/" class="btn btn-sm btn-primary" style="flex:1;">Explore AstraOS</a>
-            <a href="./astra-os/releases/" class="btn btn-sm btn-secondary">Build ISO</a>
+            <a href="./eva-linux/" class="btn btn-sm btn-primary" style="flex:1;">Explore Eva Linux</a>
+            <a href="./eva-linux/releases/" class="btn btn-sm btn-secondary">Release v2.0.0</a>
           </div>
         </div>
 
@@ -482,7 +482,7 @@ function generateHomePage() {
               <div>[SECURITY] Permission Engine: STRICT (Shell Approval Enforced)</div>
               <div>[STUDIO] Eva Studio v2.2.2: Connected (Groq / Ollama Offline)</div>
               <div>[DESKTOP] Astra Assistant v0.1.0-pre.1: Ready</div>
-              <div>[WORKSPACE] AstraOS Niri Wayland Compositor: Online</div>
+              <div>[WORKSPACE] Eva Linux Niri Wayland Compositor: Online</div>
             </div>
 
             <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -1577,7 +1577,7 @@ function generateAstraCatalogPage() {
         </p>
         <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.875rem; color:var(--text-secondary);">
           <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> Wayland native screen capture bridge for Niri & Hyprland</li>
-          <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> Direct AstraOS integration package (<code>astra-assistant</code>)</li>
+          <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> Direct Eva Linux integration package (<code>astra-assistant</code>)</li>
           <li style="display:flex; align-items:center; gap:0.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> Enhanced MCP (Model Context Protocol) tool provider server</li>
         </ul>
       </div>
@@ -1667,53 +1667,62 @@ function generateAstraReleasesPage() {
 }
 
 // -----------------------------------------------------------------------------
-// 9. ASTRAOS PROJECT PAGES GENERATOR (/astra-os/)
+// 9. EVA LINUX PROJECT PAGES GENERATOR (/eva-linux/)
 // -----------------------------------------------------------------------------
-function generateAstraOsPage() {
-  const astraOs = ecosystem.projects.find(p => p.id === 'astra-os');
+function generateEvaLinuxPage() {
+  const evaLinux = ecosystem.projects.find(p => p.id === 'eva-linux');
 
   const content = `
-  ${renderNav('astra-os', '../')}
+  ${renderNav('eva-linux', '../')}
 
-  <!-- AstraOS Hero -->
+  <!-- Eva Linux Hero -->
   <section class="section-lg" style="position:relative; overflow:hidden;">
     <div class="ambient-flare flare-crimson" style="top:-80px; left:50%; width:650px; height:650px; transform:translateX(-50%);"></div>
     <div class="container" style="text-align:center; position:relative; z-index:2;">
       <div style="display:inline-flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem;" class="reveal">
-        <img src="../shared/assets/icons/astra-os.svg" alt="AstraOS Logo" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.4);">
-        <span class="badge badge-dev" style="font-size:0.8125rem;">${astraOs.version}</span>
+        <img src="../shared/assets/icons/eva-linux.svg" alt="Eva Linux Logo" width="48" height="48" style="border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.4);">
+        <span class="badge badge-stable" style="font-size:0.8125rem;">${evaLinux.version} Stable</span>
       </div>
 
       <h1 class="title-display reveal delay-100" style="margin-bottom:1.5rem; max-width:920px; margin-left:auto; margin-right:auto;">
-        Curated Arch Linux with Niri & Noctalia
+        ${evaLinux.tagline}
       </h1>
-      <p class="lead reveal delay-200" style="margin:0 auto 2.5rem;">
-        ${astraOs.short_description}
+      <p class="lead reveal delay-200" style="margin:0 auto 2.5rem; max-width:820px;">
+        ${evaLinux.short_description}
       </p>
 
       <div class="reveal delay-300" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-bottom:4rem;">
         <a href="#install" class="btn btn-lg btn-primary">
-          <span>Installation Guide & Hardware Specs</span>
+          <span>Quick Installation</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
         </a>
         <a href="./releases/" class="btn btn-lg btn-secondary">
-          <span>Build ISO from Source</span>
+          <span>Release v2.0.0 Notes</span>
         </a>
       </div>
 
-      <!-- Wallpaper & Desktop Preview -->
-      <div class="reveal delay-400 mockup-window" style="max-width:1040px; margin:0 auto;">
+      <!-- Desktop Screenshot Preview -->
+      <div class="reveal delay-400 mockup-window" style="max-width:1080px; margin:0 auto;">
         <div class="mockup-header">
           <div class="mockup-dots">
             <span class="mockup-dot"></span>
             <span class="mockup-dot"></span>
             <span class="mockup-dot"></span>
           </div>
-          <span style="font-size:0.8125rem; color:var(--text-muted); font-family:var(--font-mono);">AstraOS - Niri Wayland Compositor + Noctalia v5</span>
-          <span class="badge badge-dev" style="padding:0.15rem 0.5rem; font-size:0.7rem;">UEFI ONLY</span>
+          <span style="font-size:0.8125rem; color:var(--text-muted); font-family:var(--font-mono);">Eva Linux - Niri Wayland Compositor + Noctalia 5</span>
+          <span class="badge badge-stable" style="padding:0.15rem 0.5rem; font-size:0.7rem;">v2.0.0 STABLE</span>
         </div>
         <div style="background:var(--bg-surface-0); padding:0.5rem; display:flex; justify-content:center;">
-          <img src="../astra-os/assets/wallpaper.png" alt="AstraOS Desktop Wallpaper" style="border-radius:var(--radius-md); width:100%; height:auto;">
+          <picture>
+            <source srcset="../eva-linux/assets/screenshot-desktop.webp" type="image/webp">
+            <img src="../eva-linux/assets/screenshot-desktop.jpg" alt="Eva Linux Desktop with Niri, Noctalia 5, and Kitty" style="border-radius:var(--radius-md); width:100%; height:auto;" loading="eager">
+          </picture>
+        </div>
+        <div class="preview-caption">
+          <span>Genuine desktop capture of Eva Linux v2: Niri infinite horizontal scrollable tiling, Noctalia 5 floating capsule bar, and Tokyo-Night Kitty terminal.</span>
+          <div class="keybind-pill" title="Toggle Application Launcher">
+            <kbd>Super</kbd><span class="pill-sep">+</span><kbd>Space</kbd>
+          </div>
         </div>
       </div>
     </div>
@@ -1723,10 +1732,10 @@ function generateAstraOsPage() {
   <section class="section" style="background:var(--bg-surface-0); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
     <div class="container">
       <div style="text-align:center; margin-bottom:4rem;">
-        <div class="eyebrow reveal">CURATED ENVIRONMENT</div>
-        <h2 class="title-section reveal delay-100">Every Detail Pre-Configured</h2>
-        <p class="lead reveal delay-200" style="margin:1rem auto 0;">
-          AstraOS pairs modern Wayland scrollable tiling with the tools developers actually use every day.
+        <div class="eyebrow reveal">CURATED ARCHITECTURE</div>
+        <h2 class="title-section reveal delay-100">Engineered for Velocity & Aesthetics</h2>
+        <p class="lead reveal delay-200" style="margin:1rem auto 0; max-width:760px;">
+          Eva Linux transforms a minimal Arch Linux installation into a turnkey Wayland powerhouse without bloating your system or enforcing rigid black boxes.
         </p>
       </div>
 
@@ -1736,31 +1745,31 @@ function generateAstraOsPage() {
           <div class="badge badge-dev" style="margin-bottom:1rem;">WINDOW COMPOSITOR</div>
           <h3 class="title-card" style="margin-bottom:0.75rem;">Niri Scrollable Tiling</h3>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
-            Windows arrange themselves along an infinite horizontal ribbon. Scroll smoothly between tasks without squishing windows or manually juggling complex grid layouts.
+            Windows arrange along an infinite horizontal ribbon with smooth spring animations. Preset column widths (33%, 50%, 66%) keep workspaces organized without window squishing or manual layout juggling.
           </p>
         </div>
 
         <div class="card reveal delay-200">
           <div class="badge badge-dev" style="margin-bottom:1rem;">DESKTOP SHELL</div>
-          <h3 class="title-card" style="margin-bottom:0.75rem;">Noctalia v5 Wayland Shell</h3>
+          <h3 class="title-card" style="margin-bottom:0.75rem;">Noctalia 5 Wayland Shell</h3>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
-            Integrated status bar, system monitors, network controls, volume slider, notifications, and application launcher triggered via <code>Super + Space</code>.
+            Integrated status capsule bar, system monitor widgets, network flyouts, volume controls, media player, and responsive application launcher triggered via <code>Super + Space</code>.
           </p>
         </div>
 
         <div class="card reveal delay-300">
           <div class="badge badge-dev" style="margin-bottom:1rem;">DEVELOPER CORE</div>
-          <h3 class="title-card" style="margin-bottom:0.75rem;">Kitty + Zsh + LazyVim</h3>
+          <h3 class="title-card" style="margin-bottom:0.75rem;">Kitty + LazyVim + Fastfetch</h3>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
-            Kitty GPU terminal with Oh My Posh 1_shell prompt, fastfetch diagnostics, and a pinned Neovim tree with LazyVim fully pre-baked and cached for instant offline launch.
+            Kitty GPU terminal styled with Tokyo-Night palette and JetBrains Mono Nerd Font, paired with a fully configured LazyVim IDE and custom Fastfetch system diagnostics.
           </p>
         </div>
 
         <div class="card reveal delay-400">
-          <div class="badge badge-dev" style="margin-bottom:1rem;">STORAGE & RELIABILITY</div>
-          <h3 class="title-card" style="margin-bottom:0.75rem;">Btrfs Subvolumes & Snapshots</h3>
+          <div class="badge badge-dev" style="margin-bottom:1rem;">ZERO-RISK SYNC</div>
+          <h3 class="title-card" style="margin-bottom:0.75rem;">SilentSDDM & HyperFluent GRUB</h3>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
-            Configured with <code>@</code> (root), <code>@home</code>, <code>@snapshots</code>, and <code>@pkg</code> subvolumes. Built on the Arch Linux Archive snapshot <code>2026/10/18</code> for reproducible stability.
+            Pure upstream display manager and bootloader themes. The <code>eva-wallpaper-sync</code> utility automatically keeps SDDM and GRUB backgrounds synchronized with Noctalia without dangerous <code>grub-mkconfig</code> rebuilds.
           </p>
         </div>
 
@@ -1768,160 +1777,304 @@ function generateAstraOsPage() {
     </div>
   </section>
 
+  <!-- Interactive Quickshell Overlay Spotlight -->
+  <section class="section-lg" style="position:relative; overflow:hidden;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:3.5rem;">
+        <div class="eyebrow reveal">INSTANT DESKTOP MASTERY</div>
+        <h2 class="title-section reveal delay-100" style="margin-bottom:1rem;">Interactive Quickshell Cheatsheet</h2>
+        <p class="lead reveal delay-200" style="margin:0 auto; max-width:760px;">
+          Never memorize keybind manuals again. A native Wayland overlay dynamically renders every desktop, compositor, and application shortcut with live search and physical key recording.
+        </p>
+      </div>
+
+      <div class="reveal delay-300 mockup-window" style="max-width:960px; margin:0 auto 3rem;">
+        <div class="mockup-header">
+          <div class="mockup-dots">
+            <span class="mockup-dot"></span>
+            <span class="mockup-dot"></span>
+            <span class="mockup-dot"></span>
+          </div>
+          <span style="font-size:0.8125rem; color:var(--text-muted); font-family:var(--font-mono);">Quickshell Cheatsheet & Keybind Manager</span>
+          <span class="badge badge-dev" style="padding:0.15rem 0.5rem; font-size:0.7rem;">WAYLAND OVERLAY</span>
+        </div>
+        <div style="background:var(--bg-surface-0); padding:0.5rem; display:flex; justify-content:center;">
+          <picture>
+            <source srcset="../eva-linux/assets/screenshot-keybinds.webp" type="image/webp">
+            <img src="../eva-linux/assets/screenshot-keybinds.png" alt="Quickshell Keybind Cheatsheet Overlay" style="border-radius:var(--radius-md); width:100%; height:auto;" loading="lazy">
+          </picture>
+        </div>
+        <div class="preview-caption">
+          <span>Active keybind cheatsheet and shortcut manager triggered instantly from anywhere in the desktop.</span>
+          <div class="keybind-pill" title="Trigger Keybind Overlay">
+            <kbd>Super</kbd><span class="pill-sep">+</span><kbd>Shift</kbd><span class="pill-sep">+</span><kbd>/</kbd>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3col">
+        <div class="card card-glass">
+          <div style="font-weight:700; font-size:1rem; margin-bottom:0.5rem; color:var(--text-primary);">Searchable Hotkey Groups</div>
+          <p style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6;">
+            Instant fuzzy filtering across 120 keybind actions: Window Management, Workspaces, Audio & Media, Launchers, and System Control.
+          </p>
+        </div>
+
+        <div class="card card-glass">
+          <div style="font-weight:700; font-size:1rem; margin-bottom:0.5rem; color:var(--text-primary);">In-Place Keybind Editor</div>
+          <p style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6;">
+            Click Edit directly in the overlay, press your new key combination, and save safely without risking malformed syntax in <code>config.kdl</code>.
+          </p>
+        </div>
+
+        <div class="card card-glass">
+          <div style="font-weight:700; font-size:1rem; margin-bottom:0.5rem; color:var(--text-primary);">Hardware Conflict Warning</div>
+          <p style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6;">
+            Real-time conflict detection alerts you before assigning an already-mapped key combination, preventing compositor lockout.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Hardware Requirements & Installation Walkthrough -->
-  <section class="section-lg" id="install">
+  <section class="section-lg" id="install" style="background:var(--bg-surface-0); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
     <div class="container container-narrow">
-      <div style="margin-bottom:3.5rem;">
+      <div style="margin-bottom:3.5rem; text-align:center;">
         <div class="eyebrow reveal">INSTALLATION & REQUIREMENTS</div>
         <h2 class="title-section reveal delay-100" style="margin-bottom:1rem;">System Compatibility & Setup</h2>
-        <p class="lead reveal delay-200">
-          AstraOS targets modern 64-bit UEFI systems. Secure Boot must be disabled.
+        <p class="lead reveal delay-200" style="margin:0 auto; max-width:680px;">
+          Eva Linux transforms an existing Arch Linux base install into a complete Wayland desktop.
+        </p>
+      </div>
+
+      <!-- Notice Alert -->
+      <div class="card card-glass reveal delay-300" style="border-left:4px solid var(--accent-primary); margin-bottom:2.5rem; padding:1.25rem 1.75rem;">
+        <div style="display:flex; align-items:center; gap:0.75rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>Installer Notice: Not an ISO Distribution</span>
+        </div>
+        <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6; margin:0;">
+          Eva Linux is a modular, script-based setup installer. Run it inside an existing Arch Linux, EndeavourOS, or CachyOS installation to automatically configure packages, user environment, Wayland compositors, and themes.
         </p>
       </div>
 
       <!-- Requirements Table -->
-      <div class="card card-glass reveal delay-300" style="margin-bottom:3rem;">
-        <h3 class="title-card" style="margin-bottom:1.25rem;">Hardware Requirements</h3>
+      <div class="card card-glass reveal delay-350" style="margin-bottom:3rem;">
+        <h3 class="title-card" style="margin-bottom:1.25rem;">Hardware & Environment Requirements</h3>
         <div style="display:flex; flex-direction:column; gap:0.875rem; font-size:0.9375rem;">
           <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:0.5rem;">
-            <span style="color:var(--text-muted);">Processor</span>
-            <span style="font-weight:600;">64-bit x86_64 (Intel or AMD)</span>
+            <span style="color:var(--text-muted);">Base Operating System</span>
+            <span style="font-weight:600; color:var(--accent-primary);">Arch Linux, EndeavourOS, or CachyOS</span>
           </div>
           <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:0.5rem;">
-            <span style="color:var(--text-muted);">Firmware</span>
-            <span style="font-weight:600; color:var(--accent-primary);">UEFI only (CSM/Legacy not supported)</span>
-          </div>
-          <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:0.5rem;">
-            <span style="color:var(--text-muted);">Secure Boot</span>
-            <span style="font-weight:600; color:#F59E0B;">Disabled</span>
+            <span style="color:var(--text-muted);">Architecture</span>
+            <span style="font-weight:600;">64-bit x86_64</span>
           </div>
           <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:0.5rem;">
             <span style="color:var(--text-muted);">Memory (RAM)</span>
             <span style="font-weight:600;">4 GB minimum (8 GB recommended)</span>
           </div>
           <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:0.5rem;">
-            <span style="color:var(--text-muted);">Storage</span>
-            <span style="font-weight:600;">25 GB free disk space (Btrfs root)</span>
+            <span style="color:var(--text-muted);">Storage Space</span>
+            <span style="font-weight:600;">20 GB free disk space</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:0.5rem;">
+            <span style="color:var(--text-muted);">Graphics Stack</span>
+            <span style="font-weight:600;">AMD (amdgpu/vulkan), Intel (mesa/vulkan), or NVIDIA (550xx+)</span>
           </div>
           <div style="display:flex; justify-content:space-between;">
-            <span style="color:var(--text-muted);">Graphics</span>
-            <span style="font-weight:600;">AMD / Intel open drivers (Mesa); NVIDIA 580xx</span>
+            <span style="color:var(--text-muted);">Safety Guarantee</span>
+            <span style="font-weight:600; color:#10B981;">Automated configuration backup &amp; instant rollback (eva-restore)</span>
           </div>
         </div>
       </div>
 
       <!-- Installation Steps -->
       <div class="card reveal delay-400">
-        <h3 class="title-card" style="margin-bottom:1.25rem;">Live Session & Installation Process</h3>
-        <ol style="margin-left:1.5rem; color:var(--text-secondary); font-size:0.9375rem; line-height:1.8; margin-bottom:2rem;">
-          <li>Flash the generated ISO image to a USB flash drive using <code>dd</code>:
-            <div class="cmd-box" style="margin:0.75rem 0;">
-              <code>sudo dd if=astraos-v1-x86_64.iso of=/dev/sdX bs=4M status=progress conv=fsync</code>
-              <button class="copy-btn" data-copy-text="sudo dd if=astraos-v1-x86_64.iso of=/dev/sdX bs=4M status=progress conv=fsync">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-              </button>
-            </div>
-          </li>
-          <li>Boot the USB stick in <strong>UEFI mode</strong>. The system boots into the SDDM login screen and automatically logs into the live Niri desktop.</li>
-          <li>Live session credentials:
-            <ul style="margin-left:1.5rem; margin-top:0.25rem;">
-              <li><strong>User:</strong> <code>astra</code></li>
-              <li><strong>Password:</strong> <code>astra</code> (for lockscreen and tty fallback)</li>
-              <li><strong>Sudo:</strong> Passwordless in live environment</li>
-            </ul>
-          </li>
-          <li>Launch the Astra Installer from the application menu (<code>Super + Space</code>) to partition and install to disk.</li>
-        </ol>
+        <h3 class="title-card" style="margin-bottom:1.25rem;">Installation Instructions</h3>
+        
+        <div style="margin-bottom:1.75rem;">
+          <div style="font-size:0.875rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">Method 1: One-Line Quick Bootstrap (Recommended)</div>
+          <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:0.75rem;">
+            Downloads and executes the modular installer directly in your terminal:
+          </p>
+          <div class="cmd-box">
+            <code>curl -fsSL https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh | bash</code>
+            <button class="copy-btn" data-copy-text="curl -fsSL https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh | bash" title="Copy command">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div style="margin-bottom:2rem;">
+          <div style="font-size:0.875rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem;">Method 2: Clone Repository &amp; Run Locally</div>
+          <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:0.75rem;">
+            Inspect modules, configs, and themes before executing:
+          </p>
+          <div class="cmd-box">
+            <code>git clone https://github.com/AmanicX/eva-linux.git &amp;&amp; cd eva-linux &amp;&amp; ./setup.sh</code>
+            <button class="copy-btn" data-copy-text="git clone https://github.com/AmanicX/eva-linux.git &amp;&amp; cd eva-linux &amp;&amp; ./setup.sh" title="Copy command">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-surface-1); border-radius:var(--radius-md); padding:1.25rem; font-size:0.875rem; line-height:1.6; color:var(--text-secondary); margin-bottom:2rem;">
+          <strong style="color:var(--text-primary); display:block; margin-bottom:0.5rem;">What happens during setup?</strong>
+          <ul style="margin-left:1.25rem; display:flex; flex-direction:column; gap:0.35rem;">
+            <li>Pre-flight system checks verify distribution, architecture, and network.</li>
+            <li>Existing configurations in <code>~/.config/</code> are backed up with a timestamped manifest.</li>
+            <li>Packages for Niri, Noctalia 5, Kitty, LazyVim, and Quickshell are verified or installed.</li>
+            <li>SilentSDDM and HyperFluent GRUB themes are deployed optionally without breaking boot records.</li>
+            <li>You are prompted to review every step; no unexpected changes are forced.</li>
+          </ul>
+        </div>
 
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
-          <a href="./catalog/" class="btn btn-secondary">Inspect Package Architecture</a>
-          <a href="./releases/" class="btn btn-primary">Build ISO from Source</a>
+          <a href="./catalog/" class="btn btn-secondary">Inspect Component Architecture</a>
+          <a href="./releases/" class="btn btn-primary">Eva Linux v2.0.0 Releases</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Upstream Credits & Attribution -->
+  <section class="section" style="text-align:center;">
+    <div class="container container-narrow">
+      <div class="eyebrow reveal">OPEN SOURCE ECOSYSTEM</div>
+      <h2 class="title-section reveal delay-100" style="margin-bottom:1rem;">Built on Great Foundations</h2>
+      <p class="lead reveal delay-200" style="margin:0 auto 2.5rem; font-size:1rem;">
+        Eva Linux stands on the shoulders of these incredible upstream open-source projects:
+      </p>
+
+      <div style="display:flex; flex-wrap:wrap; gap:0.75rem; justify-content:center; margin-bottom:3rem;">
+        <span class="badge badge-dev" style="padding:0.4rem 0.85rem; font-size:0.8125rem;">Niri by YaLTeR</span>
+        <span class="badge badge-dev" style="padding:0.4rem 0.85rem; font-size:0.8125rem;">Noctalia Shell Team</span>
+        <span class="badge badge-dev" style="padding:0.4rem 0.85rem; font-size:0.8125rem;">Kitty by Kovid Goyal</span>
+        <span class="badge badge-dev" style="padding:0.4rem 0.85rem; font-size:0.8125rem;">LazyVim by Folke Lemaitre</span>
+        <span class="badge badge-dev" style="padding:0.4rem 0.85rem; font-size:0.8125rem;">Quickshell by outfoxxed</span>
+        <span class="badge badge-dev" style="padding:0.4rem 0.85rem; font-size:0.8125rem;">SilentSDDM by uiramaru</span>
+        <span class="badge badge-dev" style="padding:0.4rem 0.85rem; font-size:0.8125rem;">HyperFluent GRUB by Coopydood</span>
+      </div>
+
+      <a href="https://github.com/AmanicX/eva-linux" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        Star Eva Linux on GitHub
+      </a>
     </div>
   </section>
 
   ${renderFooter('../')}
 `;
 
-  return renderHead('AstraOS - Curated Arch Linux Distribution', astraOs.full_description, '/astra-os/', '../', 'astra-os/assets/wallpaper.png') + content;
+  return renderHead('Eva Linux - Curated Wayland Desktop for Power Users', evaLinux.full_description, '/eva-linux/', '../', 'eva-linux/assets/screenshot-desktop.jpg') + content;
 }
 
 // -----------------------------------------------------------------------------
-// 10. ASTRAOS CATALOG & PACKAGES (/astra-os/catalog/)
+// 10. EVA LINUX CATALOG & ARCHITECTURE (/eva-linux/catalog/)
 // -----------------------------------------------------------------------------
-function generateAstraOsCatalogPage() {
+function generateEvaLinuxCatalogPage() {
   const content = `
-  ${renderNav('astra-os', '../../')}
+  ${renderNav('eva-linux', '../../')}
 
   <section class="section-lg">
     <div class="container container-narrow">
       <div style="margin-bottom:3.5rem;">
         <a href="../" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.875rem; color:var(--accent-primary); margin-bottom:1rem;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
-          Back to AstraOS Overview
+          Back to Eva Linux Overview
         </a>
-        <div class="eyebrow">CUSTOM PACKAGES & ARCHITECTURE</div>
-        <h1 class="title-section" style="margin-bottom:1rem;">AstraOS Component Catalog</h1>
+        <div class="eyebrow">SYSTEM COMPONENTS &amp; SCRIPTS</div>
+        <h1 class="title-section" style="margin-bottom:1rem;">Eva Linux Architecture Catalog</h1>
         <p class="lead">
-          AstraOS builds on Arch Linux by delivering custom maintained packages that establish its branding, shell integration, keybinds, and installer.
+          Eva Linux delivers a modular, script-driven stack where each desktop component is independent, inspectable, and safely upgradeable.
         </p>
       </div>
 
       <div style="display:flex; flex-direction:column; gap:2rem;">
         <div class="card card-glass">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-            <h3 class="title-card">astra-branding</h3>
-            <span class="badge badge-dev">PKGBUILD</span>
+            <h3 class="title-card">eva-core (Installer &amp; Setup Engine)</h3>
+            <span class="badge badge-stable">CORE ENGINE</span>
           </div>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
-            Provides AstraOS lockups, vector marks, wallpapers (aurora, ember, lunar), SDDM branding, <code>/etc/os-release</code> integration hook, and console motd banners.
+            The modular execution runner (<code>install.sh</code> and <code>setup.sh</code>) driving pre-flight validation, package installation via pacman and yay, dotfile symlinking, backup manifest logging, and automated recovery handlers.
           </p>
         </div>
 
         <div class="card card-glass">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-            <h3 class="title-card">astra-desktop-config</h3>
-            <span class="badge badge-dev">PKGBUILD</span>
+            <h3 class="title-card">niri-workstation (Infinite Scrollable Compositor)</h3>
+            <span class="badge badge-stable">WAYLAND</span>
           </div>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
-            Ships the complete desktop configuration: Niri compositor settings (<code>config.kdl</code>, <code>keybinds.kdl</code>), Noctalia v5 shell themes, Kitty terminal theme, Oh My Posh 1_shell config, and pre-baked LazyVim configuration.
+            Niri scrollable tiling compositor configuration (<code>~/.config/niri/config.kdl</code>), tuned spring animation physics, column preset rules (33%, 50%, 66%), multi-monitor workspace boundaries, and trackpad gesture mappings.
           </p>
         </div>
 
         <div class="card card-glass">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-            <h3 class="title-card">astra-installer</h3>
-            <span class="badge badge-dev">PKGBUILD</span>
+            <h3 class="title-card">noctalia-shell (Desktop Shell &amp; Widgets)</h3>
+            <span class="badge badge-stable">SHELL</span>
           </div>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
-            The guided installation wizard for disk partitioning, GPT table creation, Btrfs subvolume layout (<code>@</code>, <code>@home</code>, <code>@snapshots</code>), user configuration, and GRUB EFI setup.
+            Noctalia 5 desktop shell integrating the top status capsule bar, quick settings flyout, PipeWire audio mixer, MPRIS media playback widget, and application launcher triggered by <code>Super + Space</code>.
           </p>
         </div>
 
         <div class="card card-glass">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-            <h3 class="title-card">astra-keybinds</h3>
-            <span class="badge badge-dev">PKGBUILD</span>
+            <h3 class="title-card">quickshell-overlay (Interactive Keybind Cheatsheet)</h3>
+            <span class="badge badge-stable">OVERLAY</span>
           </div>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
-            Provides an on-screen QuickShell overlay (triggered via <code>Super + Shift + /</code>) displaying all active desktop and application hotkeys dynamically.
+            Interactive Wayland overlay triggered via <code>Super + Shift + /</code> that renders searchable hotkey categories, real-time conflict indicators, and physical key recording for fast customization.
           </p>
         </div>
 
         <div class="card card-glass">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-            <h3 class="title-card">astra-updater</h3>
-            <span class="badge badge-dev">PREVIEW</span>
+            <h3 class="title-card">terminal-dev (Kitty &amp; LazyVim)</h3>
+            <span class="badge badge-stable">DEV TOOLS</span>
           </div>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
-            CLI and systemd timer for managing snapshot updates against verified Arch Linux Archive milestones.
+            GPU-accelerated Kitty terminal configured with Tokyo-Night palette, JetBrains Mono Nerd Font, Fastfetch system diagnostics, and LazyVim IDE pre-configured with Treesitter and LSP support.
+          </p>
+        </div>
+
+        <div class="card card-glass">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <h3 class="title-card">eva-wallpaper-sync (Zero-Risk Bootloader Sync)</h3>
+            <span class="badge badge-stable">UTILITY</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Safe synchronization utility that extracts Noctalia's active desktop wallpaper and seamlessly updates SilentSDDM and HyperFluent GRUB background images directly in place without dangerous <code>grub-mkconfig</code> rebuilds.
+          </p>
+        </div>
+
+        <div class="card card-glass">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <h3 class="title-card">eva-restore (Automated Rollback Engine)</h3>
+            <span class="badge badge-stable">SAFETY</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Instant rollback tool located in <code>bin/eva-restore</code>. Restores previous desktop configurations from timestamped tarball archives generated automatically prior to any installer execution.
+          </p>
+        </div>
+
+        <div class="card card-glass">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <h3 class="title-card">Optional Themes (SilentSDDM, HyperFluent GRUB, Plymouth)</h3>
+            <span class="badge badge-preview">OPTIONAL</span>
+          </div>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
+            Modular styling packages for your login screen and boot sequence. Users choose whether to install or omit each component during the interactive setup process.
           </p>
         </div>
       </div>
 
       <div style="text-align:center; margin-top:3.5rem;">
-        <a href="../releases/" class="btn btn-primary">How to Build AstraOS ISO</a>
+        <a href="../releases/" class="btn btn-primary">Eva Linux v2.0.0 Releases</a>
       </div>
     </div>
   </section>
@@ -1929,60 +2082,89 @@ function generateAstraOsCatalogPage() {
   ${renderFooter('../../')}
 `;
 
-  return renderHead('AstraOS Component Catalog', 'Technical architecture and custom packages for AstraOS Linux.', '/astra-os/catalog/', '../../') + content;
+  return renderHead('Eva Linux Component Architecture', 'Technical architecture and modular components of Eva Linux.', '/eva-linux/catalog/', '../../') + content;
 }
 
 // -----------------------------------------------------------------------------
-// 11. ASTRAOS RELEASES & BUILD HUB (/astra-os/releases/)
+// 11. EVA LINUX RELEASES & CHANGELOG (/eva-linux/releases/)
 // -----------------------------------------------------------------------------
-function generateAstraOsReleasesPage() {
+function generateEvaLinuxReleasesPage() {
   const content = `
-  ${renderNav('astra-os', '../../')}
+  ${renderNav('eva-linux', '../../')}
 
   <section class="section-lg">
     <div class="container container-narrow">
       <div style="text-align:center; margin-bottom:3.5rem;">
         <a href="../" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.875rem; color:var(--accent-primary); margin-bottom:1rem;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
-          Back to AstraOS Overview
+          Back to Eva Linux Overview
         </a>
-        <div class="eyebrow reveal">ISO SOURCE & BUILDS</div>
-        <h1 class="title-section reveal delay-100" style="margin-bottom:1rem;">AstraOS ISO Build Guide</h1>
-        <p class="lead reveal delay-200">
-          AstraOS is currently in active development. You can compile the official bootable live ISO directly using Archiso on an Arch Linux host.
+        <div class="eyebrow reveal">OFFICIAL RELEASES &amp; CHANGELOG</div>
+        <h1 class="title-section reveal delay-100" style="margin-bottom:1rem;">Eva Linux Releases Hub</h1>
+        <p class="lead reveal delay-200" style="margin:0 auto; max-width:680px;">
+          Eva Linux v2.0.0 marks a complete architectural transformation from monolithic scripts into a modular, reliable, and verified Wayland desktop installer.
         </p>
       </div>
 
-      <div class="card card-glass" style="margin-bottom:2.5rem;">
-        <h3 class="title-card" style="margin-bottom:1rem;">Build Requirements</h3>
-        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9375rem; color:var(--text-secondary); margin-bottom:1.5rem;">
-          <li>&bull; An Arch Linux host system with <code>sudo</code> privileges</li>
-          <li>&bull; Required packages: <code>archiso</code>, <code>git</code>, <code>base-devel</code></li>
-          <li>&bull; At least 15 GiB of free disk space for the rootfs image build</li>
+      <!-- Release v2.0.0 Stable Card -->
+      <div class="card card-glass" style="margin-bottom:2.5rem; border:1px solid var(--border-medium);">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1.25rem;">
+          <div>
+            <h2 class="title-card" style="font-size:1.5rem; margin-bottom:0.25rem;">Eva Linux v2.0.0 Stable</h2>
+            <span style="font-size:0.8125rem; color:var(--text-muted);">Published on November 20, 2026 &bull; Production Release</span>
+          </div>
+          <span class="badge badge-stable" style="font-size:0.8125rem;">v2.0.0 Stable</span>
+        </div>
+
+        <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.7; margin-bottom:1.5rem;">
+          Eva Linux v2.0.0 represents a complete system refactoring. Every component has been audited, rewritten into modular units, tested on live Arch Linux installations, and integrated with upstream repositories.
+        </p>
+
+        <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.75rem;">Key Enhancements in v2.0.0</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.875rem; color:var(--text-secondary); margin-bottom:1.75rem;">
+          <li style="display:flex; align-items:flex-start; gap:0.6rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5" style="margin-top:2px; flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Modular Architecture:</strong> Split the installer into decoupled modules for preflight, packages, compositor, shell, terminal, editor, bootloader, and theme configurations.</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:0.6rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5" style="margin-top:2px; flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Zero-Risk Wallpaper Sync:</strong> <code>eva-wallpaper-sync</code> replaces the active wallpaper across SilentSDDM and HyperFluent GRUB without dangerous <code>grub-mkconfig</code> executions.</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:0.6rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5" style="margin-top:2px; flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Quickshell Cheatsheet Overlay:</strong> Instant <code>Super + Shift + /</code> overlay with searchable categories, keybind conflict detection, and physical key recording.</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:0.6rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5" style="margin-top:2px; flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Automated Backup &amp; Rollback:</strong> Automated timestamped tarball backups of existing dotfiles and one-command restoration via <code>eva-restore</code>.</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:0.6rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2.5" style="margin-top:2px; flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Pure Upstream Repositories:</strong> Replaced bloated or modified forks with official pure upstream releases for SilentSDDM, HyperFluent GRUB, and Plymouth.</span>
+          </li>
         </ul>
 
-        <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; margin-bottom:0.5rem;">Build Commands</div>
-        <div class="cmd-box" style="margin-bottom:1rem;">
-          <code>git clone https://github.com/AmanicX/astra-os.git && cd astra-os && sudo ./scripts/build-iso.sh</code>
-          <button class="copy-btn" data-copy-text="git clone https://github.com/AmanicX/astra-os.git && cd astra-os && sudo ./scripts/build-iso.sh">
+        <div style="font-size:0.8125rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.5rem;">Quick Bootstrap Command</div>
+        <div class="cmd-box" style="margin-bottom:1.5rem;">
+          <code>curl -fsSL https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh | bash</code>
+          <button class="copy-btn" data-copy-text="curl -fsSL https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh | bash" title="Copy command">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
           </button>
         </div>
-        <p style="font-size:0.8125rem; color:var(--text-muted);">
-          The script builds the local packages, syncs the pinned package snapshot, pre-bakes Neovim plugins, and outputs the final bootable ISO into <code>out/</code>.
-        </p>
-      </div>
 
-      <div class="card" style="margin-bottom:2.5rem;">
-        <h3 class="title-card" style="margin-bottom:0.75rem;">Public ISO Releases Status</h3>
-        <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6;">
-          Public pre-compiled ISO images are currently undergoing live hardware validation across AMD and Intel testbeds. As soon as release v1.0 passes certification, downloadable ISO links and SHA256 checksums will appear here automatically via GitHub Releases automation.
-        </p>
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <a href="https://github.com/AmanicX/eva-linux/releases/tag/v2.0.0" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            View Release Tag on GitHub
+          </a>
+          <a href="https://github.com/AmanicX/eva-linux" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Inspect Repository Source
+          </a>
+        </div>
       </div>
 
       <div style="text-align:center;">
-        <a href="https://github.com/AmanicX/astra-os" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          Track AstraOS on GitHub
+        <a href="https://github.com/AmanicX/eva-linux" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+          Visit GitHub Repository &bull; AmanicX/eva-linux
         </a>
       </div>
     </div>
@@ -1991,7 +2173,7 @@ function generateAstraOsReleasesPage() {
   ${renderFooter('../../')}
 `;
 
-  return renderHead('AstraOS ISO Build Guide', 'Instructions for building the official AstraOS live ISO from source.', '/astra-os/releases/', '../../') + content;
+  return renderHead('Eva Linux v2.0.0 Stable Releases', 'Download and installation instructions for Eva Linux v2.0.0 Stable.', '/eva-linux/releases/', '../../') + content;
 }
 
 // -----------------------------------------------------------------------------
@@ -2034,9 +2216,9 @@ function generateSitemap() {
     'astra/',
     'astra/catalog/',
     'astra/releases/',
-    'astra-os/',
-    'astra-os/catalog/',
-    'astra-os/releases/'
+    'eva-linux/',
+    'eva-linux/catalog/',
+    'eva-linux/releases/'
   ];
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -2073,9 +2255,9 @@ function buildAll() {
     { path: join(ROOT, 'astra/index.html'), html: generateAstraPage() },
     { path: join(ROOT, 'astra/catalog/index.html'), html: generateAstraCatalogPage() },
     { path: join(ROOT, 'astra/releases/index.html'), html: generateAstraReleasesPage() },
-    { path: join(ROOT, 'astra-os/index.html'), html: generateAstraOsPage() },
-    { path: join(ROOT, 'astra-os/catalog/index.html'), html: generateAstraOsCatalogPage() },
-    { path: join(ROOT, 'astra-os/releases/index.html'), html: generateAstraOsReleasesPage() },
+    { path: join(ROOT, 'eva-linux/index.html'), html: generateEvaLinuxPage() },
+    { path: join(ROOT, 'eva-linux/catalog/index.html'), html: generateEvaLinuxCatalogPage() },
+    { path: join(ROOT, 'eva-linux/releases/index.html'), html: generateEvaLinuxReleasesPage() },
     { path: join(ROOT, '404.html'), html: generate404Page() }
   ];
 

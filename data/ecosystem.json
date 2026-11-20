@@ -189,82 +189,88 @@
       }
     },
     {
-      "id": "astra-os",
-      "name": "AstraOS",
-      "tagline": "Design-focused Arch Linux with Niri & Noctalia",
-      "short_description": "A curated, design-driven Arch-based Linux distribution featuring the Niri scrollable tiling compositor and Noctalia v5 desktop shell.",
-      "full_description": "AstraOS is a curated Arch-based Linux distribution for developers and power users who want a coherent, quiet, and beautiful desktop without assembling it themselves. It pairs the horizontal scrollable tiling model of Niri with the Noctalia v5 shell, shipping with a pinned package archive snapshot, seeded Kitty terminal with Oh My Posh, pre-baked LazyVim editor, Btrfs subvolumes, custom SDDM Astronaut theme, and custom system tools.",
-      "category": "Operating System / Linux Distribution",
-      "status": "In Development",
-      "status_code": "dev",
-      "version": "v1.0 Preview",
-      "release_date": "Active Development",
+      "id": "eva-linux",
+      "name": "Eva Linux",
+      "tagline": "Curated Wayland Desktop for Power Users",
+      "short_description": "A modular, script-based setup installer transforming base Arch Linux into a high-performance Wayland environment with Niri, Noctalia 5, LazyVim, and Quickshell.",
+      "full_description": "Eva Linux is a modular, script-based desktop setup installer (targeting Arch Linux / x86_64) — NOT an ISO. It transforms an existing Arch Linux base into a coherent, high-performance workstation pairing Niri's scrollable tiling compositor with the Noctalia 5 shell, seeded Kitty GPU terminal, pre-configured LazyVim, pure upstream SilentSDDM, pure upstream HyperFluent GRUB, live Quickshell keybinding cheatsheet, and zero-risk bootloader wallpaper synchronization.",
+      "category": "Desktop Setup Installer / Wayland Workstation",
+      "status": "Stable",
+      "status_code": "stable",
+      "version": "v2.0.0",
+      "release_date": "November 20, 2026",
       "license": "MIT",
       "platforms": [
-        "x86_64 UEFI"
+        "Arch Linux (x86_64)"
       ],
       "tags": [
         "Arch Linux",
         "Niri",
-        "Noctalia v5",
+        "Noctalia 5",
         "Wayland",
         "LazyVim",
         "Kitty",
-        "Btrfs",
-        "UEFI"
+        "Quickshell",
+        "SilentSDDM",
+        "HyperFluent GRUB"
       ],
-      "icon": "astra-os/assets/astraos-logo.svg",
-      "hero_image": "astra-os/assets/wallpaper.png",
-      "website_url": "/astra-os/",
-      "catalog_url": "/astra-os/catalog/",
-      "releases_url": "/astra-os/releases/",
-      "github_url": "https://github.com/AmanicX/astra-os",
+      "icon": "eva-linux/assets/icon.png",
+      "hero_image": "eva-linux/assets/screenshot-desktop.jpg",
+      "website_url": "/eva-linux/",
+      "catalog_url": "/eva-linux/catalog/",
+      "releases_url": "/eva-linux/releases/",
+      "github_url": "https://github.com/AmanicX/eva-linux",
       "highlights": [
-        "Niri Wayland compositor with infinite horizontal scrollable tiling",
-        "Noctalia v5 dynamic shell with widgets, launchers, and system status",
-        "Pre-configured development stack: Kitty, Zsh, Oh My Posh, and LazyVim",
-        "Production Btrfs layout (@, @home, @snapshots) with UEFI boot"
+        "Niri Wayland compositor with infinite horizontal scrollable tiling and spring animations",
+        "Noctalia 5 shell with floating capsule bar, control center, and native IPC integration",
+        "Interactive Quickshell cheatsheet overlay (Super+Shift+/) with live conflict resolution",
+        "Zero-risk wallpaper synchronization for SilentSDDM and HyperFluent GRUB without grub-mkconfig",
+        "Automated snapshot backups and instantaneous rollback recovery with eva-restore"
       ],
       "key_features": [
         {
-          "title": "Niri Scrollable Tiling",
-          "description": "Windows arrange themselves along an infinite horizontal ribbon. Move across workspaces fluidly with trackpad gestures or keyboard shortcuts."
+          "title": "Niri Infinite Scrollable Tiling",
+          "description": "Windows arrange themselves along an infinite horizontal ribbon with smooth spring animations. Preset column widths (33%, 50%, 66%) keep workspaces organized without window shrinking."
         },
         {
-          "title": "Noctalia v5 Desktop Shell",
-          "description": "Integrated Wayland control center, application launcher (Super+Space), notifications, audio mixer, and system monitors."
+          "title": "Noctalia 5 Desktop Shell",
+          "description": "Integrated Wayland control center, application launcher (Super+Space), audio mixer, interactive media widgets, and quick settings toggles in Tokyo-Night / Oasis Abyss palette."
         },
         {
-          "title": "Pre-Baked Developer Environment",
-          "description": "Kitty GPU terminal with Oh My Posh 1_shell prompt, Neovim with LazyVim pre-installed and pre-cached, and fastfetch."
+          "title": "Quickshell Keybind Cheatsheet",
+          "description": "Press Super+Shift+/ anywhere to trigger the native Wayland overlay. Search all 120 shortcut groups, click Edit to capture physical keypresses, and validate syntax safely."
         },
         {
-          "title": "Robust Btrfs Foundation",
-          "description": "Partitioned with dedicated subvolumes for root, home, snapshots, and pacman cache. Pinned Arch Linux Archive snapshot ensures reproducible builds."
+          "title": "Zero-Risk Bootloader Sync",
+          "description": "eva-wallpaper-sync extracts your active wallpaper from Noctalia and updates SilentSDDM and HyperFluent GRUB directly in place without executing dangerous grub-mkconfig rebuilds."
+        },
+        {
+          "title": "Pre-Baked Developer Stack",
+          "description": "Kitty GPU terminal with Tokyo-Night palette and JetBrains Mono Nerd Font, Neovim configured with LazyVim and Treesitter, and Fastfetch."
+        },
+        {
+          "title": "Automated Backup & Recovery",
+          "description": "Every installation archives your pre-existing configurations with a manifest. Run eva-restore at any point to roll back in seconds."
         }
       ],
       "system_requirements": {
-        "cpu": "64-bit x86_64 processor (Intel Core i3 / AMD Ryzen 3 or higher)",
+        "cpu": "64-bit x86_64 processor (Intel Core / AMD Ryzen)",
         "ram": "4 GB RAM minimum (8 GB recommended)",
-        "storage": "25 GB free disk space (Btrfs root filesystem)",
-        "firmware": "UEFI firmware only (CSM/Legacy not supported; Secure Boot disabled)",
-        "graphics": "Intel / AMD open graphics (Mesa); NVIDIA proprietary 580xx series supported"
+        "storage": "20 GB free disk space",
+        "base_os": "Existing Arch Linux base install with network access",
+        "gpu": "AMD (amdgpu/vulkan-radeon), Intel (mesa/vulkan-intel), or NVIDIA (proprietary/open dkms)",
+        "compositor": "Niri (Wayland)"
       },
       "install_methods": {
-        "build_iso": {
-          "label": "Build ISO from Source (Arch Linux Host)",
-          "command": "git clone https://github.com/AmanicX/astra-os.git && cd astra-os && sudo ./scripts/build-iso.sh",
-          "note": "Requires archiso, git, base-devel, and 15 GiB free disk space. Produces a bootable astraos-*.iso."
+        "quick_install": {
+          "label": "One-Line Quick Bootstrap (Recommended)",
+          "command": "curl -fsSL https://raw.githubusercontent.com/AmanicX/eva-linux/main/install.sh | bash",
+          "note": "Downloads and executes the modular Eva Linux installer directly on your Arch Linux base."
         },
-        "usb_flash": {
-          "label": "Flash to USB Stick",
-          "command": "sudo dd if=astraos-v1-x86_64.iso of=/dev/sdX bs=4M status=progress conv=fsync",
-          "note": "Write the bootable image to a USB flash drive. Boot in UEFI mode with Secure Boot disabled."
-        },
-        "live_session": {
-          "label": "Live Desktop Credentials",
-          "command": "User: astra | Password: astra | Root: passwordless sudo in live session",
-          "note": "Boots straight into Niri + Noctalia desktop. Launch installer with Super + Space."
+        "git_clone": {
+          "label": "Clone Repository & Run Setup",
+          "command": "git clone https://github.com/AmanicX/eva-linux.git && cd eva-linux && ./setup.sh",
+          "note": "Inspect modules, configurations, and themes locally before launching the interactive installer."
         }
       }
     }
