@@ -193,7 +193,7 @@
       "name": "Eva Linux",
       "tagline": "Curated Wayland Desktop for Power Users",
       "short_description": "A modular, script-based setup installer transforming base Arch Linux into a high-performance Wayland environment with Niri, Noctalia 5, LazyVim, and Quickshell.",
-      "full_description": "Eva Linux is a modular, script-based desktop setup installer (targeting Arch Linux / x86_64) — NOT an ISO. It transforms an existing Arch Linux base into a coherent, high-performance workstation pairing Niri's scrollable tiling compositor with the Noctalia 5 shell, seeded Kitty GPU terminal, pre-configured LazyVim, pure upstream SilentSDDM, pure upstream HyperFluent GRUB, live Quickshell keybinding cheatsheet, and zero-risk bootloader wallpaper synchronization.",
+      "full_description": "Eva Linux is a modular, script-based desktop setup installer (targeting Arch Linux / x86_64) - NOT an ISO. It transforms an existing Arch Linux base into a coherent, high-performance workstation pairing Niri's scrollable tiling compositor with the Noctalia 5 shell, seeded Kitty GPU terminal, pre-configured LazyVim, pure upstream SilentSDDM, pure upstream HyperFluent GRUB, live Quickshell keybinding cheatsheet, and zero-risk bootloader wallpaper synchronization.",
       "category": "Desktop Setup Installer / Wayland Workstation",
       "status": "Stable",
       "status_code": "stable",
