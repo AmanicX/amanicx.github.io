@@ -193,12 +193,12 @@
       "name": "Eva Linux",
       "tagline": "Curated Wayland Desktop for Power Users",
       "short_description": "A modular, script-based setup installer transforming base Arch Linux into a high-performance Wayland environment with Niri, Noctalia 5, LazyVim, and Quickshell.",
-      "full_description": "Eva Linux is a modular, script-based desktop setup installer (targeting Arch Linux / x86_64) - NOT an ISO. It transforms an existing Arch Linux base into a coherent, high-performance workstation pairing Niri's scrollable tiling compositor with the Noctalia 5 shell, seeded Kitty GPU terminal, pre-configured LazyVim, pure upstream SilentSDDM, pure upstream HyperFluent GRUB, live Quickshell keybinding cheatsheet, and zero-risk bootloader wallpaper synchronization.",
+      "full_description": "Eva Linux is a modular, script-based desktop setup installer (targeting Arch Linux / x86_64) - NOT an ISO. It transforms an existing Arch Linux base into a coherent, high-performance workstation pairing Niri's scrollable tiling compositor with the Noctalia 5 shell, seeded Kitty GPU terminal, pre-configured LazyVim, pure upstream SilentSDDM, pure upstream HyperFluent GRUB, live Quickshell keybinding cheatsheet, and restricted bootloader wallpaper synchronization.",
       "category": "Desktop Setup Installer / Wayland Workstation",
       "status": "Stable",
       "status_code": "stable",
-      "version": "v2.0.0",
-      "release_date": "November 20, 2026",
+      "version": "v2.1",
+      "release_date": "November 21, 2026",
       "license": "MIT",
       "platforms": [
         "Arch Linux (x86_64)"
@@ -224,8 +224,8 @@
         "Niri Wayland compositor with infinite horizontal scrollable tiling and spring animations",
         "Noctalia 5 shell with floating capsule bar, control center, and native IPC integration",
         "Interactive Quickshell cheatsheet overlay (Super+Shift+/) with live conflict resolution",
-        "Zero-risk wallpaper synchronization for SilentSDDM and HyperFluent GRUB without grub-mkconfig",
-        "Automated snapshot backups and instantaneous rollback recovery with eva-restore"
+        "Restricted wallpaper synchronization for SilentSDDM and HyperFluent GRUB without grub-mkconfig",
+        "Automated snapshot backups of desktop configurations and rollback recovery with eva-restore"
       ],
       "key_features": [
         {
@@ -241,16 +241,16 @@
           "description": "Press Super+Shift+/ anywhere to trigger the native Wayland overlay. Search all 120 shortcut groups, click Edit to capture physical keypresses, and validate syntax safely."
         },
         {
-          "title": "Zero-Risk Bootloader Sync",
-          "description": "eva-wallpaper-sync extracts your active wallpaper from Noctalia and updates SilentSDDM and HyperFluent GRUB directly in place without executing dangerous grub-mkconfig rebuilds."
+          "title": "Restricted Bootloader Sync",
+          "description": "eva-wallpaper-sync extracts your active wallpaper from Noctalia and updates SilentSDDM and HyperFluent GRUB using an isolated, fixed-destination helper without executing grub-mkconfig rebuilds."
         },
         {
           "title": "Pre-Baked Developer Stack",
           "description": "Kitty GPU terminal with Tokyo-Night palette and JetBrains Mono Nerd Font, Neovim configured with LazyVim and Treesitter, and Fastfetch."
         },
         {
-          "title": "Automated Backup & Recovery",
-          "description": "Every installation archives your pre-existing configurations with a manifest. Run eva-restore at any point to roll back in seconds."
+          "title": "Automated Desktop Backup & Restoration",
+          "description": "Setup archives your pre-existing desktop configuration directories with a timestamped manifest. Run eva-restore to selectively restore desktop configs."
         }
       ],
       "system_requirements": {

@@ -76,7 +76,7 @@ try {
   assert(eva.version === 'v2.2.2', `Eva version is v2.2.2 (${eva.version})`);
   assert(astra.version === 'v0.1.0-pre.1', `Astra version is v0.1.0-pre.1 (${astra.version})`);
   assert(evaLinux.status === 'Stable', `Eva Linux is marked Stable`);
-  assert(evaLinux.version === 'v2.0.0', `Eva Linux version is v2.0.0 (${evaLinux.version})`);
+  assert(evaLinux.version === 'v2.1', `Eva Linux version is v2.1 (${evaLinux.version})`);
 
   assert(eva.install_methods.arch.command.includes('eva-2.2.2.pacman'), 'Eva Arch pacman command points to verified 2.2.2 pacman');
   assert(eva.install_methods.arch_appimage.command.includes('Eva-2.2.2.AppImage'), 'Eva AppImage command points to verified 2.2.2 AppImage');
@@ -88,7 +88,7 @@ try {
   const rel = JSON.parse(readFileSync(join(ROOT, 'data/releases.json'), 'utf-8'));
   assert(rel.projects.eva.releases.length >= 10, `Eva releases count is ${rel.projects.eva.releases.length} (>= 10 verified)`);
   assert(rel.projects.astra.releases.length >= 1, `Astra releases count is ${rel.projects.astra.releases.length} (>= 1 verified)`);
-  assert(rel.projects['eva-linux'].releases.length >= 1, `Eva Linux releases count is ${rel.projects['eva-linux'].releases.length} (>= 1 verified)`);
+  assert(rel.projects['eva-linux'].releases.length >= 2, `Eva Linux releases count is ${rel.projects['eva-linux'].releases.length} (>= 2 verified)`);
 } catch (e) {
   assert(false, `releases.json failed to parse: ${e.message}`);
 }

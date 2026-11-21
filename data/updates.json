@@ -1,0 +1,25 @@
+{
+  "updates": [
+    {
+      "id": "eva-2.2.2",
+      "title": "Eva v2.2.2",
+      "updated_at": "2026-11-19T16:00:35Z",
+      "url": "https://github.com/AmanicX/eva/releases/tag/v2.2.2",
+      "summary": "Cross-platform AI studio release with universal Linux and native Arch packages."
+    },
+    {
+      "id": "eva-linux-2.1",
+      "title": "Eva Linux v2.1",
+      "updated_at": "2026-11-21T03:25:02Z",
+      "url": "https://github.com/AmanicX/eva-linux/tree/v2.1",
+      "summary": "Security and reliability update: restricted wallpaper permissions, working bootstrap and verification, independent backups, repaired themes and helpers, and validated shortcut replacement."
+    },
+    {
+      "id": "astra-0.1.0-pre.1",
+      "title": "Astra v0.1.0-pre.1",
+      "updated_at": "2026-10-17T18:13:06Z",
+      "url": "https://github.com/AmanicX/astra/releases/tag/v0.1.0-pre.1",
+      "summary": "Preview release of the permission-gated desktop assistant."
+    }
+  ]
+}

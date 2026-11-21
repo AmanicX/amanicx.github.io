@@ -7,7 +7,7 @@
     "sync": "node scripts/sync-releases.mjs",
     "build": "node scripts/build.mjs",
     "export": "node scripts/export-to-repos.mjs",
-    "test": "node scripts/test-ecosystem.mjs"
+    "test": "node scripts/test-ecosystem.mjs && node --test scripts/test-updates.mjs"
   },
   "author": "AmanicX",
   "license": "MIT"
