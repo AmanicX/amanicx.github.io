@@ -215,30 +215,102 @@
     </div>
   </section>
 
-  <section class="section" id="latest-updates" aria-labelledby="updates-heading">
+  <section class="section" id="latest-updates" aria-labelledby="updates-heading" style="position:relative; overflow:hidden;">
+    <div class="ambient-flare flare-crimson" style="top:20%; right:-140px; width:460px; height:460px; opacity:0.18; pointer-events:none;"></div>
     <div class="container container-narrow">
-      <h2 class="title-section" id="updates-heading">Latest repository updates</h2>
-      <p class="lead" style="margin-top:1rem;">Recent source changes and releases, newest first.</p>
-      <ol class="repository-updates"><li class="repository-update" data-update-id="eva-linux-2.1">
-      <div class="repository-update-heading">
-        <h3><a href="https://github.com/AmanicX/eva-linux/tree/v2.1">Eva Linux v2.1</a></h3>
-        <time datetime="2026-11-21T03:25:02Z">Nov 21, 2026 UTC</time>
+      <div style="text-align:center; margin-bottom:3rem;">
+        <div class="eyebrow reveal" style="display:inline-flex; align-items:center; gap:0.5rem;">
+          <span class="live-dot" style="margin:0;"></span>
+          ECOSYSTEM DISPATCHES
+        </div>
+        <h2 class="title-section reveal delay-100" id="updates-heading" style="margin-top:0.5rem; margin-bottom:0.75rem;">
+          Latest repository updates
+        </h2>
+        <p class="lead reveal delay-200" style="margin:0 auto; max-width:640px; font-size:1.0625rem;">
+          Real-time releases, security milestones, and source changes across the AmanicX ecosystem.
+        </p>
       </div>
-      <p>Security and reliability update: restricted wallpaper permissions, working bootstrap and verification, independent backups, repaired themes and helpers, and validated shortcut replacement.</p>
+      <ol class="repository-updates"><li class="repository-update is-latest" data-update-id="eva-linux-2.1">
+      <div class="update-card-inner">
+        <div class="update-icon-wrap">
+          <img src="./shared/assets/icons/eva-linux.svg" alt="Eva Linux" width="44" height="44" class="update-icon" loading="lazy">
+        </div>
+        <div class="update-body">
+          <div class="repository-update-heading">
+            <div class="update-title-group">
+              <h3><a href="https://github.com/AmanicX/eva-linux/tree/v2.1" target="_blank" rel="noopener noreferrer">Eva Linux v2.1</a></h3>
+              <span class="badge badge-stable">v2.1 Stable</span> <span class="badge badge-accent update-latest-pill">LATEST PUSH</span>
+            </div>
+            <time datetime="2026-11-21T03:25:02Z" class="update-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Nov 21, 2026 UTC</span>
+            </time>
+          </div>
+          <p class="update-summary">Security &amp; reliability milestone: isolated wallpaper privilege helper, robust piped bootstrap, independent symlink backups, SilentSDDM presets, and verified keybind conflict management.</p>
+          <div class="update-footer">
+            <div class="update-tags"><span class="badge badge-dev update-tag">Arch Linux</span><span class="badge badge-dev update-tag">Wayland</span><span class="badge badge-dev update-tag">Niri</span><span class="badge badge-dev update-tag">Security Hardened</span></div>
+            <a href="https://github.com/AmanicX/eva-linux/tree/v2.1" class="update-action" target="_blank" rel="noopener noreferrer" aria-label="View Eva Linux v2.1 on GitHub">
+              <span>View on GitHub</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </li>
-<li class="repository-update" data-update-id="eva-2.2.2">
-      <div class="repository-update-heading">
-        <h3><a href="https://github.com/AmanicX/eva/releases/tag/v2.2.2">Eva v2.2.2</a></h3>
-        <time datetime="2026-11-19T16:00:35Z">Nov 19, 2026 UTC</time>
+<li class="repository-update " data-update-id="eva-2.2.2">
+      <div class="update-card-inner">
+        <div class="update-icon-wrap">
+          <img src="./shared/assets/icons/eva-dark.png" alt="Eva" width="44" height="44" class="update-icon icon-theme-dark" loading="lazy">
+          <img src="./shared/assets/icons/eva-light.png" alt="Eva" width="44" height="44" class="update-icon icon-theme-light" loading="lazy">
+        </div>
+        <div class="update-body">
+          <div class="repository-update-heading">
+            <div class="update-title-group">
+              <h3><a href="https://github.com/AmanicX/eva/releases/tag/v2.2.2" target="_blank" rel="noopener noreferrer">Eva v2.2.2</a></h3>
+              <span class="badge badge-stable">v2.2.2 Release</span>
+            </div>
+            <time datetime="2026-11-19T16:00:35Z" class="update-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Nov 19, 2026 UTC</span>
+            </time>
+          </div>
+          <p class="update-summary">Cross-platform AI character &amp; world studio release with universal Linux binaries, native Arch Linux pacman packages, and Android 16 APK.</p>
+          <div class="update-footer">
+            <div class="update-tags"><span class="badge badge-dev update-tag">AI Studio</span><span class="badge badge-dev update-tag">Universal Linux</span><span class="badge badge-dev update-tag">Pacman Package</span></div>
+            <a href="https://github.com/AmanicX/eva/releases/tag/v2.2.2" class="update-action" target="_blank" rel="noopener noreferrer" aria-label="View Eva v2.2.2 on GitHub">
+              <span>View on GitHub</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <p>Cross-platform AI studio release with universal Linux and native Arch packages.</p>
     </li>
-<li class="repository-update" data-update-id="astra-0.1.0-pre.1">
-      <div class="repository-update-heading">
-        <h3><a href="https://github.com/AmanicX/astra/releases/tag/v0.1.0-pre.1">Astra v0.1.0-pre.1</a></h3>
-        <time datetime="2026-10-17T18:13:06Z">Oct 17, 2026 UTC</time>
+<li class="repository-update " data-update-id="astra-0.1.0-pre.1">
+      <div class="update-card-inner">
+        <div class="update-icon-wrap">
+          <img src="./shared/assets/icons/astra.png" alt="Astra" width="44" height="44" class="update-icon" loading="lazy">
+        </div>
+        <div class="update-body">
+          <div class="repository-update-heading">
+            <div class="update-title-group">
+              <h3><a href="https://github.com/AmanicX/astra/releases/tag/v0.1.0-pre.1" target="_blank" rel="noopener noreferrer">Astra v0.1.0-pre.1</a></h3>
+              <span class="badge badge-preview">v0.1.0-pre.1 Preview</span>
+            </div>
+            <time datetime="2026-10-17T18:13:06Z" class="update-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Oct 17, 2026 UTC</span>
+            </time>
+          </div>
+          <p class="update-summary">Public preview release of the permission-gated desktop AI assistant built on Tauri and Rust with native system control and screen vision.</p>
+          <div class="update-footer">
+            <div class="update-tags"><span class="badge badge-dev update-tag">Desktop Assistant</span><span class="badge badge-dev update-tag">Rust / Tauri</span><span class="badge badge-dev update-tag">Permission Engine</span></div>
+            <a href="https://github.com/AmanicX/astra/releases/tag/v0.1.0-pre.1" class="update-action" target="_blank" rel="noopener noreferrer" aria-label="View Astra v0.1.0-pre.1 on GitHub">
+              <span>View on GitHub</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <p>Preview release of the permission-gated desktop assistant.</p>
     </li></ol>
     </div>
   </section>

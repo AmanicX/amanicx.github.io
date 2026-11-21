@@ -425,10 +425,21 @@ function generateHomePage() {
     </div>
   </section>
 
-  <section class="section" id="latest-updates" aria-labelledby="updates-heading">
+  <section class="section" id="latest-updates" aria-labelledby="updates-heading" style="position:relative; overflow:hidden;">
+    <div class="ambient-flare flare-crimson" style="top:20%; right:-140px; width:460px; height:460px; opacity:0.18; pointer-events:none;"></div>
     <div class="container container-narrow">
-      <h2 class="title-section" id="updates-heading">Latest repository updates</h2>
-      <p class="lead" style="margin-top:1rem;">Recent source changes and releases, newest first.</p>
+      <div style="text-align:center; margin-bottom:3rem;">
+        <div class="eyebrow reveal" style="display:inline-flex; align-items:center; gap:0.5rem;">
+          <span class="live-dot" style="margin:0;"></span>
+          ECOSYSTEM DISPATCHES
+        </div>
+        <h2 class="title-section reveal delay-100" id="updates-heading" style="margin-top:0.5rem; margin-bottom:0.75rem;">
+          Latest repository updates
+        </h2>
+        <p class="lead reveal delay-200" style="margin:0 auto; max-width:640px; font-size:1.0625rem;">
+          Real-time releases, security milestones, and source changes across the AmanicX ecosystem.
+        </p>
+      </div>
       <ol class="repository-updates">${renderUpdates(updates)}</ol>
     </div>
   </section>

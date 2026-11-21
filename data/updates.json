@@ -5,21 +5,21 @@
       "title": "Eva v2.2.2",
       "updated_at": "2026-11-19T16:00:35Z",
       "url": "https://github.com/AmanicX/eva/releases/tag/v2.2.2",
-      "summary": "Cross-platform AI studio release with universal Linux and native Arch packages."
+      "summary": "Cross-platform AI character & world studio release with universal Linux binaries, native Arch Linux pacman packages, and Android 16 APK."
     },
     {
       "id": "eva-linux-2.1",
       "title": "Eva Linux v2.1",
       "updated_at": "2026-11-21T03:25:02Z",
       "url": "https://github.com/AmanicX/eva-linux/tree/v2.1",
-      "summary": "Security and reliability update: restricted wallpaper permissions, working bootstrap and verification, independent backups, repaired themes and helpers, and validated shortcut replacement."
+      "summary": "Security & reliability milestone: isolated wallpaper privilege helper, robust piped bootstrap, independent symlink backups, SilentSDDM presets, and verified keybind conflict management."
     },
     {
       "id": "astra-0.1.0-pre.1",
       "title": "Astra v0.1.0-pre.1",
       "updated_at": "2026-10-17T18:13:06Z",
       "url": "https://github.com/AmanicX/astra/releases/tag/v0.1.0-pre.1",
-      "summary": "Preview release of the permission-gated desktop assistant."
+      "summary": "Public preview release of the permission-gated desktop AI assistant built on Tauri and Rust with native system control and screen vision."
     }
   ]
 }
